@@ -1,0 +1,76 @@
+﻿<Window x:Class="AutoCinema.View.Windows.SessionsWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCinema.View.Windows"
+        mc:Ignorable="d"
+        Title="SessionsWindows" Height="229" Width="500">
+    <Grid Margin="0,0,0,-176">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="307*"/>
+            <RowDefinition Height="34"/>
+            <RowDefinition Height="203*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380*"/>
+            <ColumnDefinition Width="169*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedSessions}" Grid.Row="0" Grid.Column="0" x:Name="dataGrid" ItemsSource="{Binding AllSessions, Mode=TwoWay}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"  Binding="{Binding ID,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridComboBoxColumn x:Name="cbc1" Header ="Фильм" ItemsSource="{Binding Films}" SelectedValueBinding="{Binding IDФильма,NotifyOnSourceUpdated=True,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID"  DisplayMemberPath="Название"/>
+                <DataGridComboBoxColumn x:Name="cbc2" Header ="Зал" ItemsSource="{Binding Halls}" SelectedValueBinding="{Binding IDЗала, Mode=TwoWay,NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID"  DisplayMemberPath="НомерЗала"/>
+                <DataGridTemplateColumn MinWidth="120" Header="Дата">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker Text="{Binding Date, Mode=TwoWay,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedDate="{Binding Дата, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Время"  Binding="{Binding Время,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                <DataGridCheckBoxColumn Binding="{Binding Премьера,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" Header="Премьера" />
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="87*"/>
+                    <ColumnDefinition Width="168*" />
+                    <ColumnDefinition Width="5*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="30"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="54"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="27*" />
+                    <RowDefinition Height="4*" />
+
+                </Grid.RowDefinitions>
+                <Label Content="Фильм:" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="Зал:" Grid.Row="1" Grid.Column="0"/>
+                <Label Content="Дата:" Grid.Row="2" Grid.Column="0"/>
+                <Label Content="Время:" Grid.Row="3" Grid.Column="0"/>
+                <Label Content="Премьера:" Grid.Row="4" Grid.Column="0"/>
+                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewFilm, Mode=TwoWay}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding Films}"  Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall, Mode=TwoWay}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Halls}" Grid.Row="1" Grid.Column="1"  />
+                <DatePicker Margin="0,3,0,3" SelectedDate="{Binding Path=NewDate, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"  />
+                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewTime, Mode=TwoWay}" Grid.Row="3" Grid.Column="1"  />
+                <CheckBox Margin="0,3,0,3" IsChecked="{Binding Path=NewIsFirst, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" Content=""  />
+
+                <Button Margin="0,3,0,3" Content="Добавить" Grid.Column="1" Grid.Row="5"  Command="{Binding AddNewSessions}" />
+
+ 
+            </Grid>
+        </GroupBox>
+
+
+    </Grid>
+</Window>

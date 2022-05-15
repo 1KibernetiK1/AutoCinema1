@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b29c9363af0149dda28712ca3fb2c20b" Name="Diagram1" ZoomLevel="88" DisplayType="true" >
+        <EntityTypeShape EntityType="CinemaData.Билеты" Width="1.5" PointX="10" PointY="5.25" />
+        <EntityTypeShape EntityType="CinemaData.Бронь" Width="1.5" PointX="11.125" PointY="9.625" />
+        <EntityTypeShape EntityType="CinemaData.Залы" Width="1.5" PointX="7.625" PointY="5.25" />
+        <EntityTypeShape EntityType="CinemaData.Пользователи" Width="1.5" PointX="7.5" PointY="9.625" />
+        <EntityTypeShape EntityType="CinemaData.РазмерыЗалов" Width="1.5" PointX="5.5" PointY="5.75" />
+        <EntityTypeShape EntityType="CinemaData.Сеансы" Width="1.5" PointX="14.625" PointY="4.625" />
+        <EntityTypeShape EntityType="CinemaData.СтоимостьБилетов" Width="1.5" PointX="17.125" PointY="5.375" />
+        <EntityTypeShape EntityType="CinemaData.Фильмы" Width="1.5" PointX="11.625" PointY="1.75" />
+        <AssociationConnector Association="CinemaData.FK_Билеты_Залы" />
+        <AssociationConnector Association="CinemaData.FK_Билеты_Сеансы" />
+        <AssociationConnector Association="CinemaData.FK_Бронь_Билеты" />
+        <AssociationConnector Association="CinemaData.FK_Table_1_РазмерыЗалов" />
+        <AssociationConnector Association="CinemaData.FK_СтоимостьБилетов_Сеансы" />
+        <AssociationConnector Association="CinemaData.FK_Сеансы_Фильмы" />
+        <AssociationConnector Association="CinemaData.СеансыЗалы" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

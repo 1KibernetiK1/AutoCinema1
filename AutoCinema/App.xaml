@@ -1,0 +1,11 @@
+﻿<Application x:Class="AutoCinema.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AutoCinema.View.Windows"
+             StartupUri="View/Windows/MainWindow.xaml"
+             ShutdownMode="OnLastWindowClose">
+
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="AutoCinema.View.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCinema.View"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="170" Width="312" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFEEF9FF">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="26"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MinWidth="169"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MinWidth="19"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content=":Логин" Grid.Column="0" Grid.Row="1" FlowDirection="RightToLeft"/>
+        <Label Content=":Пароль" Grid.Column="0" Grid.Row="2" FlowDirection="RightToLeft"/>
+        <Label Content="Уровень доступа:" Grid.Column="0" Grid.Row="3"/>
+        <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="1" />
+        <PasswordBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="2" />
+        <ComboBox Margin="0,3,0,3" x:Name="AcceptComboBox" Grid.Column="1" Grid.Row="3">
+            <TextBlock>Administrator</TextBlock>
+            <TextBlock>User</TextBlock>
+        </ComboBox>
+        <Button Name="Button_reg" Content="Регистрация" Grid.Row="4" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click"/>
+        
+    </Grid>
+</Window>
