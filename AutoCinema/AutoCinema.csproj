@@ -78,7 +78,9 @@
     <Compile Include="Domains\Prices.cs" />
     <Compile Include="Domains\Reserv.cs" />
     <Compile Include="Domains\Sessions.cs" />
+    <Compile Include="Domains\Tickets.cs" />
     <Compile Include="Security\EncryptionPassword.cs" />
+    <Compile Include="ViewModel\BuyingTicketsViewModel.cs" />
     <Compile Include="ViewModel\FilmViewModel.cs" />
     <Compile Include="ViewModel\HallsSizeViewModel.cs" />
     <Compile Include="ViewModel\HallsViewModel.cs" />
@@ -89,6 +91,9 @@
     <Compile Include="View\Windows\BuyingTicketWindow.xaml.cs">
       <DependentUpon>BuyingTicketWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\CashierWindow.xaml.cs">
+      <DependentUpon>CashierWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\EditFilm.xaml.cs">
       <DependentUpon>EditFilm.xaml</DependentUpon>
     </Compile>
@@ -97,6 +102,9 @@
     </Compile>
     <Compile Include="View\Windows\HallSizeWindow.xaml.cs">
       <DependentUpon>HallSizeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\PriceTicketsWindow.xaml.cs">
+      <DependentUpon>PriceTicketsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\PrintTicketWindow.xaml.cs">
       <DependentUpon>PrintTicketWindow.xaml</DependentUpon>
@@ -110,10 +118,20 @@
     <Compile Include="View\Windows\SessionsWindows.xaml.cs">
       <DependentUpon>SessionsWindows.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\UserControlWindow.xaml.cs">
+      <DependentUpon>UserControlWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\UserWindow.xaml.cs">
+      <DependentUpon>UserWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\WinFilms.xaml.cs">
       <DependentUpon>WinFilms.xaml</DependentUpon>
     </Compile>
     <Page Include="View\Windows\BuyingTicketWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\CashierWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -129,7 +147,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\InfoCinema.xaml">
+    <Page Include="View\Windows\AdministrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -180,13 +198,17 @@
     <Compile Include="DataBase\Фильмы.cs">
       <DependentUpon>CinemaData.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\InfoCinema.xaml.cs">
-      <DependentUpon>InfoCinema.xaml</DependentUpon>
+    <Compile Include="View\Windows\AdministrationWindow.xaml.cs">
+      <DependentUpon>AdministrationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Windows\PriceTicketsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\PrintTicketWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -200,6 +222,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\SessionsWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\UserControlWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
