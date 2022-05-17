@@ -100,9 +100,6 @@
     <Compile Include="View\Windows\AdminFunction\Halls.xaml.cs">
       <DependentUpon>Halls.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\AdminFunction\HallSizeWindow.xaml.cs">
-      <DependentUpon>HallSizeWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Windows\AdminFunction\PriceTicketsWindow.xaml.cs">
       <DependentUpon>PriceTicketsWindow.xaml</DependentUpon>
     </Compile>
@@ -137,10 +134,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\AdminFunction\Halls.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Windows\AdminFunction\HallSizeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
