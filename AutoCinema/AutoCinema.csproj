@@ -88,77 +88,77 @@
     <Compile Include="ViewModel\PricesViewModel.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\SessionsViewModel.cs" />
-    <Compile Include="View\Windows\AddSessionWindow.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\AddSessionWindow.xaml.cs">
       <DependentUpon>AddSessionWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\BuyingTicketWindow.xaml.cs">
+    <Compile Include="View\Windows\CashierFunction\BuyingTicketWindow.xaml.cs">
       <DependentUpon>BuyingTicketWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\CashierWindow.xaml.cs">
+    <Compile Include="View\Windows\UsersWindow\CashierWindow.xaml.cs">
       <DependentUpon>CashierWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\EditFilm.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\EditFilm.xaml.cs">
       <DependentUpon>EditFilm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\Halls.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\Halls.xaml.cs">
       <DependentUpon>Halls.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\HallSizeWindow.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\HallSizeWindow.xaml.cs">
       <DependentUpon>HallSizeWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\PriceTicketsWindow.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\PriceTicketsWindow.xaml.cs">
       <DependentUpon>PriceTicketsWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\PrintTicketWindow.xaml.cs">
+    <Compile Include="View\Windows\CashierFunction\PrintTicketWindow.xaml.cs">
       <DependentUpon>PrintTicketWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\Reservation.xaml.cs">
+    <Compile Include="View\Windows\UserFunction\Reservation.xaml.cs">
       <DependentUpon>Reservation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\SessionsWindows.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\SessionsWindows.xaml.cs">
       <DependentUpon>SessionsWindows.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\UserControlWindow.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\UserControlWindow.xaml.cs">
       <DependentUpon>UserControlWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\UserWindow.xaml.cs">
+    <Compile Include="View\Windows\UsersWindow\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\WinFilms.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\WinFilms.xaml.cs">
       <DependentUpon>WinFilms.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\Windows\AddSessionWindow.xaml">
+    <Page Include="View\Windows\AdminFunction\AddSessionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\BuyingTicketWindow.xaml">
+    <Page Include="View\Windows\CashierFunction\BuyingTicketWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\CashierWindow.xaml">
+    <Page Include="View\Windows\UsersWindow\CashierWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\EditFilm.xaml">
+    <Page Include="View\Windows\AdminFunction\EditFilm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\Halls.xaml">
+    <Page Include="View\Windows\AdminFunction\Halls.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\HallSizeWindow.xaml">
+    <Page Include="View\Windows\AdminFunction\HallSizeWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\AdministrationWindow.xaml">
+    <Page Include="View\Windows\UsersWindow\AdministrationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\MainWindow.xaml">
+    <Page Include="View\Windows\LoginWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -205,18 +205,18 @@
     <Compile Include="DataBase\Фильмы.cs">
       <DependentUpon>CinemaData.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\AdministrationWindow.xaml.cs">
+    <Compile Include="View\Windows\UsersWindow\AdministrationWindow.xaml.cs">
       <DependentUpon>AdministrationWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="View\Windows\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Windows\PriceTicketsWindow.xaml">
+    <Page Include="View\Windows\AdminFunction\PriceTicketsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\PrintTicketWindow.xaml">
+    <Page Include="View\Windows\CashierFunction\PrintTicketWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -224,23 +224,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\Reservation.xaml">
+    <Page Include="View\Windows\UserFunction\Reservation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\SessionsWindows.xaml">
+    <Page Include="View\Windows\AdminFunction\SessionsWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\UserControlWindow.xaml">
+    <Page Include="View\Windows\AdminFunction\UserControlWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\UserWindow.xaml">
+    <Page Include="View\Windows\UsersWindow\UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\WinFilms.xaml">
+    <Page Include="View\Windows\AdminFunction\WinFilms.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -295,5 +295,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
