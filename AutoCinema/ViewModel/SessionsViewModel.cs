@@ -15,7 +15,7 @@ using System.Windows.Input;
 
 namespace AutoCinema.ViewModel
 {
-    public class SessionsViewModel : INotifyPropertyChanged, IDisposable
+    public class SessionsViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -96,7 +96,8 @@ namespace AutoCinema.ViewModel
                     try
                     {
                         resultStr = Sessions.AddSession(NewFilm, NewHall, NewDate, NewTime, NewIsFirst);
-                        MessageBox.Show("Информация сохранена! Для обновления данных необходимо перезайти в сеансов.");
+                        MessageBox.Show("Информация сохранена");
+                        OpenSessionMethod();
                     }
                     catch (Exception ex)
                     {
@@ -133,6 +134,14 @@ namespace AutoCinema.ViewModel
             sessions.Show();
         }
 
+        private void OpenAddSessionMethod()
+        {
+            AddSessionWindow AddSessions = new AddSessionWindow();
+            AddSessions.Show();
+        }
+
+
+     
 
 
 
@@ -182,14 +191,6 @@ namespace AutoCinema.ViewModel
         //    }
         //}
 
-        
-
-      
-
-     
-
-
-
 
       
 
@@ -230,10 +231,23 @@ namespace AutoCinema.ViewModel
             set { openSession = value; }
         }
 
-
-        public void Dispose()
+        private RelayCommand openAddSession;
+        public RelayCommand OpenAddSession
         {
-            cinemaData.Dispose();
+            get
+            {
+                return openAddSession ?? new RelayCommand(obj =>
+                {
+
+                    OpenAddSessionMethod();
+
+                }
+                    );
+
+            }
+            set { openAddSession = value; }
         }
+
+
     }
 }

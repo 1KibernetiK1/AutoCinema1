@@ -88,6 +88,9 @@
     <Compile Include="ViewModel\PricesViewModel.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\SessionsViewModel.cs" />
+    <Compile Include="View\Windows\AddSessionWindow.xaml.cs">
+      <DependentUpon>AddSessionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\BuyingTicketWindow.xaml.cs">
       <DependentUpon>BuyingTicketWindow.xaml</DependentUpon>
     </Compile>
@@ -127,6 +130,10 @@
     <Compile Include="View\Windows\WinFilms.xaml.cs">
       <DependentUpon>WinFilms.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Windows\AddSessionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\BuyingTicketWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

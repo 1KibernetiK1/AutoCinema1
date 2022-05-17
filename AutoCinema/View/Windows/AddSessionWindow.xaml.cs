@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoCinema.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,18 @@ namespace AutoCinema.View.Windows
     /// </summary>
     public partial class AddSessionWindow : Window
     {
+        private SessionsViewModel viewModel = new SessionsViewModel();
+
         public AddSessionWindow()
         {
             InitializeComponent();
+
+            DataContext = viewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+           this.Close();
         }
     }
 }
