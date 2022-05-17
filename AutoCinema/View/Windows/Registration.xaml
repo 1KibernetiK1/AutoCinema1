@@ -27,8 +27,9 @@
         <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="1" />
         <PasswordBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="2" />
         <ComboBox Margin="0,3,0,3" x:Name="AcceptComboBox" Grid.Column="1" Grid.Row="3">
-            <TextBlock>Administrator</TextBlock>
-            <TextBlock>User</TextBlock>
+            <TextBlock>Администратор</TextBlock>
+            <TextBlock>Кассир</TextBlock>
+            <TextBlock>Пользователь</TextBlock>
         </ComboBox>
         <Button Name="Button_reg" Content="Регистрация" Grid.Row="4" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click"/>
         

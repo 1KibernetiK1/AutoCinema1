@@ -31,20 +31,37 @@ namespace AutoCinema.ViewModel
             {
                 if (p.Пароль == Password)
                 {
-                    if (p.УровеньДоступа == "Administrator")
+                    if (p.УровеньДоступа == "Администратор")
                     {
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_admin");
                     }
+
+
+                    if (p.УровеньДоступа == "Кассир")
+                    {
+                        AccessLevel = p.УровеньДоступа;
+                        RaisePropertyChanged("Success_cashier");
+                    }
+
+
+                    if (p.УровеньДоступа == "Пользователь")
+                    {
+                        AccessLevel = p.УровеньДоступа;
+                        RaisePropertyChanged("Success_user");
+                    }
+
                     else
                     {
-                        MessageBox.Show("Такого администратора не существует");
+                        MessageBox.Show("Такого пользователя не существует");
                     }
+
+
+
                 }
                 else
                 {
                     RaisePropertyChanged("InvalidPassword");
-
                 }
             }
             else

@@ -94,9 +94,6 @@
     <Compile Include="View\Windows\CashierFunction\BuyingTicketWindow.xaml.cs">
       <DependentUpon>BuyingTicketWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\UsersWindow\CashierWindow.xaml.cs">
-      <DependentUpon>CashierWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Windows\AdminFunction\EditFilm.xaml.cs">
       <DependentUpon>EditFilm.xaml</DependentUpon>
     </Compile>
@@ -124,9 +121,6 @@
     <Compile Include="View\Windows\AdminFunction\UserControlWindow.xaml.cs">
       <DependentUpon>UserControlWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\UsersWindow\UserWindow.xaml.cs">
-      <DependentUpon>UserWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Windows\AdminFunction\WinFilms.xaml.cs">
       <DependentUpon>WinFilms.xaml</DependentUpon>
     </Compile>
@@ -135,10 +129,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\CashierFunction\BuyingTicketWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Windows\UsersWindow\CashierWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -233,10 +223,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\AdminFunction\UserControlWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\Windows\UsersWindow\UserWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

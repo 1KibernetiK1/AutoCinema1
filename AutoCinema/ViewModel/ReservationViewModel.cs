@@ -5,14 +5,12 @@ using AutoCinema.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace AutoCinema.ViewModel
 {
-    public class ReservationViewModel: INotifyPropertyChanged, IDisposable
+    public class ReservationViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -27,9 +25,9 @@ namespace AutoCinema.ViewModel
         }
 
         public List<Бронь> reserv { get; set; }
-        
 
-      
+
+
 
         private List<Бронь> allReserv = Reserv.GetAllReserv();
 
@@ -120,7 +118,7 @@ namespace AutoCinema.ViewModel
                     // если фильмы
                     if (SelectedReserv != null)
                     {
-                        resultStr =Reserv.DeleteHallSize(SelectedReserv);
+                        resultStr = Reserv.DeleteHallSize(SelectedReserv);
                     }
 
 

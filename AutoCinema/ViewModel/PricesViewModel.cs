@@ -4,9 +4,7 @@ using AutoCinema.Domains;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace AutoCinema.ViewModel
@@ -60,7 +58,7 @@ namespace AutoCinema.ViewModel
             }
         }
 
-     
+
 
 
 
@@ -75,7 +73,7 @@ namespace AutoCinema.ViewModel
 
                     StringBuilder errors = new StringBuilder();
 
-                    if (SelectedSeans == null)
+                    if (session == 0)
                         errors.AppendLine("Укажите Сеанс");
 
                     if (NewPrice == 0)
@@ -105,9 +103,9 @@ namespace AutoCinema.ViewModel
             }
         }
 
-      
 
-      
+
+
 
 
 

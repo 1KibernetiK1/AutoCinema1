@@ -4,14 +4,10 @@ using AutoCinema.Domains;
 using AutoCinema.View.Windows;
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Input;
 
 namespace AutoCinema.ViewModel
 {
@@ -80,7 +76,7 @@ namespace AutoCinema.ViewModel
         public static Сеансы SelectedSessions { get; set; }
 
 
-      
+
 
 
         private RelayCommand addNewSession;
@@ -100,7 +96,7 @@ namespace AutoCinema.ViewModel
                         errors.AppendLine("Выберите зал");
                     if (string.IsNullOrWhiteSpace(NewTime))
                         errors.AppendLine("Укажите Время");
-                      
+
 
                     if (errors.Length > 0)
                     {
@@ -131,7 +127,7 @@ namespace AutoCinema.ViewModel
             cinemaData = CinemaDataContainer.GetContext();
             sessions = new List<Сеансы>(cinemaData.Сеансы);
             Films = new List<Фильмы>(cinemaData.Фильмы);
-            Halls = new List<Залы>(cinemaData.Залы);     
+            Halls = new List<Залы>(cinemaData.Залы);
             NewDate = DateTime.Now;
         }
 
@@ -157,7 +153,7 @@ namespace AutoCinema.ViewModel
         }
 
 
-     
+
 
 
 
@@ -177,7 +173,7 @@ namespace AutoCinema.ViewModel
                         resultStr = Sessions.DeleteSessions(SelectedSessions);
                     }
 
-                    
+
                 }
           );
             }
@@ -208,7 +204,7 @@ namespace AutoCinema.ViewModel
         //}
 
 
-      
+
 
         //private RelayCommand openeditHall;
         //public RelayCommand OpenEditHall

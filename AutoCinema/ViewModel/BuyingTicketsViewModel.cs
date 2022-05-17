@@ -5,9 +5,7 @@ using AutoCinema.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace AutoCinema.ViewModel
@@ -76,9 +74,9 @@ namespace AutoCinema.ViewModel
                         errors.AppendLine("Введите ряд");
                     if (SelectedPlace == 0)
                         errors.AppendLine("Введите место в ряду");
-                   
-                   
-                 
+
+
+
 
 
                     if (errors.Length > 0)

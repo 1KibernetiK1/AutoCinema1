@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
-        Title="PriceTicketsWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Name="PriceWnd"
+        Title="PriceTicketsWindow" Height="291.477" Width="515" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="134*"/>
+            <ColumnDefinition Width="117*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <DataGrid FontSize="10"  x:Name="ViewAllHallsSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Сеанс" Binding="{Binding IDСеанса}" />
+                <DataGridTextColumn Header="Стоимость билета"  Binding="{Binding Стоимость}" />
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <GroupBox Header="Добавить новый" FontSize="10" Grid.Column="1" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="111"/>
+                    <ColumnDefinition Width="Auto" MinWidth="111" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30*"/>
+                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="150*"/>
+                    <RowDefinition Height="80*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Сеанс:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <Label Content="Стоимость билетов:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <ComboBox Margin="0,3,0,3" Text="{Binding Path=session}" ItemsSource="{Binding Seansi}" Grid.Row="0" Grid.Column="1"  />
+                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewPrice}" Grid.Row="1" Grid.Column="1" />
+
+                <Button Content="Добавить" Grid.Column="1" Grid.Row="3"  Height="27" VerticalAlignment="Bottom" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}"/>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>

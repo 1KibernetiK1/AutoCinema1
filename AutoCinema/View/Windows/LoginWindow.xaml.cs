@@ -1,4 +1,5 @@
 ﻿using AutoCinema.View;
+using AutoCinema.View.Windows;
 using AutoCinema.ViewModel;
 using System.Windows;
 
@@ -27,8 +28,18 @@ namespace AutoCinema
             {
                 case "Success_admin":
                     this.Hide();
-                    Info_cinema w = new Info_cinema();
-                    w.Show();
+                    Info_cinema info = new Info_cinema();
+                    info.Show();
+                    break;
+                case "Success_cashier":
+                    this.Hide();
+                    BuyingTicketWindow ticketWindow = new BuyingTicketWindow();
+                    ticketWindow.Show();
+                    break;
+                case "Success_user":
+                    this.Hide();
+                    Reservation reservation = new Reservation();
+                    reservation.Show();
                     break;
                 case "InvalidPassword":
                     MessageBox.Show("Неверный пароль!");
