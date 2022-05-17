@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace AutoCinema.ViewModel
 {
-    public class FilmViewModel : INotifyPropertyChanged, IDisposable
+    public class FilmViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -229,9 +229,5 @@ namespace AutoCinema.ViewModel
         }
 
 
-        public void Dispose()
-        {
-            cinemaData.Dispose();
-        }
     }
 }

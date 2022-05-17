@@ -33,11 +33,11 @@
                 <Label Content="Дата:" Grid.Row="2" Grid.Column="0"/>
                 <Label Content="Время:" Grid.Row="3" Grid.Column="0"/>
                 <Label Content="Премьера:" Grid.Row="4" Grid.Column="0"/>
-                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewFilm, Mode=TwoWay}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding Films}"  Grid.Row="0" Grid.Column="1"  />
-                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall, Mode=TwoWay}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Halls}" Grid.Row="1" Grid.Column="1"  />
-                <DatePicker Margin="0,3,0,3" SelectedDate="{Binding Path=NewDate, Mode=TwoWay}" Grid.Row="2" Grid.Column="1"  />
-                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewTime, Mode=TwoWay}" Grid.Row="3" Grid.Column="1"  />
-                <CheckBox Margin="0,3,0,3" IsChecked="{Binding Path=NewIsFirst, Mode=TwoWay}" Grid.Row="4" Grid.Column="1" Content=""  />
+                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewFilm}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding Films}"  Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Halls}" Grid.Row="1" Grid.Column="1"  />
+                <DatePicker Margin="0,3,0,3" SelectedDate="{Binding Path=NewDate}" Grid.Row="2" Grid.Column="1"  />
+                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewTime}" Grid.Row="3" Grid.Column="1"  />
+                <CheckBox Margin="0,3,0,3" IsChecked="{Binding Path=NewIsFirst}" Grid.Row="4" Grid.Column="1" Content=""  />
 
                 <Button Margin="0,3,0,3" Content="Добавить" Grid.Column="1" Grid.Row="5"  Command="{Binding AddNewSessions}" Click="Button_Click" />
 
