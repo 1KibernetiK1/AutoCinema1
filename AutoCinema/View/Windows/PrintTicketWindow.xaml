@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
-         Title="Печать билета" Height="170.821" Width="527.763" Loaded="Window_Loaded" ResizeMode="NoResize">
+         Title="Печать билета" Height="170.821" Width="527.763" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid x:Name="TicketGrid">
             <Grid.ColumnDefinitions>

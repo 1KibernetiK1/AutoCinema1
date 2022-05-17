@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="AddhallSizewnd"
-        Title="HallSizeWindow" Height="291.477" Width="515">
+        Title="HallSizeWindow" Height="291.477" Width="515" WindowStartupLocation="CenterScreen">
      <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="134*"/>

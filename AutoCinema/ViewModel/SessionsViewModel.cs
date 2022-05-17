@@ -92,6 +92,23 @@ namespace AutoCinema.ViewModel
                 {
                     string resultStr = "";
 
+                    StringBuilder errors = new StringBuilder();
+
+                    if (NewFilm == 0)
+                        errors.AppendLine("Выберите фильм");
+                    if (NewHall == 0)
+                        errors.AppendLine("Выберите зал");
+                    if (string.IsNullOrWhiteSpace(NewTime))
+                        errors.AppendLine("Укажите Время");
+                      
+
+                    if (errors.Length > 0)
+                    {
+                        MessageBox.Show(errors.ToString());
+                        OpenAddSessionMethod();
+                        return;
+                    }
+
 
                     try
                     {
@@ -103,7 +120,6 @@ namespace AutoCinema.ViewModel
                     {
                         MessageBox.Show(ex.Message.ToString());
                     }
-
 
                 }
           );

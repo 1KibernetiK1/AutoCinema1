@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
-        Title="AddSessionWindow" Height="240" Width="300">
+        Title="AddSessionWindow" Height="240" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <GroupBox Header="Добавить новый">
             <Grid>

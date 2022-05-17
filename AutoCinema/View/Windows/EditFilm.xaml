@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="EditFilmWnd"
-        Title="EditFilm" Height="276" Width="380" WindowStartupLocation="CenterScreen">
+        Title="EditFilm" Height="276" Width="380" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid Background="#FFEEF9FF" HorizontalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition Height="25"></RowDefinition>

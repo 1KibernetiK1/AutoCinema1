@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
-        Title="Бронирование" Height="131.728" Width="240.51">
+        Title="Бронирование" Height="131.728" Width="240.51" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"> 
     <Canvas>
         <TextBox x:Name="textBox" Text="{Binding NewFIO, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="70,13,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154"/>
         <TextBox x:Name="textBox_Copy" Text="{Binding NewPhone, Mode=TwoWay}" HorizontalAlignment="Left" Height="23" Margin="70,41,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="154"/>
