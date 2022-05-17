@@ -1,6 +1,7 @@
 ﻿using AutoCinema.Core;
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
+using AutoCinema.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,6 +92,8 @@ namespace AutoCinema.ViewModel
                     {
                         resultStr = Prices.AddPrice(session, NewPrice);
                         MessageBox.Show("Информация сохранена!");
+                        SetNullValuesProperties();
+                        UpdateAllPriceView();
                     }
                     catch (Exception ex)
                     {
@@ -122,6 +125,8 @@ namespace AutoCinema.ViewModel
                     if (Selectedprice != null)
                     {
                         resultStr = Prices.DeletePrice(Selectedprice);
+                        SetNullValuesProperties();
+                        UpdateAllPriceView();
                     }
 
 
@@ -155,28 +160,25 @@ namespace AutoCinema.ViewModel
         //    }
         //}
 
-        //private void SetNullValuesProperties()
-        //{
-        //    NewFIO = null;
-        //    NewPhone = null;
-        //}
+        private void SetNullValuesProperties()
+        {
+            session = 0;
+            NewPrice = 0;
+        }
 
-        //private void UpdateAllDataView()
-        //{
-        //    UpdateAllHallsView();
-        //}
+       
 
 
 
-        //private void UpdateAllHallsView()
-        //{
-        //    AllReserv= Reserv.GetAllReserv();
+        private void UpdateAllPriceView()
+        {
+            AllPrices = Prices.GetAllPrices();
 
-        //    Halls.AllHallsView.ItemsSource = null;
-        //    Halls.AllHallsView.Items.Clear();
-        //    Halls.AllHallsView.ItemsSource = AllReserv;
-        //    Halls.AllHallsView.Items.Refresh();
-        //}
+            PriceTicketsWindow.AllPriceView.ItemsSource = null;
+            PriceTicketsWindow.AllPriceView.Items.Clear();
+            PriceTicketsWindow.AllPriceView.ItemsSource = AllPrices;
+            PriceTicketsWindow.AllPriceView.Items.Refresh();
+        }
 
         //private RelayCommand openeditHall;
         //public RelayCommand OpenEditHall
@@ -199,21 +201,27 @@ namespace AutoCinema.ViewModel
         //    set { openeditHall = value; }
         //}
 
-        //private RelayCommand openReserv;
-        //public RelayCommand OpenReserv
-        //{
-        //    get
-        //    {
-        //        return openReserv ?? new RelayCommand(obj =>
-        //        {
+        private void OpenPriceMethod()
+        {
+            PriceTicketsWindow priceTickets = new PriceTicketsWindow();
+            priceTickets.Show();
+        }
 
-        //            OpenReservMethod();
-        //        }
-        //            );
+        private RelayCommand openPrice;
+        public RelayCommand OpenPrice
+        {
+            get
+            {
+                return openPrice ?? new RelayCommand(obj =>
+                {
 
-        //    }
-        //    set { openReserv = value; }
-        //}
+                    OpenPriceMethod();
+                }
+                    );
+
+            }
+            set { openPrice = value; }
+        }
 
 
         public void Dispose()

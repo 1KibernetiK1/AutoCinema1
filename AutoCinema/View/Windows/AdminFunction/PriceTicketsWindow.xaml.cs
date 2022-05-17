@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoCinema.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,15 @@ namespace AutoCinema.View.Windows
     /// </summary>
     public partial class PriceTicketsWindow : Window
     {
+        public static DataGrid AllPriceView;
+
         public PriceTicketsWindow()
         {
             InitializeComponent();
+
+
+            DataContext = new PricesViewModel();
+            AllPriceView = ViewAllPriceSize;
         }
     }
 }

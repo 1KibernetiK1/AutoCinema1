@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
-        <DataGrid FontSize="10"  x:Name="ViewAllHallsSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
+        <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Сеанс" Binding="{Binding IDСеанса}" />
                 <DataGridTextColumn Header="Стоимость билета"  Binding="{Binding Стоимость}" />
