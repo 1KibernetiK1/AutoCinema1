@@ -49,7 +49,7 @@ namespace AutoCinema.Domains
         {
             string result = "Такого билета не существует";
 
-            MessageBox.Show(result);
+          
 
             CinemaDataContainer.GetContext().Билеты.Remove(Tickets);
             CinemaDataContainer.GetContext().SaveChanges();

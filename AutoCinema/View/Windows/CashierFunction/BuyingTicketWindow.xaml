@@ -49,8 +49,8 @@
                 <Label Content="Зал:" Grid.Row="1" Grid.Column="0"/>
                 <Label Content="Ряд:" Grid.Row="2" Grid.Column="0"/>
                 <Label Content="Место:" Grid.Row="3" Grid.Column="0"/>
-                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewSession}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding NewSess}"  Grid.Row="0" Grid.Column="1"  />
-                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Newhall}" Grid.Row="1" Grid.Column="1"  />
+                <ComboBox Name="ses" Margin="0,3,0,3" SelectedValue="{Binding Path=NewSession}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding NewSess1}"  Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Name="hall" Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Newhall1}" Grid.Row="1" Grid.Column="1"  />
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedRow}" Grid.Row="2" Grid.Column="1"/>
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedPlace}" Grid.Row="3" Grid.Column="1"/>
 
@@ -59,7 +59,7 @@
 
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
                     <StackPanel Background="#FF3DA7A2">
-                        <Button Command="{Binding DeleteItem}">Удалить</Button>
+                        <Button Command="{Binding DeleteTicket}">Удалить</Button>
                         <Button Command="{Binding OpenEditFilm}">Изменить</Button>
                         <Button>Записать в word</Button>
                     </StackPanel>

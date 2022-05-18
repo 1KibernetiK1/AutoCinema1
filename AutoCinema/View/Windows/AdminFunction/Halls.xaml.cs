@@ -9,6 +9,8 @@ namespace AutoCinema.View.Windows
     /// </summary>
     public partial class Halls : Window
     {
+       
+
         public static DataGrid AllHallssizeView;
         public static DataGrid AllHallsView;
 
@@ -20,6 +22,7 @@ namespace AutoCinema.View.Windows
             AllHallsView = ViewAllHalls;
             Grid2.DataContext = new HallsSizeViewModel();
             cbc1.ItemsSource = vm.Размеры;
+            ActionsForHallSize.DataContext = new HallsSizeViewModel();
             AllHallssizeView = ViewAllHallssizes;
         }
     }

@@ -138,8 +138,8 @@ namespace AutoCinema.ViewModel
                         UpdateAllDataView();
                     }
 
-                    //обновление
-                    SetNullValuesProperties();
+                 
+
                 }
           );
             }

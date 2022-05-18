@@ -75,7 +75,7 @@ namespace AutoCinema.ViewModel
 
         public static Сеансы SelectedSessions { get; set; }
 
-
+ 
 
 
 
@@ -171,6 +171,9 @@ namespace AutoCinema.ViewModel
                     if (SelectedSessions != null)
                     {
                         resultStr = Sessions.DeleteSessions(SelectedSessions);
+                        MessageBox.Show("Удаление выполнено успешно!");
+                        SessionsWindows sessions = new SessionsWindows();
+                        sessions.Show();
                     }
 
 

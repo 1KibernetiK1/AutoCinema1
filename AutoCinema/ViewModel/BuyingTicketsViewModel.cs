@@ -38,8 +38,8 @@ namespace AutoCinema.ViewModel
 
         public List<Билеты> Ticket { get; set; }
         public List<Бронь> Reservations { get; set; }
-        public List<Сеансы> NewSess { get; set; }
-        public List<Залы> Newhall { get; set; }
+        public List<Сеансы> NewSess1 { get; set; }
+        public List<Залы> Newhall1 { get; set; }
 
         public int NewHall { get; set; }
         public int NewSession { get; set; }
@@ -52,6 +52,8 @@ namespace AutoCinema.ViewModel
             cinemaData = new CinemaDataContainer();
             Ticket = new List<Билеты>(cinemaData.Билеты);
             Reservations = new List<Бронь>(cinemaData.Бронь);
+            NewSess1 = new List<Сеансы>(cinemaData.Сеансы);
+            Newhall1 = new List<Залы>(cinemaData.Залы);
         }
 
 

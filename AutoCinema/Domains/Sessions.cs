@@ -49,7 +49,7 @@ namespace AutoCinema.Domains
         {
             string result = "Такого сеанса не существует";
 
-            MessageBox.Show(result);
+          
 
             CinemaDataContainer.GetContext().Сеансы.Remove(sessions);
             CinemaDataContainer.GetContext().SaveChanges();

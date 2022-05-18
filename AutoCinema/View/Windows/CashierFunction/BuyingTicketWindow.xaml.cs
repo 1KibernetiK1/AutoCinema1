@@ -28,6 +28,7 @@ namespace AutoCinema.View.Windows
 
             DataContext = new BuyingTicketsViewModel();
             AllTickView = ViewAllTicket;
+
         }
     }
 }

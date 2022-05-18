@@ -45,7 +45,7 @@ namespace AutoCinema.ViewModel
         #endregion
 
 
-        public static РазмерыЗалов SelectedHall { get; set; }
+        public static РазмерыЗалов SelectedHallsize { get; set; }
 
 
         private RelayCommand addNewHall;
@@ -111,9 +111,9 @@ namespace AutoCinema.ViewModel
                 {
                     string resultStr = "Ничего не выбрано";
                     // если фильмы
-                    if (SelectedHall != null)
+                    if (SelectedHallsize != null)
                     {
-                        resultStr = Hallsize.DeleteHallSize(SelectedHall);
+                        resultStr = Hallsize.DeleteHallSize(SelectedHallsize);
                         SetNullValuesProperties();
                         UpdateAllDataView();
                     }
@@ -134,9 +134,9 @@ namespace AutoCinema.ViewModel
                 {
                     Window window = new Window();
                     string resultStr = "Не выбран сотрудник";
-                    if (SelectedHall != null)
+                    if (SelectedHallsize != null)
                     {
-                        resultStr = Hallsize.editHallSize(SelectedHall, SizeName, SizeCount);
+                        resultStr = Hallsize.editHallSize(SelectedHallsize, SizeName, SizeCount);
                         SetNullValuesProperties();
                         UpdateAllDataView();
 

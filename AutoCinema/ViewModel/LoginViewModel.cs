@@ -36,13 +36,14 @@ namespace AutoCinema.ViewModel
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_admin");
                     }
-
+                   
 
                     if (p.УровеньДоступа == "Кассир")
                     {
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_cashier");
                     }
+                 
 
 
                     if (p.УровеньДоступа == "Пользователь")
@@ -50,11 +51,8 @@ namespace AutoCinema.ViewModel
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_user");
                     }
+                  
 
-                    else
-                    {
-                        MessageBox.Show("Такого пользователя не существует");
-                    }
 
 
 
