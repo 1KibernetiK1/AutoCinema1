@@ -82,6 +82,7 @@
     <Compile Include="Domains\Tickets.cs" />
     <Compile Include="Security\EncryptionPassword.cs" />
     <Compile Include="ViewModel\BuyingTicketsViewModel.cs" />
+    <Compile Include="ViewModel\ExcelViewModel.cs" />
     <Compile Include="ViewModel\FilmViewModel.cs" />
     <Compile Include="ViewModel\HallsSizeViewModel.cs" />
     <Compile Include="ViewModel\HallsViewModel.cs" />
