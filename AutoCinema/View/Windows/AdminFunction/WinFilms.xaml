@@ -70,7 +70,7 @@
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteItem}">Удалить</Button>
                         <Button Command="{Binding OpenEditFilm}">Изменить</Button>
-                        <Button>Записать в word</Button>
+                        <Button Click="Button_Click_1">Записать в excel</Button>
                     </StackPanel>
                 </GroupBox>
             </Grid>

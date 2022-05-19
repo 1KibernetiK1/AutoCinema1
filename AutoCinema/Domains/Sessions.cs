@@ -20,7 +20,7 @@ namespace AutoCinema.Domains
 
        
 
-        public static string AddSession(int IDFilm, int IdHall, string date, string time, bool NewISFirst)
+        public static string AddSession(int IDFilm, int IdHall, string date, string time, bool? NewISFirst)
         {
             string result = "Не найдено";
             //проверяем есть ли фильм

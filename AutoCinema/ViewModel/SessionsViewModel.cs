@@ -36,7 +36,7 @@ namespace AutoCinema.ViewModel
         public string NewTime { get; set; }
         public int NewHall { get; set; }
         public int NewFilm { get; set; }
-        public bool NewIsFirst { get; set; }
+        public bool? NewIsFirst { get; set; }
         public string NewDate { get; set; }
 
         public static int A { get; set; }
@@ -292,6 +292,7 @@ namespace AutoCinema.ViewModel
             NewHall = 0;
             NewDate = null;
             NewTime = null;
+            NewIsFirst = null; 
         }
 
         private void UpdateAllDataView()
