@@ -36,6 +36,18 @@ namespace AutoCinema.ViewModel
             }
         }
 
+        private List<Залы> allHalls = HallsD.GetAllHall();
+
+        public List<Залы> AllHalls
+        {
+            get { return allHalls; }
+            set
+            {
+                allHalls = value;
+                NotifyPropertyChanged("AllHalls");
+            }
+        }
+
 
 
 
@@ -159,7 +171,6 @@ namespace AutoCinema.ViewModel
         private void UpdateAllDataView()
         {
             UpdateAllHallSizesView();
-
         }
 
         private void UpdateAllHallSizesView()
@@ -172,6 +183,7 @@ namespace AutoCinema.ViewModel
             Halls.AllHallssizeView.Items.Refresh();
         }
 
+       
 
 
 

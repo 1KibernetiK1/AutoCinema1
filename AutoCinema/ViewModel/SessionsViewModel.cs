@@ -2,6 +2,7 @@
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.CashierFunction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -110,7 +111,9 @@ namespace AutoCinema.ViewModel
                     {
                         resultStr = Sessions.AddSession(NewFilm, NewHall, NewDate, NewTime, NewIsFirst);
                         MessageBox.Show("Информация сохранена");
-                        OpenSessionMethod();
+                        SetNullValuesProperties();
+                        UpdateAllDataView();
+
                     }
                     catch (Exception ex)
                     {
@@ -151,7 +154,11 @@ namespace AutoCinema.ViewModel
             AddSessions.Show();
         }
 
-
+        private void OpenInfoSessionMethod()
+        {
+            InfoAboutSessionWindow Infosessions = new InfoAboutSessionWindow();
+            Infosessions.Show();
+        }
 
 
 
@@ -171,8 +178,8 @@ namespace AutoCinema.ViewModel
                     {
                         resultStr = Sessions.DeleteSessions(SelectedSessions);
                         MessageBox.Show("Удаление выполнено успешно!");
-                        SessionsWindows sessions = new SessionsWindows();
-                        sessions.Show();
+                        SetNullValuesProperties();
+                        UpdateAllDataView();
                     }
 
 
@@ -260,6 +267,48 @@ namespace AutoCinema.ViewModel
 
             }
             set { openAddSession = value; }
+        }
+
+        private RelayCommand openInfoSession;
+        public RelayCommand OpenInfoSession
+        {
+            get
+            {
+                return openInfoSession ?? new RelayCommand(obj =>
+                {
+
+                    OpenInfoSessionMethod();
+                }
+                    );
+
+            }
+            set { openInfoSession = value; }
+        }
+
+
+        private void SetNullValuesProperties()
+        {
+            NewFilm = 0;
+            NewHall = 0;
+            NewDate = null;
+            NewTime = null;
+        }
+
+        private void UpdateAllDataView()
+        {
+            UpdateAllSessionView();
+        }
+
+
+
+        private void UpdateAllSessionView()
+        {
+            AllSessions = Sessions.GetAllSessions();
+
+            SessionsWindows.AllsessView.ItemsSource = null;
+            SessionsWindows.AllsessView.Items.Clear();
+            SessionsWindows.AllsessView.ItemsSource = AllSessions;
+            SessionsWindows.AllsessView.Items.Refresh();
         }
 
 

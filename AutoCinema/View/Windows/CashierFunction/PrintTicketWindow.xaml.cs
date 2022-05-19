@@ -39,7 +39,7 @@ namespace AutoCinema.View.Windows
             t = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Время;
             h = ctx.Залы.FirstOrDefault(c => c.ID == ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDЗала).НомерЗала.Value.ToString();
             Сеансы lastSeans = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса);
-            pr = ctx.СтоимостьБилетов.FirstOrDefault(c => c.IDСеанса == lastSeans.ID).Стоимость.Value.ToString() + ".руб";
+            pr = ctx.СтоимостьБилетов.FirstOrDefault(c => c.IDСеанса == lastSeans.ID).Стоимость.Value.ToString() + " руб.";
 
             Film.Content = f.ToString();
             Row.Content = r.ToString();

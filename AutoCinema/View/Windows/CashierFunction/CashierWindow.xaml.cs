@@ -13,25 +13,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AutoCinema.View.Windows
+namespace AutoCinema.View.Windows.CashierFunction
 {
     /// <summary>
-    /// Логика взаимодействия для BuyingTicketWindow.xaml
+    /// Логика взаимодействия для CashierWindow.xaml
     /// </summary>
-    public partial class BuyingTicketWindow : Window
+    public partial class CashierWindow : Window
     {
-        public static DataGrid AllTickView;
-
-        public BuyingTicketWindow()
+        public CashierWindow()
         {
             InitializeComponent();
 
-            DataContext = new BuyingTicketsViewModel();
-            AllTickView = ViewAllTicket;
-            Print.DataContext = new PrintTicketViewModel();
-
+            button_Copy.DataContext = new BuyingTicketsViewModel();
+            button_Copy2.DataContext = new SessionsViewModel();
         }
 
-      
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

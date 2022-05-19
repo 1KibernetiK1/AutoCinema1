@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
-        <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
+        <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Сеанс" Binding="{Binding IDСеанса}" />
                 <DataGridTextColumn Header="Стоимость билета"  Binding="{Binding Стоимость}" />
@@ -39,7 +39,7 @@
                 </Grid.RowDefinitions>
                 <Label Content="Сеанс:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
                 <Label Content="Стоимость билетов:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-                <ComboBox Margin="0,3,0,3" Text="{Binding Path=session}" ItemsSource="{Binding Seansi}" Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Margin="0,3,0,3"  SelectedValue="{Binding Path=session}" DisplayMemberPath="ID" SelectedValuePath="ID" ItemsSource="{Binding Seansi}" Grid.Row="0" Grid.Column="1"  />
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewPrice}" Grid.Row="1" Grid.Column="1" />
 
                 <Button Content="Добавить" Grid.Column="1" Grid.Row="3"  Height="27" VerticalAlignment="Bottom" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}"/>

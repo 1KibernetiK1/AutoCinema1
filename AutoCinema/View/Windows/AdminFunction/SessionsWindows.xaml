@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
-        Title="SessionsWindows" Height="229" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="SessionsWindows" Height="497" Width="700" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Margin="0,0,0,-176">
         <Grid.RowDefinitions>
             <RowDefinition Height="307*"/>
@@ -16,7 +16,7 @@
             <ColumnDefinition Width="380*"/>
             <ColumnDefinition Width="169*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedTicket}" Grid.Row="0" Grid.Column="0" x:Name="dataGrid" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" >
+        <DataGrid  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedTicket}" Grid.Row="0" Grid.Column="0" x:Name="dataGrid" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" Grid.ColumnSpan="2" Margin="0,0,215,178" Grid.RowSpan="3" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"  Binding="{Binding ID,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridComboBoxColumn x:Name="cbc1" Header ="Фильм" ItemsSource="{Binding Films}" SelectedValueBinding="{Binding IDФильма,NotifyOnSourceUpdated=True,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID"  DisplayMemberPath="Название"/>
@@ -27,7 +27,44 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <GroupBox Header="Действия" Grid.Column="1" Grid.Row="0">
+        <GroupBox Header="Добавить новый" Grid.Column="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="87*"/>
+                    <ColumnDefinition Width="168*" />
+                    <ColumnDefinition Width="5*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="30"/>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="54"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="27*" />
+                    <RowDefinition Height="4*" />
+
+                </Grid.RowDefinitions>
+                <Label Content="Фильм:" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="Зал:" Grid.Row="1" Grid.Column="0"/>
+                <Label Content="Дата:" Grid.Row="2" Grid.Column="0"/>
+                <Label Content="Время:" Grid.Row="3" Grid.Column="0"/>
+                <Label Content="Премьера:" Grid.Row="4" Grid.Column="0"/>
+                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewFilm}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding Films}"  Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Halls}" Grid.Row="1" Grid.Column="1"  />
+                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewDate}" Grid.Row="2" Grid.Column="1"  />
+                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewTime}" Grid.Row="3" Grid.Column="1"  />
+                <CheckBox Margin="0,3,0,3" IsChecked="{Binding Path=NewIsFirst}" Grid.Row="4" Grid.Column="1" Content=""  />
+
+                <Button Margin="0,3,0,3" Content="Добавить" Grid.Column="1" Grid.Row="5"  Command="{Binding AddNewSessions}"/>
+
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Действия" Margin="5,363,5,178" Grid.Column="1" Grid.RowSpan="3">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="5*" />
@@ -43,8 +80,6 @@
 
                 </Grid.RowDefinitions>
 
-
-                <Button Margin="0,0,0,30" Content="Добавить" Grid.Row="3"  Command="{Binding OpenAddSession}" Click="Button_Click" />
 
                 <StackPanel Grid.Row="3" Margin="0,20,0,-5" Grid.RowSpan="2">
                     <Button Command="{Binding DeleteSession}" Click="Button_Click_1">Удалить</Button>

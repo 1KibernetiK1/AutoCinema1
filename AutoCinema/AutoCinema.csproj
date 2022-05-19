@@ -104,6 +104,12 @@
     <Compile Include="View\Windows\AdminFunction\PriceTicketsWindow.xaml.cs">
       <DependentUpon>PriceTicketsWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\CashierFunction\CashierWindow.xaml.cs">
+      <DependentUpon>CashierWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\CashierFunction\InfoAboutSessionWindow.xaml.cs">
+      <DependentUpon>InfoAboutSessionWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\CashierFunction\PrintTicketWindow.xaml.cs">
       <DependentUpon>PrintTicketWindow.xaml</DependentUpon>
     </Compile>
@@ -138,7 +144,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\AdministrationWindow.xaml">
+    <Page Include="View\Windows\AdminFunction\AdministrationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\CashierFunction\CashierWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\CashierFunction\InfoAboutSessionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -189,7 +203,7 @@
     <Compile Include="DataBase\Фильмы.cs">
       <DependentUpon>CinemaData.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\AdministrationWindow.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\AdministrationWindow.xaml.cs">
       <DependentUpon>AdministrationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\LoginWindow.xaml.cs">

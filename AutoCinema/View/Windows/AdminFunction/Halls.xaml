@@ -41,14 +41,13 @@
                 <Label Content="Номер:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
                 <Label Content="Размер:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewNumber, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"  />
-                <ComboBox Margin="0,3,0,3" Text="{Binding Path=NewSize, Mode=TwoWay}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="1" />
+                <ComboBox Name="ComboSize" Margin="0,3,0,3" Text="{Binding Path=NewSize, Mode=TwoWay}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="1" />
 
                 <Button Content="Добавить" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewHall}"   CommandParameter="{Binding ElementName=AddNewHallswnd}" Margin="0,5,0,0"/>
 
                 <StackPanel Name="ActionsForHalls" Grid.Column="1" Grid.Row="2" Margin="30,66,30,4">
                     <Button Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHall}" >Удалить</Button>
                     <Button Command="{Binding OpenEditFilm}" Width="100">Изменить</Button>
-                    <Button Width="100" >Записать в word</Button>
                 </StackPanel>
 
 
@@ -90,14 +89,13 @@
                     <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeName, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"  />
                     <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeCount, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" />
 
-                    <Button Content="Добавить" Grid.Column="1" Grid.Row="3"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewHallSize}" />
+                    <Button Content="Добавить" Grid.Column="1" Grid.Row="3"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewHallSize}"/>
 
 
 
                     <StackPanel Name="ActionsForHallSize" Grid.Column="2" Margin="20,29,-104,22" Grid.RowSpan="3" Grid.Row="1" >
                         <Button  Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHallSize}" >Удалить</Button>
                         <Button Command="{Binding OpenEditFilm}" Width="100">Изменить</Button>
-                        <Button Width="100" >Записать в word</Button>
                     </StackPanel>
 
                 </Grid>

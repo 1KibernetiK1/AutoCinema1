@@ -1,5 +1,6 @@
 ﻿using AutoCinema.View;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.CashierFunction;
 using AutoCinema.ViewModel;
 using System.Windows;
 
@@ -33,8 +34,8 @@ namespace AutoCinema
                     break;
                 case "Success_cashier":
                     this.Hide();
-                    BuyingTicketWindow ticketWindow = new BuyingTicketWindow();
-                    ticketWindow.Show();
+                    CashierWindow cashiertWindow = new CashierWindow();
+                    cashiertWindow.Show();
                     break;
                 case "Success_user":
                     this.Hide();

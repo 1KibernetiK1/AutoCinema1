@@ -13,25 +13,22 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace AutoCinema.View.Windows
+namespace AutoCinema.View.Windows.CashierFunction
 {
     /// <summary>
-    /// Логика взаимодействия для BuyingTicketWindow.xaml
+    /// Логика взаимодействия для InfoAboutSessionWindow.xaml
     /// </summary>
-    public partial class BuyingTicketWindow : Window
+    public partial class InfoAboutSessionWindow : Window
     {
-        public static DataGrid AllTickView;
+        private SessionsViewModel viewModel = new SessionsViewModel();
 
-        public BuyingTicketWindow()
+        public InfoAboutSessionWindow()
         {
             InitializeComponent();
 
-            DataContext = new BuyingTicketsViewModel();
-            AllTickView = ViewAllTicket;
-            Print.DataContext = new PrintTicketViewModel();
-
+            DataContext = viewModel;
+            cbc1.ItemsSource = viewModel.Films;
+            cbc2.ItemsSource = viewModel.Halls;
         }
-
-      
     }
 }

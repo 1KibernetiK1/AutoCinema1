@@ -23,7 +23,9 @@ namespace AutoCinema.View.Windows
             Grid2.DataContext = new HallsSizeViewModel();
             cbc1.ItemsSource = vm.Размеры;
             ActionsForHallSize.DataContext = new HallsSizeViewModel();
-            AllHallssizeView = ViewAllHallssizes;
+            AllHallssizeView = ViewAllHallssizes;           
         }
+
+    
     }
 }

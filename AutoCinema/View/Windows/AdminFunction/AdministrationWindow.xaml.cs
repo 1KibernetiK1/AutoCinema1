@@ -18,6 +18,7 @@ namespace AutoCinema
             button_Copy.DataContext = new FilmViewModel();
             button_Copy1.DataContext = new HallsViewModel();
             button_Copy2.DataContext = new SessionsViewModel();
+            button_Copy3.DataContext = new PricesViewModel();
         }
 
       

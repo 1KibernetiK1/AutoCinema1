@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="AddTicketWnd"
-        Title="Выбрать место" Height="450" Width="640" Closed="Window_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Выбрать место" Height="450" Width="640" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="129*"/>
