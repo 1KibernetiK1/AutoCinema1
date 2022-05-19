@@ -37,7 +37,7 @@ namespace AutoCinema.ViewModel
         }
 
         #region PROPERTY FOR HALLS
-        public decimal NewPrice { get; set; }
+        public int NewPrice { get; set; }
         public int session { get; set; }
         public static Сеансы SelectedSeans { get; set; }
 

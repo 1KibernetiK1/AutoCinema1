@@ -21,13 +21,7 @@
                 <DataGridTextColumn Header="ID"  Binding="{Binding ID,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridComboBoxColumn x:Name="cbc1" Header ="Фильм" ItemsSource="{Binding Films}" SelectedValueBinding="{Binding IDФильма,NotifyOnSourceUpdated=True,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID"  DisplayMemberPath="Название"/>
                 <DataGridComboBoxColumn x:Name="cbc2" Header ="Зал" ItemsSource="{Binding Halls}" SelectedValueBinding="{Binding IDЗала, Mode=TwoWay,NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID"  DisplayMemberPath="НомерЗала"/>
-                <DataGridTemplateColumn MinWidth="120" Header="Дата">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <DatePicker Text="{Binding Date, Mode=TwoWay,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" SelectedDate="{Binding Дата, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
+                <DataGridTextColumn MinWidth="120" Header="Дата" Binding="{Binding Дата}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Время"  Binding="{Binding Время,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridCheckBoxColumn Binding="{Binding Премьера,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, UpdateSourceTrigger=PropertyChanged}" Header="Премьера" />
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="AddTicketWnd"
-        Title="Выбрать место" Height="450" Width="640" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Выбрать место" Height="450" Width="640" Closed="Window_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="129*"/>
@@ -49,7 +49,7 @@
                 <Label Content="Зал:" Grid.Row="1" Grid.Column="0"/>
                 <Label Content="Ряд:" Grid.Row="2" Grid.Column="0"/>
                 <Label Content="Место:" Grid.Row="3" Grid.Column="0"/>
-                <ComboBox Name="ses" Margin="0,3,0,3" SelectedValue="{Binding Path=NewSession}" DisplayMemberPath="Название" SelectedValuePath="ID" ItemsSource="{Binding NewSess1}"  Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Name="ses" Margin="0,3,0,3" SelectedValue="{Binding Path=NewSession}" DisplayMemberPath="ID" SelectedValuePath="ID" ItemsSource="{Binding NewSess1}"  Grid.Row="0" Grid.Column="1"  />
                 <ComboBox Name="hall" Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Newhall1}" Grid.Row="1" Grid.Column="1"  />
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedRow}" Grid.Row="2" Grid.Column="1"/>
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedPlace}" Grid.Row="3" Grid.Column="1"/>
@@ -61,6 +61,7 @@
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteTicket}">Удалить</Button>
                         <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                        <Button Name="Print" Command="{Binding OpenPrintTicket}">Распечатать билет</Button>
                         <Button>Записать в word</Button>
                     </StackPanel>
                 </GroupBox>

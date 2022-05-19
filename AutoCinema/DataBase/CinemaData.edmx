@@ -95,7 +95,7 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IDФильма" Type="int" Nullable="true" />
     <Property Name="IDЗала" Type="int" Nullable="true" />
-    <Property Name="Дата" Type="datetime" Nullable="true" />
+    <Property Name="Дата" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Время" Type="nvarchar" Nullable="true" MaxLength="50" />
     <Property Name="Премьера" Type="bit" Nullable="true" />
     <Property Name="Залы_ID" Type="int" Nullable="true" />
@@ -106,7 +106,7 @@
     </Key>
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="IDСеанса" Type="int" Nullable="true" />
-    <Property Name="Стоимость" Type="decimal" Nullable="true" Precision="19" Scale="4" />
+    <Property Name="Стоимость" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="Фильмы">
     <Key>
@@ -307,7 +307,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IDФильма" Type="Int32" />
           <Property Name="IDЗала" Type="Int32" />
-          <Property Name="Дата" Type="DateTime" Precision="3" />
+          <Property Name="Дата" Type="String" />
           <Property Name="Время" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Премьера" Type="Boolean" />
           <NavigationProperty Name="Билеты" Relationship="CinemaData.FK_Билеты_Сеансы" FromRole="Сеансы" ToRole="Билеты" />
@@ -321,7 +321,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="IDСеанса" Type="Int32" />
-          <Property Name="Стоимость" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Стоимость" Type="Int32" />
           <NavigationProperty Name="Сеансы" Relationship="CinemaData.FK_СтоимостьБилетов_Сеансы" FromRole="СтоимостьБилетов" ToRole="Сеансы" />
         </EntityType>
         <EntityType Name="Фильмы">

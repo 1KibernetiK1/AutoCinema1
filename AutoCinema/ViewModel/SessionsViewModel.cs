@@ -36,7 +36,7 @@ namespace AutoCinema.ViewModel
         public int NewHall { get; set; }
         public int NewFilm { get; set; }
         public bool NewIsFirst { get; set; }
-        public DateTime NewDate { get; set; }
+        public string NewDate { get; set; }
 
         public static int A { get; set; }
         public static int B { get; set; }
@@ -128,7 +128,6 @@ namespace AutoCinema.ViewModel
             sessions = new List<Сеансы>(cinemaData.Сеансы);
             Films = new List<Фильмы>(cinemaData.Фильмы);
             Halls = new List<Залы>(cinemaData.Залы);
-            NewDate = DateTime.Now;
         }
 
         public void SelectMethod()

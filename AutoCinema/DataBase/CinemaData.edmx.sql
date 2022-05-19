@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/14/2022 22:48:24
--- Generated from EDMX file: C:\Users\12345\Desktop\AutoCinema\AutoCinema\AutoCinema\DataBase\CinemaData.edmx
+-- Date Created: 05/19/2022 19:44:46
+-- Generated from EDMX file: C:\Users\12345\Desktop\AutoCinema\Autos\AutoCinema\AutoCinema\DataBase\CinemaData.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -17,11 +17,56 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_Билеты_Залы]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Билеты] DROP CONSTRAINT [FK_Билеты_Залы];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Билеты_Сеансы]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Билеты] DROP CONSTRAINT [FK_Билеты_Сеансы];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Бронь_Билеты]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Бронь] DROP CONSTRAINT [FK_Бронь_Билеты];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Table_1_РазмерыЗалов]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Залы] DROP CONSTRAINT [FK_Table_1_РазмерыЗалов];
+GO
+IF OBJECT_ID(N'[dbo].[FK_СтоимостьБилетов_Сеансы]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[СтоимостьБилетов] DROP CONSTRAINT [FK_СтоимостьБилетов_Сеансы];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Сеансы_Фильмы]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Сеансы] DROP CONSTRAINT [FK_Сеансы_Фильмы];
+GO
+IF OBJECT_ID(N'[dbo].[FK_СеансыЗалы]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Сеансы] DROP CONSTRAINT [FK_СеансыЗалы];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Билеты]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Билеты];
+GO
+IF OBJECT_ID(N'[dbo].[Бронь]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Бронь];
+GO
+IF OBJECT_ID(N'[dbo].[Залы]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Залы];
+GO
+IF OBJECT_ID(N'[dbo].[Пользователи]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Пользователи];
+GO
+IF OBJECT_ID(N'[dbo].[РазмерыЗалов]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[РазмерыЗалов];
+GO
+IF OBJECT_ID(N'[dbo].[Сеансы]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Сеансы];
+GO
+IF OBJECT_ID(N'[dbo].[СтоимостьБилетов]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[СтоимостьБилетов];
+GO
+IF OBJECT_ID(N'[dbo].[Фильмы]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Фильмы];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -77,7 +122,7 @@ CREATE TABLE [dbo].[Сеансы] (
     [ID] int IDENTITY(1,1) NOT NULL,
     [IDФильма] int  NULL,
     [IDЗала] int  NULL,
-    [Дата] datetime  NULL,
+    [Дата] nvarchar(max)  NULL,
     [Время] nvarchar(50)  NULL,
     [Премьера] bit  NULL,
     [Залы_ID] int  NULL
@@ -88,7 +133,7 @@ GO
 CREATE TABLE [dbo].[СтоимостьБилетов] (
     [ID] int  NOT NULL,
     [IDСеанса] int  NULL,
-    [Стоимость] decimal(19,4)  NULL
+    [Стоимость] int  NULL
 );
 GO
 

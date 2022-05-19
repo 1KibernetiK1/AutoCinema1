@@ -28,7 +28,13 @@ namespace AutoCinema.View.Windows
 
             DataContext = new BuyingTicketsViewModel();
             AllTickView = ViewAllTicket;
+            Print.DataContext = new PrintTicketViewModel();
 
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

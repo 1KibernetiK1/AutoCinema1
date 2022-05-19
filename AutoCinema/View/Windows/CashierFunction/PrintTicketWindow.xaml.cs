@@ -35,7 +35,7 @@ namespace AutoCinema.View.Windows
             f = ctx.Фильмы.FirstOrDefault(c => c.ID == ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDФильма).Название;
             r = last.Ряд.Value.ToString();
             pl = last.Место.Value.ToString();
-            d = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Дата.Value.ToShortDateString();
+            d = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Дата;
             t = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Время;
             h = ctx.Залы.FirstOrDefault(c => c.ID == ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDЗала).НомерЗала.Value.ToString();
             Сеансы lastSeans = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса);
@@ -59,5 +59,7 @@ namespace AutoCinema.View.Windows
 
             }
         }
+
+       
     }
 }

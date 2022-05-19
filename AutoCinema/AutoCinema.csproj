@@ -86,6 +86,7 @@
     <Compile Include="ViewModel\HallsViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\PricesViewModel.cs" />
+    <Compile Include="ViewModel\PrintTicketViewModel.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\SessionsViewModel.cs" />
     <Compile Include="View\Windows\AdminFunction\AddSessionWindow.xaml.cs">

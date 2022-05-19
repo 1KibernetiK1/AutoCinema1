@@ -17,7 +17,7 @@ namespace AutoCinema.Domains
 
         }
 
-        public static string AddPrice(int session, decimal price)
+        public static string AddPrice(int session, int price)
         {
             string result = "Не найдено";
             //проверяем есть ли цена
