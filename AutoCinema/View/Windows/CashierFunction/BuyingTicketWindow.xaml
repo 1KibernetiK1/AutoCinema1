@@ -62,7 +62,7 @@
                         <Button Command="{Binding DeleteTicket}">Удалить</Button>
                         <Button Command="{Binding OpenEditFilm}">Изменить</Button>
                         <Button Name="Print" Command="{Binding OpenPrintTicket}">Распечатать билет</Button>
-                        <Button>Записать в word</Button>
+                        <Button Name="excelTicket" Command="{Binding TicketExcel}">Записать в excel</Button>
                     </StackPanel>
                 </GroupBox>
             </Grid>

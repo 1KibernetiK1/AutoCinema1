@@ -20,7 +20,7 @@ namespace AutoCinema.Domains
 
        
 
-        public static string AddSession(int IDFilm, int IdHall, string date, string time, bool? NewISFirst)
+        public static string AddSession(int IDFilm, int IdHall, string date, string time, string NewISFirst)
         {
             string result = "Не найдено";
             //проверяем есть ли фильм
@@ -53,9 +53,9 @@ namespace AutoCinema.Domains
 
             CinemaDataContainer.GetContext().Сеансы.Remove(sessions);
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! сеанс " + sessions.ID + "удален";
+           
 
-            MessageBox.Show(result);
+          
 
             return result;
         }

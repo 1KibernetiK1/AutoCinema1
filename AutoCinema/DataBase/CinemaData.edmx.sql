@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/19/2022 19:44:46
+-- Date Created: 05/21/2022 20:59:12
 -- Generated from EDMX file: C:\Users\12345\Desktop\AutoCinema\Autos\AutoCinema\AutoCinema\DataBase\CinemaData.edmx
 -- --------------------------------------------------
 
@@ -124,7 +124,7 @@ CREATE TABLE [dbo].[Сеансы] (
     [IDЗала] int  NULL,
     [Дата] nvarchar(max)  NULL,
     [Время] nvarchar(50)  NULL,
-    [Премьера] bit  NULL,
+    [Премьера] nvarchar(max)  NULL,
     [Залы_ID] int  NULL
 );
 GO

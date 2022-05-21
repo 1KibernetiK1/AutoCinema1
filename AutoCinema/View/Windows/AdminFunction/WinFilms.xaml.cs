@@ -1,5 +1,7 @@
 ﻿using AutoCinema.DataBase;
 using AutoCinema.ViewModel;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,16 +17,17 @@ namespace AutoCinema.View.Windows
     {
         public static DataGrid AllFilmsView;
 
+
+
         public WinFilms()
         {
             InitializeComponent();
-
+     
             DataContext = new FilmViewModel();
             AllFilmsView = ViewAllFilms;
             Export.DataContext = new ExcelViewModel();
         }
 
-
-        
+      
     }
 }

@@ -35,6 +35,7 @@ public partial class CinemaDataContainer : DbContext
             return _context;
         }
 
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
         throw new UnintentionalCodeFirstException();

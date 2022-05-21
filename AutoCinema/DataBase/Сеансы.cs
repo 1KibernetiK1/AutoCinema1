@@ -39,7 +39,7 @@ public partial class Сеансы
 
     public string Время { get; set; }
 
-    public Nullable<bool> Премьера { get; set; }
+    public string Премьера { get; set; }
 
 
 

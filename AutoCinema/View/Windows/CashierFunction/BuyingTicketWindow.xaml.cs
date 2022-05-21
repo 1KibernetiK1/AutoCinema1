@@ -29,7 +29,7 @@ namespace AutoCinema.View.Windows
             DataContext = new BuyingTicketsViewModel();
             AllTickView = ViewAllTicket;
             Print.DataContext = new PrintTicketViewModel();
-
+            excelTicket.DataContext = new ExcelViewModel();
         }
 
       

@@ -36,7 +36,7 @@ namespace AutoCinema.ViewModel
         public string NewTime { get; set; }
         public int NewHall { get; set; }
         public int NewFilm { get; set; }
-        public bool? NewIsFirst { get; set; }
+        public string NewIsFirst { get; set; }
         public string NewDate { get; set; }
 
         public static int A { get; set; }
@@ -102,7 +102,6 @@ namespace AutoCinema.ViewModel
                     if (errors.Length > 0)
                     {
                         MessageBox.Show(errors.ToString());
-                        OpenAddSessionMethod();
                         return;
                     }
 
@@ -110,9 +109,9 @@ namespace AutoCinema.ViewModel
                     try
                     {
                         resultStr = Sessions.AddSession(NewFilm, NewHall, NewDate, NewTime, NewIsFirst);
+                        OpenSessionMethod();
                         MessageBox.Show("Информация сохранена");
-                        SetNullValuesProperties();
-                        UpdateAllDataView();
+                        
 
                     }
                     catch (Exception ex)
@@ -133,19 +132,19 @@ namespace AutoCinema.ViewModel
             Halls = new List<Залы>(cinemaData.Залы);
         }
 
-        public void SelectMethod()
-        {
-            Залы z = CinemaDataContainer.GetContext().Залы.FirstOrDefault(a => a.ID == SelectedSessions.IDЗала);
-            A = SelectedSessions.ID;
-            B = CinemaDataContainer.GetContext().РазмерыЗалов.FirstOrDefault(b => b.ID == z.IDРазмера).КоличествоРядов.Value;
-
-        }
+     
 
 
         private void OpenSessionMethod()
         {
             SessionsWindows sessions = new SessionsWindows();
             sessions.Show();
+        }
+
+        private void CloseSessionMethod()
+        {
+            SessionsWindows sessions = new SessionsWindows();
+            sessions.Hide();
         }
 
         private void OpenAddSessionMethod()
@@ -177,9 +176,9 @@ namespace AutoCinema.ViewModel
                     if (SelectedSessions != null)
                     {
                         resultStr = Sessions.DeleteSessions(SelectedSessions);
+                        OpenSessionMethod();
                         MessageBox.Show("Удаление выполнено успешно!");
-                        SetNullValuesProperties();
-                        UpdateAllDataView();
+                       
                     }
 
 
@@ -286,31 +285,9 @@ namespace AutoCinema.ViewModel
         }
 
 
-        private void SetNullValuesProperties()
-        {
-            NewFilm = 0;
-            NewHall = 0;
-            NewDate = null;
-            NewTime = null;
-            NewIsFirst = null; 
-        }
+       
 
-        private void UpdateAllDataView()
-        {
-            UpdateAllSessionView();
-        }
-
-
-
-        private void UpdateAllSessionView()
-        {
-            AllSessions = Sessions.GetAllSessions();
-
-            SessionsWindows.AllsessView.ItemsSource = null;
-            SessionsWindows.AllsessView.Items.Clear();
-            SessionsWindows.AllsessView.ItemsSource = AllSessions;
-            SessionsWindows.AllsessView.Items.Refresh();
-        }
+      
 
 
     }

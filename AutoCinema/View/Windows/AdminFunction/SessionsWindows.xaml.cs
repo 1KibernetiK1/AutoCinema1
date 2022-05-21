@@ -20,16 +20,16 @@ namespace AutoCinema.View.Windows
     /// </summary>
     public partial class SessionsWindows : Window
     {
-        private SessionsViewModel viewModel = new SessionsViewModel();
+        private SessionsViewModel sessions = new SessionsViewModel();
 
         public static DataGrid AllsessView;
 
         public SessionsWindows()
         {
             InitializeComponent();
-            DataContext = viewModel;
-            cbc1.ItemsSource = viewModel.Films;
-            cbc2.ItemsSource = viewModel.Halls;
+            DataContext = new SessionsViewModel();
+            cbc1.ItemsSource = sessions.Films;
+            cbc2.ItemsSource = sessions.Halls;
             dataGrid = AllsessView;
         }
 
@@ -38,11 +38,14 @@ namespace AutoCinema.View.Windows
 
         }
 
-      
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+            Hide();
         }
     }
 }
