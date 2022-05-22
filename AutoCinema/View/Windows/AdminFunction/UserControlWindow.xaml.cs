@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoCinema.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,16 @@ namespace AutoCinema.View.Windows
     /// </summary>
     public partial class UserControlWindow : Window
     {
+        public static DataGrid AllusersView;
+
+
         public UserControlWindow()
         {
             InitializeComponent();
+
+            DataContext = new LoginViewModel();
+            AllusersView = ViewAllUsers;
+            Export.DataContext = new ExcelViewModel();
         }
     }
 }

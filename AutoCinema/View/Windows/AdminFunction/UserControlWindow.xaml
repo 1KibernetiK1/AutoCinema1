@@ -5,8 +5,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
+        Name="Userswnd"
         Title="UserControlWindow" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="68*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <DataGrid x:Name="ViewAllUsers" ItemsSource="{Binding AllUsers}" SelectedItem="{Binding SelectedUsers}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AreRowDetailsFrozen="True" IsReadOnly="True" Grid.IsSharedSizeScope="True" FontSize="14" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Пользователь" Binding="{Binding Логин}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пароль" Binding="{Binding Пароль}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Уровень доступа" Binding="{Binding УровеньДоступа}"></DataGridTextColumn>
+
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="87*"/>
+                    <ColumnDefinition Width="168*" />
+                    <ColumnDefinition Width="5*" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="70"/>
+                    <RowDefinition Height="Auto" MinHeight="33"/>
+                    <RowDefinition Height="Auto" MinHeight="33"/>
+
+                </Grid.RowDefinitions>
+                <Label Content="Логин:" Grid.Row="0" Grid.Column="0"/>
+                <Label Content="Пароль:" Grid.Row="1" Grid.Column="0"/>
+                <Label Content="Уровень доступа:" Grid.Row="2" Grid.Column="0"/>
+                <TextBox x:Name="NameBox" Text="{Binding Login}" Margin="0,3,0,3" Grid.Row="0" Grid.Column="1"  />
+                <TextBox x:Name="GenreBox" Text="{Binding Password}" Margin="0,3,0,3" Grid.Row="1" Grid.Column="1"  />
+                <ComboBox x:Name="DurationBox" Text="{Binding AccessLevel}" Margin="0,3,0,3" Grid.Row="2" Grid.Column="1"  >
+                    <TextBlock>Администратор</TextBlock>
+                    <TextBlock>Кассир</TextBlock>
+                    <TextBlock>Пользователь</TextBlock>
+                </ComboBox>
+
+
+
+                <Button Content="Добавить" Command="{Binding AddNewUsers}" Grid.Row="6" Height="27" CommandParameter="{Binding ElementName=Userswnd}" Grid.ColumnSpan="2" Margin="88,10,0,33"/>
+
+                <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
+                    <StackPanel Background="#FF3DA7A2">
+                        <Button Command="{Binding DeleteUser}">Удалить</Button>
+                        <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                        <Button Name="Export" Command="{Binding UserExcel}">Записать в excel</Button>
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </GroupBox>
     </Grid>
 </Window>

@@ -40,7 +40,7 @@ namespace AutoCinema.View
                 {
                     Логин = LoginTextBox.Text,
                     Пароль = PasswordTextBox.Password.ToString(),
-                    УровеньДоступа = AcceptComboBox.Text
+                    УровеньДоступа = "Пользователь"
                 };
                 CinemaDataContainer.GetContext().Пользователи.Add(userObj);
                 CinemaDataContainer.GetContext().SaveChanges();

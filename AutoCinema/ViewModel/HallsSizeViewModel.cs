@@ -89,6 +89,7 @@ namespace AutoCinema.ViewModel
                         MessageBox.Show("Информация сохранена!");
                         SetNullValuesProperties();
                         UpdateAllDataView();
+                        OpenHallsizeMethod();
 
                     }
                     catch (Exception ex)
@@ -128,6 +129,7 @@ namespace AutoCinema.ViewModel
                         resultStr = Hallsize.DeleteHallSize(SelectedHallsize);
                         SetNullValuesProperties();
                         UpdateAllDataView();
+                        OpenHallsizeMethod();
                     }
 
                     //обновление
@@ -183,7 +185,16 @@ namespace AutoCinema.ViewModel
             Halls.AllHallssizeView.Items.Refresh();
         }
 
-       
+
+        private void OpenHallsizeMethod()
+        {
+            Halls halls = new Halls();
+            halls.Show();
+        }
+
+     
+
+
 
 
 

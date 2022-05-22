@@ -24,7 +24,7 @@
                 <Button x:Name="button_Copy1" Content="Залы" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" VerticalAlignment="Top" Command="{Binding OpenHall}" Width="309" Grid.ColumnSpan="2" />
                 <Button x:Name="button_Copy2" Content="Сеансы" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" VerticalAlignment="Top" Command="{Binding OpenSession}" Width="309" Grid.ColumnSpan="2" />
                 <Button x:Name="button_Copy3" Content="Цена" HorizontalAlignment="Left" Height="25" Margin="10,100,0,0" VerticalAlignment="Top" Command="{Binding OpenPrice}" Width="309" Grid.ColumnSpan="2" />
-                <Button x:Name="button_Copy4" Content="Пользователи" HorizontalAlignment="Left" Height="25" Margin="10,130,0,0" VerticalAlignment="Top" Command="{Binding OpenSession}" Width="309" Grid.ColumnSpan="2" />
+                <Button x:Name="button_Copy4" Content="Пользователи" HorizontalAlignment="Left" Height="25" Margin="10,130,0,0" VerticalAlignment="Top" Command="{Binding OpenUser}" Width="309" Grid.ColumnSpan="2" />
             </Grid>
         </TabItem>
     </TabControl>

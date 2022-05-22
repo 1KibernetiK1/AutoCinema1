@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View"
         mc:Ignorable="d"
-        Title="Регистрация" Height="170" Width="312" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Регистрация" Height="172" Width="272" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFEEF9FF">
         <Grid.RowDefinitions>
             <RowDefinition Height="25"></RowDefinition>
@@ -21,17 +21,11 @@
             <ColumnDefinition Width="auto" MinWidth="169"></ColumnDefinition>
             <ColumnDefinition Width="auto" MinWidth="19"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Content=":Логин" Grid.Column="0" Grid.Row="1" FlowDirection="RightToLeft"/>
-        <Label Content=":Пароль" Grid.Column="0" Grid.Row="2" FlowDirection="RightToLeft"/>
-        <Label Content="Уровень доступа:" Grid.Column="0" Grid.Row="3"/>
-        <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="1" />
-        <PasswordBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="2" />
-        <ComboBox Margin="0,3,0,3" x:Name="AcceptComboBox" Grid.Column="1" Grid.Row="3">
-            <TextBlock>Администратор</TextBlock>
-            <TextBlock>Кассир</TextBlock>
-            <TextBlock>Пользователь</TextBlock>
-        </ComboBox>
-        <Button Name="Button_reg" Content="Регистрация" Grid.Row="4" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click"/>
+        <Label Content=":Логин" Grid.Column="0" Grid.Row="2" FlowDirection="RightToLeft"/>
+        <Label Content=":Пароль" Grid.Column="0" Grid.Row="3" FlowDirection="RightToLeft"/>
+        <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="2" />
+        <PasswordBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="3" />
+        <Button Name="Button_reg" Content="Регистрация" Grid.Row="4" Grid.Column="1" Margin="112,10,0,-10" Click="Button_reg_Click"/>
         
     </Grid>
 </Window>
