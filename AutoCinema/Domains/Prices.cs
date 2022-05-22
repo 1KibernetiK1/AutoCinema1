@@ -54,13 +54,13 @@ namespace AutoCinema.Domains
             return result;
         }
 
-        //public static string editHall(Залы hall, int newName, РазмерыЗалов newCount)
+        //public static string editPrice(СтоимостьБилетов pricetick ,int session, int price)
         //{
         //    string result = "Такого размера не существует";
         //    MessageBox.Show(result);
-        //    Залы halls = CinemaDataContainer.GetContext().Залы.FirstOrDefault(f => f.ID == hall.ID);
-        //    halls.НомерЗала = newName;
-        //    halls.РазмерыЗалов = newCount;
+        //    СтоимостьБилетов prices = CinemaDataContainer.GetContext().СтоимостьБилетов.FirstOrDefault(f => f.ID == pricetick.ID);
+        //    prices.Сеансы = session;
+        //    prices.Стоимость = price;
 
 
         //    CinemaDataContainer.GetContext().SaveChanges();
