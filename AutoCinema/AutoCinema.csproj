@@ -97,6 +97,9 @@
     <Compile Include="View\Windows\AdminFunction\AddSessionWindow.xaml.cs">
       <DependentUpon>AddSessionWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\AdminFunction\GeneralDataWindow.xaml.cs">
+      <DependentUpon>GeneralDataWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\CashierFunction\BuyingTicketWindow.xaml.cs">
       <DependentUpon>BuyingTicketWindow.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <DependentUpon>WinFilms.xaml</DependentUpon>
     </Compile>
     <Page Include="View\Windows\AdminFunction\AddSessionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AdminFunction\GeneralDataWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

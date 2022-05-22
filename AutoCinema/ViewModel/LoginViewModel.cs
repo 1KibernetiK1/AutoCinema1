@@ -1,6 +1,7 @@
 ﻿using AutoCinema.Core;
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
+using AutoCinema.Security;
 using AutoCinema.View.Windows;
 using System;
 using System.Collections.Generic;
@@ -48,7 +49,7 @@ namespace AutoCinema.ViewModel
             Пользователи p = cinemaData.Пользователи.FirstOrDefault(u => u.Логин == Login);
             if (p != null)
             {
-                if (p.Пароль == Password)
+                if (p.Пароль == EncryptionPassword.GetHash(Password))
                 {
                     if (p.УровеньДоступа == "Администратор")
                     {

@@ -1,4 +1,5 @@
 ﻿using AutoCinema.DataBase;
+using AutoCinema.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace AutoCinema.Domains
                 Пользователи newUsers = new Пользователи
                 {
                     Логин = name,
-                    Пароль = password,
+                    Пароль = EncryptionPassword.GetHash(password),
                     УровеньДоступа = access
                 };
 
@@ -53,6 +54,8 @@ namespace AutoCinema.Domains
 
             return result;
         }
+
+
 
         //public static string editFilm(Фильмы oldFilm, string newName, string newGenre, string newDuration, int newYear, string newCountry, string newAuthors, string newDescriptions)
         //{

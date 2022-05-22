@@ -1,4 +1,5 @@
 ﻿using AutoCinema.DataBase;
+using AutoCinema.Security;
 using System;
 using System.Linq;
 using System.Windows;
@@ -13,22 +14,16 @@ namespace AutoCinema.View
         public Registration()
         {
             InitializeComponent();
+
+           
         }
 
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            if (PasswordTextBox.Password == null)
-            {
-                Button_reg.IsEnabled = false;
-            }
-            else
-            {
-                Button_reg.IsEnabled = true;
-            }
-        }
+      
 
         private void Button_reg_Click(object sender, RoutedEventArgs e)
         {
+            var tt = PasswordTextBox.Text;
+
             if (CinemaDataContainer.GetContext().Пользователи.Count(x => x.Логин == LoginTextBox.Text) > 0)
             {
                 MessageBox.Show("Пользователь с таким логином существует ", " Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
@@ -39,7 +34,7 @@ namespace AutoCinema.View
                 Пользователи userObj = new Пользователи()
                 {
                     Логин = LoginTextBox.Text,
-                    Пароль = PasswordTextBox.Password.ToString(),
+                    Пароль = EncryptionPassword.GetHash(tt),
                     УровеньДоступа = "Пользователь"
                 };
                 CinemaDataContainer.GetContext().Пользователи.Add(userObj);

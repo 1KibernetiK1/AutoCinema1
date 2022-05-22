@@ -2,6 +2,7 @@
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.AdminFunction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -119,7 +120,7 @@ namespace AutoCinema.ViewModel
         //}
 
 
-
+     
 
 
         private RelayCommand deleteHall;
@@ -227,6 +228,28 @@ namespace AutoCinema.ViewModel
 
             }
             set { openHall = value; }
+        }
+
+        private void OpenGenaralDataMethod()
+        {
+            GeneralDataWindow generalData = new GeneralDataWindow();
+            generalData.Show();
+        }
+
+        private RelayCommand openGen;
+        public RelayCommand OpenGen
+        {
+            get
+            {
+                return openGen ?? new RelayCommand(obj =>
+                {
+
+                    OpenGenaralDataMethod();
+                }
+                    );
+
+            }
+            set { openGen = value; }
         }
 
 

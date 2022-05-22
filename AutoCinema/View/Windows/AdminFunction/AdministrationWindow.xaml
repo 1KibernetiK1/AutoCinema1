@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema"
         mc:Ignorable="d"
-        Title="Окно Администратора" Height="225" Width="362.182" Closed="Window_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Окно Администратора" Height="285" Width="362.182" Closed="Window_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
 
     <TabControl x:Name="tabControl" >
         <TabControl.Background>
@@ -25,6 +25,7 @@
                 <Button x:Name="button_Copy2" Content="Сеансы" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" VerticalAlignment="Top" Command="{Binding OpenSession}" Width="309" Grid.ColumnSpan="2" />
                 <Button x:Name="button_Copy3" Content="Цена" HorizontalAlignment="Left" Height="25" Margin="10,100,0,0" VerticalAlignment="Top" Command="{Binding OpenPrice}" Width="309" Grid.ColumnSpan="2" />
                 <Button x:Name="button_Copy4" Content="Пользователи" HorizontalAlignment="Left" Height="25" Margin="10,130,0,0" VerticalAlignment="Top" Command="{Binding OpenUser}" Width="309" Grid.ColumnSpan="2" />
+                <Button x:Name="button_Copy5" Content="Обшие сведения" HorizontalAlignment="Left" Height="25" Margin="10,160,0,0" VerticalAlignment="Top" Command="{Binding OpenGen}" Width="309" Grid.ColumnSpan="2" />
             </Grid>
         </TabItem>
     </TabControl>

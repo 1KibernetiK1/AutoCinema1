@@ -42,7 +42,14 @@
                 <ComboBox Margin="0,3,0,3"  SelectedValue="{Binding Path=session}" DisplayMemberPath="ID" SelectedValuePath="ID" ItemsSource="{Binding Seansi}" Grid.Row="0" Grid.Column="1"  />
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewPrice}" Grid.Row="1" Grid.Column="1" />
 
-                <Button Content="Добавить" Grid.Column="1" Grid.Row="3"  Height="27" VerticalAlignment="Bottom" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}"/>
+                <Button Content="Добавить" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}" Margin="0,10,0,0"/>
+
+                <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="0,50,0,10">
+                    <StackPanel Height="35">
+                        <Button Command="{Binding DeletePrice}">Удалить</Button>
+                        <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                    </StackPanel>
+                </GroupBox>
             </Grid>
         </GroupBox>
     </Grid>
