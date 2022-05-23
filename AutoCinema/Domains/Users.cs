@@ -1,10 +1,7 @@
 ﻿using AutoCinema.DataBase;
 using AutoCinema.Security;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AutoCinema.Domains
 {
@@ -57,21 +54,17 @@ namespace AutoCinema.Domains
 
 
 
-        //public static string editFilm(Фильмы oldFilm, string newName, string newGenre, string newDuration, int newYear, string newCountry, string newAuthors, string newDescriptions)
-        //{
-        //    string result = "Такого фильма не существует";
-        //    Фильмы Film = CinemaDataContainer.GetContext().Фильмы.FirstOrDefault(f => f.ID == oldFilm.ID);
-        //    Film.Название = newName;
-        //    Film.Жанр = newGenre;
-        //    Film.Длительность = newDuration;
-        //    Film.Год = newYear;
-        //    Film.Страна = newCountry;
-        //    Film.Авторы = newAuthors;
-        //    Film.Описание = newDescriptions;
-        //    CinemaDataContainer.GetContext().SaveChanges();
-        //    result = "Сделано! Фильм " + Film.Название + "изменен";
+        public static string editUser(Пользователи oldUsers, string name, string password, string access)
+        {
+            string result = "Такого фильма не существует";
+            Пользователи Users = CinemaDataContainer.GetContext().Пользователи.FirstOrDefault(f => f.ID == oldUsers.ID);
+            Users.Логин = name;
+            Users.Пароль = EncryptionPassword.GetHash(password);
+            Users.УровеньДоступа = access;
+            CinemaDataContainer.GetContext().SaveChanges();
+            result = "Сделано! Пользователь " + Users.Логин + " изменен";
 
-        //    return result;
-        //}
+            return result;
+        }
     }
 }

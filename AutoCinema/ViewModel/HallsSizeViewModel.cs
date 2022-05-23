@@ -139,12 +139,12 @@ namespace AutoCinema.ViewModel
             set { deleteHallSize = value; }
         }
 
-        private RelayCommand editHall;
-        public RelayCommand EditHall
+        private RelayCommand editHallSize;
+        public RelayCommand EditHallSize
         {
             get
             {
-                return editHall ?? new RelayCommand(obj =>
+                return editHallSize ?? new RelayCommand(obj =>
                 {
                     Window window = new Window();
                     string resultStr = "Не выбран сотрудник";
@@ -192,32 +192,39 @@ namespace AutoCinema.ViewModel
             halls.Show();
         }
 
+
+
+
+
+
+
      
+        private void OpenEditHallSizeMethod(РазмерыЗалов _hallsize)
+        {
+            EditHallSize editHallSize = new EditHallSize(_hallsize);
+            editHallSize.Show();
+        }
 
+        private RelayCommand openeditHallSize;
+        public RelayCommand OpenEditHallSize
+        {
+            get
+            {
+                return openeditHallSize ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "Ничего не выбрано";
+                    // если фильмы
+                    if (SelectedHallsize != null)
+                    {
+                        OpenEditHallSizeMethod(SelectedHallsize);
+                    }
 
+                }
+                    );
 
-
-
-        //private RelayCommand openeditHall;
-        //public RelayCommand OpenEditHall
-        //{
-        //    get
-        //    {
-        //        return openeditHall ?? new RelayCommand(obj =>
-        //        {
-        //            string resultStr = "Ничего не выбрано";
-        //            // если фильмы
-        //            if (SelectedHall != null)
-        //            {
-        //                OpenEditFilmMethod(SelectedFilm);
-        //            }
-
-        //        }
-        //            );
-
-        //    }
-        //    set { openeditHall = value; }
-        //}
+            }
+            set { openeditHallSize = value; }
+        }
 
 
 

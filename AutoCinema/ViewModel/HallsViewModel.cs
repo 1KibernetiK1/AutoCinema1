@@ -53,9 +53,9 @@ namespace AutoCinema.ViewModel
         }
 
         #region PROPERTY FOR HALLS
-        public int NewNumber { get; set; }
+        public static int NewNumber { get; set; }
 
-        public string NewSize { get; set; }
+        public static string NewSize { get; set; }
         #endregion
 
 
@@ -120,7 +120,7 @@ namespace AutoCinema.ViewModel
         //}
 
 
-     
+
 
 
         private RelayCommand deleteHall;
@@ -139,7 +139,7 @@ namespace AutoCinema.ViewModel
                         UpdateAllDataView();
                     }
 
-                 
+
 
                 }
           );
@@ -147,28 +147,26 @@ namespace AutoCinema.ViewModel
             set { deleteHall = value; }
         }
 
-        //private RelayCommand editHall;
-        //public RelayCommand EditHall
-        //{
-        //    get
-        //    {
-        //        return editHall ?? new RelayCommand(obj =>
-        //        {
-        //            Window window = new Window();
-        //            string resultStr = "Не выбран сотрудник";
-        //            if (SelectedHall != null)
-        //            {
-        //                resultStr = HallsD.editHall(SelectedHall, NewName, NewNumber);
+        private RelayCommand editHall;
+        public RelayCommand EditHall
+        {
+            get
+            {
+                return editHall ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "Не выбран сотрудник";
+                    if (SelectedHall != null)
+                    {
+                        resultStr = HallsD.editHall(SelectedHall, NewNumber, NewSize);
 
-        //                UpdateAllDataView();
-        //                SetNullValuesProperties();
-        //                MessageBox.Show(resultStr);
-        //                window.Close();
-        //            }
-        //            else MessageBox.Show(resultStr);
-        //        });
-        //    }
-        //}
+                        UpdateAllDataView();
+                        SetNullValuesProperties();
+                        MessageBox.Show(resultStr);
+                    }
+                    else MessageBox.Show(resultStr);
+                });
+            }
+        }
 
         private void SetNullValuesProperties()
         {
@@ -193,26 +191,6 @@ namespace AutoCinema.ViewModel
             Halls.AllHallsView.Items.Refresh();
         }
 
-        //private RelayCommand openeditHall;
-        //public RelayCommand OpenEditHall
-        //{
-        //    get
-        //    {
-        //        return openeditHall ?? new RelayCommand(obj =>
-        //        {
-        //            string resultStr = "Ничего не выбрано";
-        //            // если фильмы
-        //            if (SelectedHall != null)
-        //            {
-        //                OpenEditFilmMethod(SelectedFilm);
-        //            }
-
-        //        }
-        //            );
-
-        //    }
-        //    set { openeditHall = value; }
-        //}
 
         private RelayCommand openHall;
         public RelayCommand OpenHall
@@ -250,6 +228,34 @@ namespace AutoCinema.ViewModel
 
             }
             set { openGen = value; }
+        }
+
+
+
+        private void OpenEditHallsMethod(Залы _halls)
+        {
+            EditHalls editFilm = new EditHalls(_halls);
+            editFilm.Show();
+        }
+
+        private RelayCommand openeditHalls;
+        public RelayCommand OpenEditHalls
+        {
+            get
+            {
+                return openeditHalls ?? new RelayCommand(obj =>
+                {
+                    // если фильмы
+                    if (SelectedHall != null)
+                    {
+                        OpenEditHallsMethod(SelectedHall);
+                    }
+
+                }
+                    );
+
+            }
+            set { openeditHalls = value; }
         }
 
 

@@ -2,6 +2,7 @@
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.AdminFunction.Editing;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,11 +42,11 @@ namespace AutoCinema.ViewModel
         public List<Сеансы> NewSess1 { get; set; }
         public List<Залы> Newhall1 { get; set; }
 
-        public int NewHall { get; set; }
-        public int NewSession { get; set; }
-        public int SelectedRow { get; set; }
-        public int SelectedPlace { get; set; }
-        public int SeansID { get; set; }
+        public static int NewHall { get; set; }
+        public static int NewSession { get; set; }
+        public static int SelectedRow { get; set; }
+        public static int SelectedPlace { get; set; }
+        public static int SeansID { get; set; }
 
         public BuyingTicketsViewModel()
         {
@@ -113,11 +114,11 @@ namespace AutoCinema.ViewModel
             winTick.Show();
         }
 
-        //private void OpenEditFilmMethod(Фильмы films)
-        //{
-        //    EditFilm editFilm = new EditFilm(films);
-        //    editFilm.Show();
-        //}
+        private void OpenEditTicketMethod(Билеты _tickets)
+        {
+            EditTicket editTicket = new EditTicket(_tickets);
+            editTicket.Show();
+        }
 
 
         public static Билеты SelectedTicket { get; set; }
@@ -145,28 +146,25 @@ namespace AutoCinema.ViewModel
             set { deleteTicket = value; }
         }
 
-        //private RelayCommand editFilm;
-        //public RelayCommand EditFilm
-        //{
-        //    get
-        //    {
-        //        return editFilm ?? new RelayCommand(obj =>
-        //        {
-        //            Window window = new Window();
-        //            string resultStr = "Не выбран сотрудник";
-        //            if (SelectedFilm != null)
-        //            {
-        //                resultStr = Films.editFilm(SelectedFilm, FilmName, FilmGenre, FilmDuration, FilmYear, FilmCountry, FilmAuthors, FilmDescriptions);
+        private RelayCommand editTicket;
+        public RelayCommand EditTicket
+        {
+            get
+            {
+                return editTicket ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "Не выбран сотрудник";
+                    if (SelectedTicket != null)
+                    {
+                        resultStr = Tickets.editTicket(SelectedTicket, NewSession, NewHall, SelectedRow, SelectedPlace);
 
-        //                UpdateAllDataView();
-        //                SetNullValuesProperties();
-        //                MessageBox.Show(resultStr);
-        //                window.Close();
-        //            }
-        //            else MessageBox.Show(resultStr);
-        //        });
-        //    }
-        //}
+                        UpdateAllDataView();
+                        SetNullValuesProperties();
+                    }
+                    else MessageBox.Show(resultStr);
+                });
+            }
+        }
 
         private void SetNullValuesProperties()
         {
@@ -191,26 +189,7 @@ namespace AutoCinema.ViewModel
             BuyingTicketWindow.AllTickView.Items.Refresh();
         }
 
-        //private RelayCommand openeditFilm;
-        //public RelayCommand OpenEditFilm
-        //{
-        //    get
-        //    {
-        //        return openeditFilm ?? new RelayCommand(obj =>
-        //        {
-        //            string resultStr = "Ничего не выбрано";
-        //            // если фильмы
-        //            if (SelectedFilm != null)
-        //            {
-        //                OpenEditFilmMethod(SelectedFilm);
-        //            }
 
-        //        }
-        //            );
-
-        //    }
-        //    set { openeditFilm = value; }
-        //}
 
         private RelayCommand openTicket;
         public RelayCommand OpenTicket
@@ -226,6 +205,29 @@ namespace AutoCinema.ViewModel
 
             }
             set { openTicket = value; }
+        }
+
+
+
+        private RelayCommand openeditTicket;
+        public RelayCommand OpenEditTicket
+        {
+            get
+            {
+                return openeditTicket ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "Ничего не выбрано";
+                    // если фильмы
+                    if (SelectedTicket != null)
+                    {
+                        OpenEditTicketMethod(SelectedTicket);
+                    }
+
+                }
+                    );
+
+            }
+            set { openeditTicket = value; }
         }
 
     }

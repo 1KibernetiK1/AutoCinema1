@@ -53,13 +53,14 @@ namespace AutoCinema.Domains
             return result;
         }
 
-        public static string editHall(Залы hall, int newName, РазмерыЗалов newCount)
+        public static string editHall(Залы hall, int newName, string count)
         {
             string result = "Такого размера не существует";
             MessageBox.Show(result);
             Залы halls = CinemaDataContainer.GetContext().Залы.FirstOrDefault(f => f.ID == hall.ID);
             halls.НомерЗала = newName;
-            halls.РазмерыЗалов = newCount;
+            halls.РазмерыЗалов = CinemaDataContainer.GetContext().РазмерыЗалов.FirstOrDefault(a => a.Наименование == count);
+            halls.IDРазмера = CinemaDataContainer.GetContext().РазмерыЗалов.FirstOrDefault(a => a.Наименование == count).ID;
 
 
             CinemaDataContainer.GetContext().SaveChanges();

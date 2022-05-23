@@ -1,9 +1,6 @@
 ﻿using AutoCinema.DataBase;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace AutoCinema.Domains
@@ -49,7 +46,7 @@ namespace AutoCinema.Domains
         {
             string result = "Такого билета не существует";
 
-          
+
 
             CinemaDataContainer.GetContext().Билеты.Remove(Tickets);
             CinemaDataContainer.GetContext().SaveChanges();
@@ -60,21 +57,24 @@ namespace AutoCinema.Domains
             return result;
         }
 
-        //public static string editHall(Залы hall, int newName, РазмерыЗалов newCount)
-        //{
-        //    string result = "Такого размера не существует";
-        //    MessageBox.Show(result);
-        //    Залы halls = CinemaDataContainer.GetContext().Залы.FirstOrDefault(f => f.ID == hall.ID);
-        //    halls.НомерЗала = newName;
-        //    halls.РазмерыЗалов = newCount;
+        public static string editTicket(Билеты Newtickets, int NewIDSession, int NewIdHall, int NewRow, int Newplace)
+        {
+            string result = "Такого размера не существует";
+            MessageBox.Show(result);
+            Билеты tickets = CinemaDataContainer.GetContext().Билеты.FirstOrDefault(f => f.ID == Newtickets.ID);
+            tickets.IDСеанса = NewIDSession;
+            tickets.IDЗала = NewIdHall;
+            tickets.Ряд = NewRow;
+            tickets.Место = Newplace;
+            tickets.Бронь = false;
 
 
-        //    CinemaDataContainer.GetContext().SaveChanges();
-        //    result = "Сделано! размер зала " + halls.НомерЗала + "изменен";
+            CinemaDataContainer.GetContext().SaveChanges();
+            result = "Сделано! размер зала " + tickets.ID + " изменен";
 
-        //    MessageBox.Show(result);
+            MessageBox.Show(result);
 
-        //    return result;
-        //}
+            return result;
+        }
     }
 }

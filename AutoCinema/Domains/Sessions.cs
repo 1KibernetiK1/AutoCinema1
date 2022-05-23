@@ -1,9 +1,6 @@
 ﻿using AutoCinema.DataBase;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace AutoCinema.Domains
@@ -18,7 +15,7 @@ namespace AutoCinema.Domains
 
         }
 
-       
+
 
         public static string AddSession(int IDFilm, int IdHall, string date, string time, string NewISFirst)
         {
@@ -49,32 +46,35 @@ namespace AutoCinema.Domains
         {
             string result = "Такого сеанса не существует";
 
-          
+
 
             CinemaDataContainer.GetContext().Сеансы.Remove(sessions);
             CinemaDataContainer.GetContext().SaveChanges();
-           
 
-          
+
+
 
             return result;
         }
 
-        //public static string editHall(Залы hall, int newName, РазмерыЗалов newCount)
-        //{
-        //    string result = "Такого размера не существует";
-        //    MessageBox.Show(result);
-        //    Залы halls = CinemaDataContainer.GetContext().Залы.FirstOrDefault(f => f.ID == hall.ID);
-        //    halls.НомерЗала = newName;
-        //    halls.РазмерыЗалов = newCount;
+        public static string editSession(Сеансы sessions, int NewIDFilm, int NewIdHall, string Newdate, string Newtime, string NewNewISFirst)
+        {
+            string result = "Такого размера не существует";
+            MessageBox.Show(result);
+            Сеансы Session = CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(f => f.ID == sessions.ID);
+            Session.IDФильма = NewIDFilm;
+            Session.IDЗала = NewIdHall;
+            Session.Дата = Newdate;
+            Session.Время = Newtime;
+            Session.Премьера = NewNewISFirst;
 
 
-        //    CinemaDataContainer.GetContext().SaveChanges();
-        //    result = "Сделано! размер зала " + halls.НомерЗала + "изменен";
+            CinemaDataContainer.GetContext().SaveChanges();
+            result = "Сделано! Сеанс " + Session.ID + "изменен";
 
-        //    MessageBox.Show(result);
+            MessageBox.Show(result);
 
-        //    return result;
-        //}
+            return result;
+        }
     }
 }

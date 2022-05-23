@@ -15,10 +15,10 @@ namespace AutoCinema.View
         {
             InitializeComponent();
 
-           
+
         }
 
-      
+
 
         private void Button_reg_Click(object sender, RoutedEventArgs e)
         {

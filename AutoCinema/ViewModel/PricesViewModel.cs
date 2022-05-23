@@ -2,6 +2,7 @@
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.AdminFunction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,8 +38,8 @@ namespace AutoCinema.ViewModel
         }
 
         #region PROPERTY FOR HALLS
-        public int NewPrice { get; set; }
-        public int session { get; set; }
+        public static int NewPrice { get; set; }
+        public static int session { get; set; }
         public static Сеансы SelectedSeans { get; set; }
 
         public static СтоимостьБилетов Selectedprice { get; set; }
@@ -137,28 +138,28 @@ namespace AutoCinema.ViewModel
             set { deletePrice = value; }
         }
 
-        //private RelayCommand editHall;
-        //public RelayCommand EditHall
-        //{
-        //    get
-        //    {
-        //        return editHall ?? new RelayCommand(obj =>
-        //        {
-        //            Window window = new Window();
-        //            string resultStr = "Не выбран сотрудник";
-        //            if (SelectedHall != null)
-        //            {
-        //                resultStr = HallsD.editHall(SelectedHall, NewName, NewNumber);
+        private RelayCommand editPrice;
+        public RelayCommand EditPrice
+        {
+            get
+            {
+                return editPrice ?? new RelayCommand(obj =>
+                {
+                    Window window = new Window();
+                    string resultStr = "Не выбран сотрудник";
+                    if (Selectedprice != null)
+                    {
+                        resultStr = Prices.editPrice(Selectedprice, session, NewPrice);
 
-        //                UpdateAllDataView();
-        //                SetNullValuesProperties();
-        //                MessageBox.Show(resultStr);
-        //                window.Close();
-        //            }
-        //            else MessageBox.Show(resultStr);
-        //        });
-        //    }
-        //}
+                        UpdateAllPriceView();
+                        SetNullValuesProperties();
+                        MessageBox.Show(resultStr);
+                        window.Close();
+                    }
+                    else MessageBox.Show(resultStr);
+                });
+            }
+        }
 
         private void SetNullValuesProperties()
         {
@@ -166,7 +167,7 @@ namespace AutoCinema.ViewModel
             NewPrice = 0;
         }
 
-       
+
 
 
 
@@ -180,26 +181,7 @@ namespace AutoCinema.ViewModel
             PriceTicketsWindow.AllPriceView.Items.Refresh();
         }
 
-        //private RelayCommand openeditHall;
-        //public RelayCommand OpenEditHall
-        //{
-        //    get
-        //    {
-        //        return openeditHall ?? new RelayCommand(obj =>
-        //        {
-        //            string resultStr = "Ничего не выбрано";
-        //            // если фильмы
-        //            if (SelectedHall != null)
-        //            {
-        //                OpenEditFilmMethod(SelectedFilm);
-        //            }
 
-        //        }
-        //            );
-
-        //    }
-        //    set { openeditHall = value; }
-        //}
 
         private void OpenPriceMethod()
         {
@@ -223,6 +205,32 @@ namespace AutoCinema.ViewModel
             set { openPrice = value; }
         }
 
+        private void OpenEditPriceMethod(СтоимостьБилетов _prices)
+        {
+            EditPrice editFilm = new EditPrice(_prices);
+            editFilm.Show();
+        }
+
+        private RelayCommand openeditPrice;
+        public RelayCommand OpenEditPrice
+        {
+            get
+            {
+                return openeditPrice ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "Ничего не выбрано";
+                    // если фильмы
+                    if (Selectedprice != null)
+                    {
+                        OpenEditPriceMethod(Selectedprice);
+                    }
+
+                }
+                    );
+
+            }
+            set { openeditPrice = value; }
+        }
 
         public void Dispose()
         {

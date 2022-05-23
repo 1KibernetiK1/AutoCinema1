@@ -1,6 +1,5 @@
 ﻿using AutoCinema.ViewModel;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace AutoCinema
 {
@@ -23,7 +22,7 @@ namespace AutoCinema
             button_Copy5.DataContext = new HallsViewModel();
         }
 
-      
+
 
         private void Window_Closed(object sender, System.EventArgs e)
         {

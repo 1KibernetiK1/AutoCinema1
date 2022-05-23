@@ -1,0 +1,38 @@
+﻿<Window x:Class="AutoCinema.View.Windows.AdminFunction.Editing.EditTicket"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCinema.View.Windows.AdminFunction.Editing"
+        mc:Ignorable="d"
+        Name="EditTicketWnd"
+        Title="EditFilm" Height="164" Width="298" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#FFEEF9FF" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"></RowDefinition>
+            <RowDefinition Height="26"></RowDefinition>
+            <RowDefinition Height="26"></RowDefinition>
+            <RowDefinition Height="26"></RowDefinition>
+            <RowDefinition Height="26"></RowDefinition>
+         
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="Auto" MinWidth="169"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MinWidth="19"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="Сеанс:" Grid.Row="0" Grid.Column="0"/>
+        <Label Content="Зал:" Grid.Row="1" Grid.Column="0"/>
+        <Label Content="Ряд:" Grid.Row="2" Grid.Column="0"/>
+        <Label Content="Место:" Grid.Row="3" Grid.Column="0"/>
+        <ComboBox Name="ses" Margin="0,3,0,3" SelectedValue="{Binding Path=NewSession}" DisplayMemberPath="ID" SelectedValuePath="ID" ItemsSource="{Binding NewSess1}"  Grid.Row="0" Grid.Column="1"  />
+        <ComboBox Name="hall" Margin="0,3,0,3" SelectedValue="{Binding Path=NewHall}" DisplayMemberPath="НомерЗала" SelectedValuePath="ID" ItemsSource="{Binding Newhall1}" Grid.Row="1" Grid.Column="1"  />
+        <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedRow}" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedPlace}" Grid.Row="3" Grid.Column="1"/>
+
+        <Button Name="Button_reg" Command="{Binding EditTicket}" CommandParameter="{Binding ElementName=EditTicketWnd}" Content="Изменить" Grid.Row="8" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click" />
+
+    </Grid>
+</Window>

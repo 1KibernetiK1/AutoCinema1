@@ -1,0 +1,43 @@
+﻿<Window x:Class="AutoCinema.View.Windows.AdminFunction.EditUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCinema.View.Windows.AdminFunction"
+        mc:Ignorable="d"
+        Name="EditUsersWnd"
+        Title="Редактирование пользователя" Height="156" Width="362" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Background="#FFEEF9FF" HorizontalAlignment="Center" Width="289">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="70"/>
+            <RowDefinition Height="Auto" MinHeight="33"/>
+            <RowDefinition Height="Auto" MinHeight="33"/>
+
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto" MinWidth="169"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Content="Логин:" Grid.Row="0" Grid.Column="0"/>
+        <Label Content="Пароль:" Grid.Row="1" Grid.Column="0"/>
+        <Label Content="Уровень доступа:" Grid.Row="2" Grid.Column="0"/>
+        <TextBox x:Name="NameBox" Text="{Binding Login}" Margin="0,3,0,3" Grid.Row="0" Grid.Column="1"  />
+        <TextBox x:Name="GenreBox" Text="{Binding Password}" Margin="0,3,0,3" Grid.Row="1" Grid.Column="1"  />
+        <ComboBox x:Name="DurationBox" Text="{Binding AccessLevel}" Margin="0,3,0,3" Grid.Row="2" Grid.Column="1"  >
+            <TextBlock>Администратор</TextBlock>
+            <TextBlock>Кассир</TextBlock>
+            <TextBlock>Пользователь</TextBlock>
+        </ComboBox>
+
+        <Button Name="Button_reg" Command="{Binding EditUsers}" CommandParameter="{Binding ElementName=EditUsersWnd}" Content="Изменить" Grid.Row="6" Grid.Column="1" Margin="111,9,0,35" Click="Button_reg_Click" />
+
+    </Grid>
+</Window>

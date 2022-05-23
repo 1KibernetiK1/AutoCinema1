@@ -94,8 +94,17 @@
     <Compile Include="ViewModel\PrintTicketViewModel.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="ViewModel\SessionsViewModel.cs" />
-    <Compile Include="View\Windows\AdminFunction\AddSessionWindow.xaml.cs">
-      <DependentUpon>AddSessionWindow.xaml</DependentUpon>
+    <Compile Include="View\Windows\AdminFunction\Editing\EditPrice.xaml.cs">
+      <DependentUpon>EditPrice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\AdminFunction\Editing\EditSessions.xaml.cs">
+      <DependentUpon>EditSessions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\AdminFunction\Editing\EditTicket.xaml.cs">
+      <DependentUpon>EditTicket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\AdminFunction\Editing\EditUsers.xaml.cs">
+      <DependentUpon>EditUsers.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\AdminFunction\GeneralDataWindow.xaml.cs">
       <DependentUpon>GeneralDataWindow.xaml</DependentUpon>
@@ -103,7 +112,7 @@
     <Compile Include="View\Windows\CashierFunction\BuyingTicketWindow.xaml.cs">
       <DependentUpon>BuyingTicketWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Windows\AdminFunction\EditFilm.xaml.cs">
+    <Compile Include="View\Windows\AdminFunction\Editing\EditFilm.xaml.cs">
       <DependentUpon>EditFilm.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Windows\AdminFunction\Halls.xaml.cs">
@@ -121,6 +130,15 @@
     <Compile Include="View\Windows\CashierFunction\PrintTicketWindow.xaml.cs">
       <DependentUpon>PrintTicketWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Windows\AdminFunction\Editing\EditHalls.xaml.cs">
+      <DependentUpon>EditHalls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\AdminFunction\Editing\EditHallSize.xaml.cs">
+      <DependentUpon>EditHallSize.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Windows\CashierFunction\ReservationWindow.xaml.cs">
+      <DependentUpon>ReservationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
@@ -136,7 +154,19 @@
     <Compile Include="View\Windows\AdminFunction\WinFilms.xaml.cs">
       <DependentUpon>WinFilms.xaml</DependentUpon>
     </Compile>
-    <Page Include="View\Windows\AdminFunction\AddSessionWindow.xaml">
+    <Page Include="View\Windows\AdminFunction\Editing\EditPrice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AdminFunction\Editing\EditSessions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AdminFunction\Editing\EditTicket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AdminFunction\Editing\EditUsers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,7 +178,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Windows\AdminFunction\EditFilm.xaml">
+    <Page Include="View\Windows\AdminFunction\Editing\EditFilm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,6 +195,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Windows\CashierFunction\InfoAboutSessionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AdminFunction\Editing\EditHalls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\AdminFunction\Editing\EditHallSize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Windows\CashierFunction\ReservationWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

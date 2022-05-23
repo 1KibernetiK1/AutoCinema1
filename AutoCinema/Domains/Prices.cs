@@ -54,22 +54,22 @@ namespace AutoCinema.Domains
             return result;
         }
 
-        //public static string editPrice(СтоимостьБилетов pricetick ,int session, int price)
-        //{
-        //    string result = "Такого размера не существует";
-        //    MessageBox.Show(result);
-        //    СтоимостьБилетов prices = CinemaDataContainer.GetContext().СтоимостьБилетов.FirstOrDefault(f => f.ID == pricetick.ID);
-        //    prices.Сеансы = session;
-        //    prices.Стоимость = price;
+        public static string editPrice(СтоимостьБилетов pricetick, int session, int price)
+        {
+            string result = "Такого размера не существует";
+            MessageBox.Show(result);
+            СтоимостьБилетов prices = CinemaDataContainer.GetContext().СтоимостьБилетов.FirstOrDefault(f => f.ID == pricetick.ID);
+            prices.IDСеанса = session;
+            prices.Стоимость = price;
 
 
-        //    CinemaDataContainer.GetContext().SaveChanges();
-        //    result = "Сделано! размер зала " + halls.НомерЗала + "изменен";
+            CinemaDataContainer.GetContext().SaveChanges();
+            result = "Сделано! Стоимость изменена " + pricetick.Стоимость + "изменен";
 
-        //    MessageBox.Show(result);
+            MessageBox.Show(result);
 
-        //    return result;
-        //}
+            return result;
+        }
     }
 }
 

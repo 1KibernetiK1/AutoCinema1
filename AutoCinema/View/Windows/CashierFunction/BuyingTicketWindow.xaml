@@ -60,7 +60,7 @@
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteTicket}">Удалить</Button>
-                        <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                        <Button Command="{Binding OpenEditTicket}">Изменить</Button>
                         <Button Name="Print" Command="{Binding OpenPrintTicket}">Распечатать билет</Button>
                         <Button Name="excelTicket" Command="{Binding TicketExcel}">Записать в excel</Button>
                     </StackPanel>

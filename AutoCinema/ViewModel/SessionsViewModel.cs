@@ -2,11 +2,11 @@
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.AdminFunction;
 using AutoCinema.View.Windows.CashierFunction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Text;
 using System.Windows;
 
@@ -33,11 +33,11 @@ namespace AutoCinema.ViewModel
 
 
         #region PROPERTY FOR HALLS
-        public string NewTime { get; set; }
-        public int NewHall { get; set; }
-        public int NewFilm { get; set; }
-        public string NewIsFirst { get; set; }
-        public string NewDate { get; set; }
+        public static string NewTime { get; set; }
+        public static int NewHall { get; set; }
+        public static int NewFilm { get; set; }
+        public static string NewIsFirst { get; set; }
+        public static string NewDate { get; set; }
 
         public static int A { get; set; }
         public static int B { get; set; }
@@ -76,7 +76,7 @@ namespace AutoCinema.ViewModel
 
         public static Сеансы SelectedSessions { get; set; }
 
- 
+
 
 
 
@@ -111,7 +111,7 @@ namespace AutoCinema.ViewModel
                         resultStr = Sessions.AddSession(NewFilm, NewHall, NewDate, NewTime, NewIsFirst);
                         OpenSessionMethod();
                         MessageBox.Show("Информация сохранена");
-                        
+
 
                     }
                     catch (Exception ex)
@@ -132,7 +132,7 @@ namespace AutoCinema.ViewModel
             Halls = new List<Залы>(cinemaData.Залы);
         }
 
-     
+
 
 
         private void OpenSessionMethod()
@@ -147,11 +147,7 @@ namespace AutoCinema.ViewModel
             sessions.Hide();
         }
 
-        private void OpenAddSessionMethod()
-        {
-            AddSessionWindow AddSessions = new AddSessionWindow();
-            AddSessions.Show();
-        }
+
 
         private void OpenInfoSessionMethod()
         {
@@ -178,7 +174,7 @@ namespace AutoCinema.ViewModel
                         resultStr = Sessions.DeleteSessions(SelectedSessions);
                         OpenSessionMethod();
                         MessageBox.Show("Удаление выполнено успешно!");
-                       
+
                     }
 
 
@@ -188,52 +184,7 @@ namespace AutoCinema.ViewModel
             set { deleteSession = value; }
         }
 
-        //private RelayCommand editHall;
-        //public RelayCommand EditHall
-        //{
-        //    get
-        //    {
-        //        return editHall ?? new RelayCommand(obj =>
-        //        {
-        //            Window window = new Window();
-        //            string resultStr = "Не выбран сотрудник";
-        //            if (SelectedHall != null)
-        //            {
-        //                resultStr = HallsD.editHall(SelectedHall, NewName, NewNumber);
 
-        //                UpdateAllDataView();
-        //                SetNullValuesProperties();
-        //                MessageBox.Show(resultStr);
-        //                window.Close();
-        //            }
-        //            else MessageBox.Show(resultStr);
-        //        });
-        //    }
-        //}
-
-
-
-
-        //private RelayCommand openeditHall;
-        //public RelayCommand OpenEditHall
-        //{
-        //    get
-        //    {
-        //        return openeditHall ?? new RelayCommand(obj =>
-        //        {
-        //            string resultStr = "Ничего не выбрано";
-        //            // если фильмы
-        //            if (SelectedHall != null)
-        //            {
-        //                OpenEditFilmMethod(SelectedFilm);
-        //            }
-
-        //        }
-        //            );
-
-        //    }
-        //    set { openeditHall = value; }
-        //}
 
         private RelayCommand openSession;
         public RelayCommand OpenSession
@@ -251,22 +202,7 @@ namespace AutoCinema.ViewModel
             set { openSession = value; }
         }
 
-        private RelayCommand openAddSession;
-        public RelayCommand OpenAddSession
-        {
-            get
-            {
-                return openAddSession ?? new RelayCommand(obj =>
-                {
 
-                    OpenAddSessionMethod();
-
-                }
-                    );
-
-            }
-            set { openAddSession = value; }
-        }
 
         private RelayCommand openInfoSession;
         public RelayCommand OpenInfoSession
@@ -284,10 +220,56 @@ namespace AutoCinema.ViewModel
             set { openInfoSession = value; }
         }
 
+        private RelayCommand editSession;
+        public RelayCommand EditSession
+        {
+            get
+            {
+                return editSession ?? new RelayCommand(obj =>
+                {
 
-       
+                    string resultStr = "Не выбран сотрудник";
 
-      
+                    if (SelectedSessions != null)
+                    {
+                        resultStr = Sessions.editSession(SelectedSessions, NewFilm, NewHall, NewDate, NewTime, NewIsFirst);
+                        OpenSessionMethod();
+
+                    }
+
+                    else MessageBox.Show(resultStr);
+                });
+            }
+        }
+
+
+
+
+        private void OpenEditSessionMethod(Сеансы _sessions)
+        {
+            EditSessions editSessions = new EditSessions(_sessions);
+            editSessions.Show();
+        }
+
+        private RelayCommand openeditSession;
+        public RelayCommand OpenEditSession
+        {
+            get
+            {
+                return openeditSession ?? new RelayCommand(obj =>
+                {
+
+                    if (SelectedSessions != null)
+                    {
+                        OpenEditSessionMethod(SelectedSessions);
+                    }
+
+                }
+                    );
+
+            }
+            set { openeditSession = value; }
+        }
 
 
     }

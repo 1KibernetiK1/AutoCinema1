@@ -47,7 +47,7 @@
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="0,50,0,10">
                     <StackPanel Height="35">
                         <Button Command="{Binding DeletePrice}">Удалить</Button>
-                        <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                        <Button Command="{Binding OpenEditPrice}">Изменить</Button>
                     </StackPanel>
                 </GroupBox>
             </Grid>

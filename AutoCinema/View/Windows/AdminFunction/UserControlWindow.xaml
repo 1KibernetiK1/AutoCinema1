@@ -64,7 +64,7 @@
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteUser}">Удалить</Button>
-                        <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                        <Button Command="{Binding OpenEditUsers}">Изменить</Button>
                         <Button Name="Export" Command="{Binding UserExcel}">Записать в excel</Button>
                     </StackPanel>
                 </GroupBox>

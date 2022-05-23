@@ -9,7 +9,7 @@ namespace AutoCinema.View.Windows
     /// </summary>
     public partial class Halls : Window
     {
-       
+
 
         public static DataGrid AllHallssizeView;
         public static DataGrid AllHallsView;

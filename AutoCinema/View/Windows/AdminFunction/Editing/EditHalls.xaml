@@ -1,0 +1,34 @@
+﻿<Window x:Class="AutoCinema.View.Windows.EditHalls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoCinema.View.Windows"
+        mc:Ignorable="d"
+        Name="EditHallWnd"
+        Title="EditHalls" Height="122" Width="373" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid Background="#FFEEF9FF" HorizontalAlignment="Center" Width="343">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"></RowDefinition>
+                <RowDefinition Height="26"></RowDefinition>
+                <RowDefinition Height="26"></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto" MinWidth="169"></ColumnDefinition>
+                <ColumnDefinition Width="auto" MinWidth="19"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Content="Номер:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Label Content="Размер:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <TextBox Margin="5,6,-155,0" Text="{Binding Path=NewNumber, Mode=TwoWay}" Grid.Row="0" Grid.Column="2"  />
+            <ComboBox Name="ComboSize" Margin="5,3,-155,3" Text="{Binding Path=NewSize, Mode=TwoWay}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="2" />
+
+            <Button Name="Button_reg" Command="{Binding EditHall}" CommandParameter="{Binding ElementName=EditHallWnd}" Content="Изменить" Grid.Row="2" Grid.Column="2" Margin="116,10,-155,-10" Click="Button_reg_Click" />
+
+        </Grid>
+    </Grid>
+</Window>

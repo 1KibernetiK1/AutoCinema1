@@ -1,11 +1,6 @@
-﻿using AutoCinema.DataBase;
-using AutoCinema.ViewModel;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.UI;
+﻿using AutoCinema.ViewModel;
 using System.Windows;
 using System.Windows.Controls;
-using Excel = Microsoft.Office.Interop.Excel;
 
 
 namespace AutoCinema.View.Windows
@@ -22,12 +17,12 @@ namespace AutoCinema.View.Windows
         public WinFilms()
         {
             InitializeComponent();
-     
+
             DataContext = new FilmViewModel();
             AllFilmsView = ViewAllFilms;
             Export.DataContext = new ExcelViewModel();
         }
 
-      
+
     }
 }

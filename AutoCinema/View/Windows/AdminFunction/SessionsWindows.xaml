@@ -62,7 +62,7 @@
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteSession}" Click="Button_Click_1">Удалить</Button>
-                        <Button Command="{Binding OpenEditFilm}">Изменить</Button>
+                        <Button Command="{Binding OpenEditSession}" Click="Button_Click_2">Изменить</Button>
                     </StackPanel>
                 </GroupBox>
             </Grid>

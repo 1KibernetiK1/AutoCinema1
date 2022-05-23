@@ -3,12 +3,12 @@ using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.Security;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.AdminFunction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Web.UI;
 using System.Windows;
 using System.Windows.Input;
 
@@ -19,9 +19,9 @@ namespace AutoCinema.ViewModel
         CinemaDataContainer cinemaData = CinemaDataContainer.GetContext();
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand ClickCommand { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string AccessLevel { get; set; }
+        public static string Login { get; set; }
+        public static string Password { get; set; }
+        public static string AccessLevel { get; set; }
 
         public LoginViewModel()
         {
@@ -56,14 +56,14 @@ namespace AutoCinema.ViewModel
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_admin");
                     }
-                   
+
 
                     if (p.УровеньДоступа == "Кассир")
                     {
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_cashier");
                     }
-                 
+
 
 
                     if (p.УровеньДоступа == "Пользователь")
@@ -71,7 +71,7 @@ namespace AutoCinema.ViewModel
                         AccessLevel = p.УровеньДоступа;
                         RaisePropertyChanged("Success_user");
                     }
-                  
+
 
 
 
@@ -206,8 +206,57 @@ namespace AutoCinema.ViewModel
             set { openUser = value; }
         }
 
+        private void OpenEditUsersMethod(Пользователи _users)
+        {
+            EditUsers editFilm = new EditUsers(_users);
+            editFilm.Show();
+        }
 
-      
+        private RelayCommand openeditUsers;
+        public RelayCommand OpenEditUsers
+        {
+            get
+            {
+                return openeditUsers ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "Ничего не выбрано";
+                    // если фильмы
+                    if (SelectedUsers != null)
+                    {
+                        OpenEditUsersMethod(SelectedUsers);
+                    }
+
+                }
+                    );
+
+            }
+            set { openeditUsers = value; }
+        }
+
+        private RelayCommand editUsers;
+        public RelayCommand EditUsers
+        {
+            get
+            {
+                return editUsers ?? new RelayCommand(obj =>
+                {
+
+                    string resultStr = "Не выбран сотрудник";
+                    if (SelectedUsers != null)
+                    {
+                        resultStr = Users.editUser(SelectedUsers, Login, Password, AccessLevel);
+
+                        UpdateAllUserView();
+                        SetNullValuesProperties();
+
+                    }
+                    else MessageBox.Show(resultStr);
+                });
+            }
+        }
+
+
+
 
         private void RaisePropertyChanged(string propertyName)
         {

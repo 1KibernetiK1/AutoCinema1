@@ -1,9 +1,6 @@
 ﻿using AutoCinema.DataBase;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace AutoCinema.Domains
@@ -57,20 +54,20 @@ namespace AutoCinema.Domains
             return result;
         }
 
-        //public static string editHallSize(РазмерыЗалов hallsizes, string newName, int newcount)
-        //{
-        //    string result = "Такого размера не существует";
-        //    MessageBox.Show(result, newName);
-        //    РазмерыЗалов Sizes = CinemaDataContainer.GetContext().РазмерыЗалов.FirstOrDefault(f => f.ID == hallsizes.ID);
-        //    Sizes.Наименование = newName;
-        //    Sizes.КоличествоРядов = newcount;
+        public static string editHallSize(Бронь reservasion, string newName, string newcount)
+        {
+            string result = "Такого размера не существует";
+            MessageBox.Show(result, newName);
+            Бронь reserv = CinemaDataContainer.GetContext().Бронь.FirstOrDefault(f => f.ID == reservasion.ID);
+            reserv.ФИО = newName;
+            reserv.Телефон = newcount;
 
-        //    CinemaDataContainer.GetContext().SaveChanges();
-        //    result = "Сделано! размер зала " + Sizes.Наименование + "изменен";
+            CinemaDataContainer.GetContext().SaveChanges();
+            result = "Сделано! Билет " + reserv.IDБилета + "изменен";
 
-        //    MessageBox.Show(result);
+            MessageBox.Show(result);
 
-        //    return result;
-        //}
+            return result;
+        }
     }
 }
