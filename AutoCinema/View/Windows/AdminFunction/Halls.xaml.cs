@@ -24,6 +24,8 @@ namespace AutoCinema.View.Windows
             cbc1.ItemsSource = vm.Размеры;
             ActionsForHallSize.DataContext = new HallsSizeViewModel();
             AllHallssizeView = ViewAllHallssizes;
+            ExcelHallSize.DataContext = new ExcelViewModel();
+            HallsExcel.DataContext = new ExcelViewModel();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

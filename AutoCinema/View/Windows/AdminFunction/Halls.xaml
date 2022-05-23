@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="AddNewHallswnd"
-        Title="Halls" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        Title="Halls" Height="500" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -18,14 +18,14 @@
             <RowDefinition Height="152*"/>
 
         </Grid.RowDefinitions>
-        <DataGrid x:Name="ViewAllHalls"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" >
+        <DataGrid x:Name="ViewAllHalls" IsReadOnly="True"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="0,0,21,17" Grid.RowSpan="2" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding НомерЗала, Mode=TwoWay}"    />
                 <DataGridComboBoxColumn x:Name="cbc1" Header="Размер" ItemsSource="{Binding Размеры}"  SelectedValueBinding="{Binding IDРазмера, Mode=TwoWay}" SelectedValuePath="ID"  DisplayMemberPath="Наименование" />
             </DataGrid.Columns>
 
         </DataGrid>
-        <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0">
+        <GroupBox Header="Добавить новый" Grid.Row="0" Grid.ColumnSpan="2" Margin="538,0,0,17" Grid.RowSpan="2">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="75*" />
@@ -40,15 +40,18 @@
                 </Grid.RowDefinitions>
                 <Label Content="Номер:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
                 <Label Content="Размер:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewNumber, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"  />
-                <ComboBox Name="ComboSize" Margin="0,3,0,3" Text="{Binding Path=NewSize, Mode=TwoWay}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="1" />
+                <TextBox Margin="0,3,0,3" Text="{Binding Path=NewNumber}" Grid.Row="0" Grid.Column="1"  />
+                <ComboBox Name="ComboSize" Margin="0,3,0,3" Text="{Binding Path=NewSize}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="1" />
 
                 <Button Content="Добавить" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewHall}"   CommandParameter="{Binding ElementName=AddNewHallswnd}" Margin="0,5,0,0"/>
 
-                <StackPanel Name="ActionsForHalls" Grid.Column="1" Grid.Row="2" Margin="30,66,30,4">
-                    <Button Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHall}" >Удалить</Button>
-                    <Button Command="{Binding OpenEditHalls}" Width="100">Изменить</Button>
-                </StackPanel>
+                <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="44,59,44,29" Grid.RowSpan="2">
+                    <StackPanel Margin="0,0,-2,0" Height="80">
+                        <Button Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHall}" >Удалить</Button>
+                        <Button Command="{Binding OpenEditHalls}" Width="100">Изменить</Button>
+                        <Button  Width="100" VerticalAlignment="Top" x:Name="HallsExcel" Command="{Binding HallsExcel}" Content="Записать в excel"/>
+                    </StackPanel>
+                </GroupBox>
 
 
             </Grid>
@@ -61,7 +64,7 @@
             <Grid.RowDefinitions>
 
             </Grid.RowDefinitions>
-            <DataGrid x:Name="ViewAllHallssizes" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" >
+            <DataGrid x:Name="ViewAllHallssizes" IsReadOnly="True" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,359,0" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование, Mode=TwoWay}"    />
                     <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding КоличествоРядов, Mode=TwoWay}" />
@@ -70,8 +73,8 @@
 
 
             </DataGrid>
-            <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0">
-                <Grid Margin="0,0,-16,0">
+            <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0" Margin="61,0,0,0">
+                <Grid Margin="0,0,-2,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" MinWidth="111"/>
                         <ColumnDefinition Width="Auto" MinWidth="111" />
@@ -88,14 +91,17 @@
                     <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeName, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"  />
                     <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeCount, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" />
 
-                    <Button Content="Добавить" Grid.Column="1" Grid.Row="2" Command="{Binding AddNewHallSize}" Margin="0,40,0,10" Grid.RowSpan="2" Click="Button_Click"/>
+                    <Button Content="Добавить" Grid.Column="1" Grid.Row="2" Command="{Binding AddNewHallSize}" Margin="0,7,0,16" Click="Button_Click"/>
 
 
 
-                    <StackPanel Name="ActionsForHallSize" Grid.Column="2" Margin="21,37,0,-20" Grid.RowSpan="2" Grid.Row="2" HorizontalAlignment="Left" Width="124" >
-                        <Button Name="delHallsize"  Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHallSize}" Click="delHallsize_Click" >Удалить</Button>
-                        <Button Command="{Binding OpenEditHallSize}" Width="100">Изменить</Button>
-                    </StackPanel>
+                    <GroupBox Name="ActionsForHallSize" Header="Действия" Margin="10,20,-82,20" Grid.RowSpan="3" Grid.Column="2" Grid.Row="1">
+                        <StackPanel >
+                            <Button Name="delHallsize"  Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHallSize}" Click="delHallsize_Click" >Удалить</Button>
+                            <Button Command="{Binding OpenEditHallSize}" Width="100">Изменить</Button>
+                            <Button x:Name="ExcelHallSize" Command="{Binding HallsSizeExcel}" Content="Записать в excel"/>
+                        </StackPanel>
+                    </GroupBox>
 
                 </Grid>
             </GroupBox>

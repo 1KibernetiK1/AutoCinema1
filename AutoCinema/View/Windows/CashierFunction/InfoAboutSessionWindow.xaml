@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="InfoAboutSessionWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedTicket}" Grid.Row="0" Grid.Column="0" x:Name="dataGrid" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" >
+        <DataGrid  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" IsReadOnly="True" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedTicket}" Grid.Row="0" Grid.Column="0" x:Name="dataGrid" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID"  Binding="{Binding ID,NotifyOnSourceUpdated=True,NotifyOnTargetUpdated=True, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
                 <DataGridComboBoxColumn x:Name="cbc1" Header ="Фильм" ItemsSource="{Binding Films}" SelectedValueBinding="{Binding IDФильма,NotifyOnSourceUpdated=True,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="ID"  DisplayMemberPath="Название"/>

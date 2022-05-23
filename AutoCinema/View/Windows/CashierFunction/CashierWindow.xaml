@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows.CashierFunction"
         mc:Ignorable="d"
-        Title="CashierWindow" Height="139" Width="352" ResizeMode="NoResize" Closed="Window_Closed">
+        Title="CashierWindow" Height="167" Width="352" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl x:Name="tabControl" >
             <TabControl.Background>
@@ -21,7 +21,8 @@
                         <ColumnDefinition Width="239*"/>
                     </Grid.ColumnDefinitions>
                     <Button x:Name="button_Copy" Content="Билеты" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Command="{Binding OpenTicket}" Width="309" Grid.ColumnSpan="2" />
-                    <Button x:Name="button_Copy2" Content="Сеансы" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" VerticalAlignment="Top" Command="{Binding OpenInfoSession}" Width="309" Grid.ColumnSpan="2" />
+                    <Button x:Name="button_Copy2" Content="Информация о Сеансах" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" VerticalAlignment="Top" Command="{Binding OpenInfoSession}" Width="309" Grid.ColumnSpan="2" />
+                    <Button x:Name="button_Copy1" Content="Информация о бронировании" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" VerticalAlignment="Top" Command="{Binding OpenReservInfo}" Width="309" Grid.ColumnSpan="2" />
                 </Grid>
             </TabItem>
         </TabControl>

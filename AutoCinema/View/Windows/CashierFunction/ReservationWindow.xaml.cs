@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoCinema.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace AutoCinema.View.Windows.CashierFunction
         public ReservationWindow()
         {
             InitializeComponent();
+
+            DataContext = new ReservationViewModel();
         }
     }
 }

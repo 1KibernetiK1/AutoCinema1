@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows.AdminFunction"
         mc:Ignorable="d"
-        Title="Общие сведения" Height="600" Width="1429" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Общие сведения" Height="600" Width="1429" ResizeMode="NoResize">
     <Grid Margin="0,0,354,209">
 
         <Grid x:Name="AllGrid">
@@ -37,7 +37,7 @@
 
             </DataGrid>
 
-            <DataGrid x:Name="dataGrid"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedSessions}" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" Margin="0,289,626,-137" >
+            <DataGrid x:Name="dataGrid"  AlternatingRowBackground="#FFFDF7DC" IsReadOnly="True" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedSessions}" Grid.Row="0" Grid.Column="0" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" Margin="0,289,626,-137" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID"  Binding="{Binding ID}"/>
                     <DataGridComboBoxColumn x:Name="cbc1" Header ="Фильм" ItemsSource="{Binding Films}" SelectedValueBinding="{Binding IDФильма}" SelectedValuePath="ID"  DisplayMemberPath="Название"/>
@@ -49,7 +49,7 @@
                 </DataGrid.Columns>
             </DataGrid>
 
-            <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="893,4,-353,91" >
+            <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" IsReadOnly="True" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="893,4,-353,91" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Сеанс" Binding="{Binding IDСеанса}" />
                     <DataGridTextColumn Header="Стоимость билета"  Binding="{Binding Стоимость}" />
@@ -59,7 +59,7 @@
 
             </DataGrid>
 
-            <DataGrid x:Name="ViewAllHalls"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="449,289,187,-137" >
+            <DataGrid x:Name="ViewAllHalls"  AlternatingRowBackground="#FFFDF7DC" IsReadOnly="True" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="449,289,187,-137" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Номер" Binding="{Binding НомерЗала, Mode=TwoWay}"/>
                     <DataGridComboBoxColumn x:Name="cbc4" Header="Размер" ItemsSource="{Binding Размеры}"  SelectedValueBinding="{Binding IDРазмера, Mode=TwoWay}" SelectedValuePath="ID"  DisplayMemberPath="Наименование" />
@@ -67,7 +67,7 @@
 
             </DataGrid>
 
-            <DataGrid x:Name="ViewAllHallssizes" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="888,289,-353,-137" >
+            <DataGrid x:Name="ViewAllHallssizes" AlternatingRowBackground="#FFFDF7DC" IsReadOnly="True" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="888,289,-353,-137" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" IsReadOnly="True" Binding="{Binding ID, Mode=OneWay}"    />
                     <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование, Mode=TwoWay}"    />

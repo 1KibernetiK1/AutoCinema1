@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="PriceWnd"
-        Title="PriceTicketsWindow" Height="291.477" Width="515" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="PriceTicketsWindow" Height="350" Width="548" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="134*"/>
@@ -15,7 +15,7 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
-        <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0" >
+        <DataGrid FontSize="10"  x:Name="ViewAllPriceSize" IsReadOnly="True" ItemsSource="{Binding AllPrices}" SelectedItem="{Binding Selectedprice}"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="0,0,5,0" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Сеанс" Binding="{Binding IDСеанса}" />
                 <DataGridTextColumn Header="Стоимость билета"  Binding="{Binding Стоимость}" />
@@ -44,10 +44,11 @@
 
                 <Button Content="Добавить" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}" Margin="0,10,0,0"/>
 
-                <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="0,50,0,10">
-                    <StackPanel Height="35">
-                        <Button Command="{Binding DeletePrice}">Удалить</Button>
-                        <Button Command="{Binding OpenEditPrice}">Изменить</Button>
+                <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="0,57,0,26">
+                    <StackPanel>
+                        <Button Command="{Binding DeletePrice}" Content="Удалить"/>
+                        <Button Command="{Binding OpenEditPrice}" Content="Изменить"/>
+                        <Button x:Name="PriceExcel" Command="{Binding PriceExcel}" Content="Записать в excel"/>
                     </StackPanel>
                 </GroupBox>
             </Grid>

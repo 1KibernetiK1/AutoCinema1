@@ -16,7 +16,7 @@
         "Entry"
         {
         "MsmKey" = "8:_000A77EFF90C9294EE431D1203CC48D3"
-        "OwnerKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
+        "OwnerKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -27,8 +27,14 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_B15956F0C305CDBBE2BD31ACFA20182B"
-        "OwnerKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
+        "OwnerKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -40,25 +46,19 @@
         "Entry"
         {
         "MsmKey" = "8:_C5529F2A7529D30603A84196C55BB8F2"
-        "OwnerKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E6BF9C69122E586675876176E2E75430"
-        "OwnerKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
+        "OwnerKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E9B2D2F858570C9CF4E0281AAB19E9E3"
-        "OwnerKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
+        "OwnerKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +76,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_DDC249FB5AB7449581553B7C80D61B44"
+        "OwnerKey" = "8:_AC1BE93640064DA8A9D083BC7371B349"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -121,6 +121,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -137,6 +145,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -526,7 +542,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_DDC249FB5AB7449581553B7C80D61B44"
+            "Target" = "8:"
             "Folder" = "8:_9F02DD072C93457086D7596AFDC1F7C2"
             "WorkingFolder" = "8:_9F02DD072C93457086D7596AFDC1F7C2"
             "Icon" = "8:"
@@ -931,9 +947,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_DDC249FB5AB7449581553B7C80D61B44"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_AC1BE93640064DA8A9D083BC7371B349"
             {
-            "SourcePath" = "8:..\\AutoCinema\\obj\\Release\\AutoCinema.exe"
+            "SourcePath" = "8:..\\AutoCinema\\obj\\Debug\\AutoCinema.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_A243DF5526B846C79D6C147A6DC8E12C"

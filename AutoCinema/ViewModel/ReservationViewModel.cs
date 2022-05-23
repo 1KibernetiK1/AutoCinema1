@@ -2,6 +2,7 @@
 using AutoCinema.DataBase;
 using AutoCinema.Domains;
 using AutoCinema.View.Windows;
+using AutoCinema.View.Windows.CashierFunction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -91,17 +92,9 @@ namespace AutoCinema.ViewModel
             }
         }
 
-        private void OpenReservMethod()
-        {
-            Reservation reservation = new Reservation();
-            reservation.Show();
-        }
+      
 
-        //private void OpenEditFilmMethod(Залы hallsize)
-        //{
-        //    EditFilm editFilm = new EditFilm(hallsize);
-        //    editFilm.Show();
-        //}
+      
 
 
 
@@ -129,72 +122,11 @@ namespace AutoCinema.ViewModel
             set { deleteHall = value; }
         }
 
-        //private RelayCommand editHall;
-        //public RelayCommand EditHall
-        //{
-        //    get
-        //    {
-        //        return editHall ?? new RelayCommand(obj =>
-        //        {
-        //            Window window = new Window();
-        //            string resultStr = "Не выбран сотрудник";
-        //            if (SelectedHall != null)
-        //            {
-        //                resultStr = HallsD.editHall(SelectedHall, NewName, NewNumber);
-
-        //                UpdateAllDataView();
-        //                SetNullValuesProperties();
-        //                MessageBox.Show(resultStr);
-        //                window.Close();
-        //            }
-        //            else MessageBox.Show(resultStr);
-        //        });
-        //    }
-        //}
-
-        //private void SetNullValuesProperties()
-        //{
-        //    NewFIO = null;
-        //    NewPhone = null;
-        //}
-
-        //private void UpdateAllDataView()
-        //{
-        //    UpdateAllHallsView();
-        //}
-
-
-
-        //private void UpdateAllHallsView()
-        //{
-        //    AllReserv= Reserv.GetAllReserv();
-
-        //    Halls.AllHallsView.ItemsSource = null;
-        //    Halls.AllHallsView.Items.Clear();
-        //    Halls.AllHallsView.ItemsSource = AllReserv;
-        //    Halls.AllHallsView.Items.Refresh();
-        //}
-
-        //private RelayCommand openeditHall;
-        //public RelayCommand OpenEditHall
-        //{
-        //    get
-        //    {
-        //        return openeditHall ?? new RelayCommand(obj =>
-        //        {
-        //            string resultStr = "Ничего не выбрано";
-        //            // если фильмы
-        //            if (SelectedHall != null)
-        //            {
-        //                OpenEditFilmMethod(SelectedFilm);
-        //            }
-
-        //        }
-        //            );
-
-        //    }
-        //    set { openeditHall = value; }
-        //}
+        private void OpenReservMethod()
+        {
+            Reservation reservation = new Reservation();
+            reservation.Show();
+        }
 
         private RelayCommand openReserv;
         public RelayCommand OpenReserv
@@ -210,6 +142,28 @@ namespace AutoCinema.ViewModel
 
             }
             set { openReserv = value; }
+        }
+
+        private void OpenReservInfoMethod()
+        {
+            ReservationWindow reservation = new ReservationWindow();
+            reservation.Show();
+        }
+
+        private RelayCommand openReservInfo;
+        public RelayCommand OpenReservInfo
+        {
+            get
+            {
+                return openReservInfo ?? new RelayCommand(obj =>
+                {
+
+                    OpenReservInfoMethod();
+                }
+                    );
+
+            }
+            set { openReservInfo = value; }
         }
 
 

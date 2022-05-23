@@ -18,6 +18,7 @@ namespace AutoCinema.View.Windows
 
             DataContext = new PricesViewModel();
             AllPriceView = ViewAllPriceSize;
+            PriceExcel.DataContext = new ExcelViewModel();
         }
     }
 }

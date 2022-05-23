@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows.CashierFunction"
         mc:Ignorable="d"
-        Title="ReservationWindow" Height="450" Width="800">
+        Title="Информация о бронировании" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid x:Name="dataGrid"  AlternatingRowBackground="#FFFDF7DC" IsReadOnly="True" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969"  Grid.Row="0" Grid.Column="0" ItemsSource="{Binding AllReserv}" AutoGenerateColumns="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID"  Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding ФИО}"    />
+                <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding Телефон}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>
