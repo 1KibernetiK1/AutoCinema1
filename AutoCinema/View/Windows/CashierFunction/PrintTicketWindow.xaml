@@ -42,6 +42,6 @@
             <Label  Content="Кинотеатр 'Кино'" Grid.Row="0" Grid.Column="5" FontStyle="Italic"  />
 
         </Grid>
-        <Button Content="Печать" Margin="455,28,10,96" Click="Button_Click" FontSize="9.333"/>
+        <Button Content="Печать" Cursor="Hand" Margin="438,28,10,91" Click="Button_Click" FontSize="9.333"/>
     </Grid>
 </Window>

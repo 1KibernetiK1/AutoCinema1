@@ -37,7 +37,7 @@
             <TextBlock>Пользователь</TextBlock>
         </ComboBox>
 
-        <Button Name="Button_reg" Command="{Binding EditUsers}" CommandParameter="{Binding ElementName=EditUsersWnd}" Content="Изменить" Grid.Row="6" Grid.Column="1" Margin="111,9,0,35" Click="Button_reg_Click" />
+        <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditUsers}" CommandParameter="{Binding ElementName=EditUsersWnd}" Content="Изменить" Grid.Row="6" Grid.Column="1" Margin="111,9,0,35" Click="Button_reg_Click" />
 
     </Grid>
 </Window>

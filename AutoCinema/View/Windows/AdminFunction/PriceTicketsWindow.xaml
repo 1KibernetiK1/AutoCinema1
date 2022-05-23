@@ -42,13 +42,13 @@
                 <ComboBox Margin="0,3,0,3"  SelectedValue="{Binding Path=session}" DisplayMemberPath="ID" SelectedValuePath="ID" ItemsSource="{Binding Seansi}" Grid.Row="0" Grid.Column="1"  />
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewPrice}" Grid.Row="1" Grid.Column="1" />
 
-                <Button Content="Добавить" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}" Margin="0,10,0,0"/>
+                <Button Content="Добавить" Cursor="Hand" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewPrice}" CommandParameter="{Binding ElementName=PriceWnd}" Margin="0,10,0,0"/>
 
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="0,57,0,26">
                     <StackPanel>
-                        <Button Command="{Binding DeletePrice}" Content="Удалить"/>
-                        <Button Command="{Binding OpenEditPrice}" Content="Изменить"/>
-                        <Button x:Name="PriceExcel" Command="{Binding PriceExcel}" Content="Записать в excel"/>
+                        <Button Command="{Binding DeletePrice}" Cursor="Hand" Content="Удалить"/>
+                        <Button Command="{Binding OpenEditPrice}" Cursor="Hand" Content="Изменить"/>
+                        <Button x:Name="PriceExcel" Command="{Binding PriceExcel}" Cursor="Hand" Content="Записать в excel"/>
                     </StackPanel>
                 </GroupBox>
             </Grid>

@@ -37,7 +37,7 @@
         <TextBox Margin="0,3,0,3" Text="{Binding Path=NewTime}" Grid.Row="3" Grid.Column="1"  />
         <TextBox Margin="0,3,0,3" Text="{Binding Path=NewIsFirst}" Grid.Row="4" Grid.Column="1" />
 
-        <Button Name="Button_reg" Command="{Binding EditSession}" CommandParameter="{Binding ElementName=EditSassionWnd}" Content="Изменить" Grid.Row="6" Grid.Column="1" Margin="111,10,0,34" Click="Button_reg_Click" />
+        <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditSession}" CommandParameter="{Binding ElementName=EditSassionWnd}" Content="Изменить" Grid.Row="6" Grid.Column="1" Margin="111,10,0,34" Click="Button_reg_Click" />
 
     </Grid>
 </Window>

@@ -26,7 +26,7 @@
         <ComboBox Margin="123,3,-104,3"  SelectedValue="{Binding Path=session}" DisplayMemberPath="ID" SelectedValuePath="ID" ItemsSource="{Binding Seansi}" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"  />
         <TextBox Margin="123,6,-105,0" Text="{Binding Path=NewPrice}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" />
 
-        <Button Name="Button_reg" Command="{Binding EditPrice}" CommandParameter="{Binding ElementName=EditPriceWnd}" Content="Изменить" Grid.Row="2" Grid.Column="2" Margin="66,5,-105,-5" Click="Button_reg_Click" />
+        <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditPrice}" CommandParameter="{Binding ElementName=EditPriceWnd}" Content="Изменить" Grid.Row="2" Grid.Column="2" Margin="66,5,-105,-5" Click="Button_reg_Click" />
 
     </Grid>
 </Window>

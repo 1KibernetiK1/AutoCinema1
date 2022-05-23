@@ -55,14 +55,14 @@
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedPlace}" Grid.Row="3" Grid.Column="1"/>
 
 
-                <Button Content="Добавить" Command="{Binding AddNewTicket}" Grid.Column="1" Grid.Row="7" Height="27" CommandParameter="{Binding ElementName = AddTicketWnd}"/>
+                <Button Content="Добавить" Command="{Binding AddNewTicket}" Grid.Column="1" Grid.Row="7" Height="27" CommandParameter="{Binding ElementName = AddTicketWnd}" Cursor="Hand"/>
 
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
                     <StackPanel Background="#FF3DA7A2">
-                        <Button Command="{Binding DeleteTicket}">Удалить</Button>
-                        <Button Command="{Binding OpenEditTicket}">Изменить</Button>
-                        <Button Name="Print" Command="{Binding OpenPrintTicket}">Распечатать билет</Button>
-                        <Button Name="excelTicket" Command="{Binding TicketExcel}">Записать в excel</Button>
+                        <Button Command="{Binding DeleteTicket}" Cursor="Hand">Удалить</Button>
+                        <Button Command="{Binding OpenEditTicket}" Cursor="Hand">Изменить</Button>
+                        <Button Name="Print" Command="{Binding OpenPrintTicket}" Cursor="Hand">Распечатать билет</Button>
+                        <Button Name="excelTicket" Command="{Binding TicketExcel}" Cursor="Hand">Записать в excel</Button>
                     </StackPanel>
                 </GroupBox>
             </Grid>

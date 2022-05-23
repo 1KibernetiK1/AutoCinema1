@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:AutoCinema"
         mc:Ignorable="d"
         Title="Вход" Height="136.534" Width="246.785" Closed="Window_Closed" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
-    <Grid x:Name="GridLogin" Background="#FFEEF9FF">
+   
+    <Grid x:Name="GridLogin" Background="#FFD5F0FF">
         <Grid.RowDefinitions>
             <RowDefinition Height="11"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
@@ -25,9 +26,18 @@
         <Label Content="Логин:" Grid.Column="0" Grid.Row="1" Margin="0,0,0,13.6" Grid.RowSpan="2"/>
         <Label Content="Пароль:" Grid.Column="0" Grid.Row="2" Margin="0,0,0,0.4" Grid.RowSpan="2"/>
         <TextBox Margin="0,3,19,3" x:Name="LoginTextBox" Text="{Binding Login}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
-        <TextBox Margin="0,3,19,3.4"   x:Name="PasswordTextBox" Text="{Binding Password}" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" />
-        <Button Name="Button_reg" Content="Регистрация" Grid.Row="4" Grid.ColumnSpan="2" Margin="10,0,96.8,7.8" Click="Button_Click_reg" />
-        <Button Name="Button_autoraz" Content="Войти" Grid.Row="4" Grid.Column="1" Command="{Binding ClickCommand}" Margin="113,0,19,7.8" Grid.ColumnSpan="2"/>
+        <TextBox Margin="0,3,19,3.4"   x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Grid.RowSpan="2" InputScope="Password" />
+        <Button Name="Button_reg" BorderThickness="1" Content="Регистрация" Grid.Row="4" Grid.ColumnSpan="2" Margin="10,0,97,8" Click="Button_Click_reg" Background="WhiteSmoke" Cursor="Hand" />
+        <Button Name="Button_autoraz" BorderThickness="1" Content="Войти" Grid.Row="4" Grid.Column="1" Command="{Binding ClickCommand}" Margin="113,0,19,8" Grid.ColumnSpan="2" Background="WhiteSmoke" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
 
     </Grid>

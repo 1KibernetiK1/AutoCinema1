@@ -20,9 +20,9 @@
                         <ColumnDefinition Width="101*"/>
                         <ColumnDefinition Width="239*"/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="button_Copy" Content="Билеты" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Command="{Binding OpenTicket}" Width="309" Grid.ColumnSpan="2" />
-                    <Button x:Name="button_Copy2" Content="Информация о Сеансах" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" VerticalAlignment="Top" Command="{Binding OpenInfoSession}" Width="309" Grid.ColumnSpan="2" />
-                    <Button x:Name="button_Copy1" Content="Информация о бронировании" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" VerticalAlignment="Top" Command="{Binding OpenReservInfo}" Width="309" Grid.ColumnSpan="2" />
+                    <Button x:Name="button_Copy" Content="Билеты" Cursor="Hand" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top" Command="{Binding OpenTicket}" Width="309" Grid.ColumnSpan="2" />
+                    <Button x:Name="button_Copy2" Content="Информация о Сеансах" Cursor="Hand" HorizontalAlignment="Left" Height="25" Margin="10,40,0,0" VerticalAlignment="Top" Command="{Binding OpenInfoSession}" Width="309" Grid.ColumnSpan="2" />
+                    <Button x:Name="button_Copy1" Content="Информация о бронировании" Cursor="Hand" HorizontalAlignment="Left" Height="25" Margin="10,70,0,0" VerticalAlignment="Top" Command="{Binding OpenReservInfo}" Width="309" Grid.ColumnSpan="2" />
                 </Grid>
             </TabItem>
         </TabControl>

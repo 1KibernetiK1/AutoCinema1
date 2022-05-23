@@ -32,7 +32,7 @@
         <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedRow}" Grid.Row="2" Grid.Column="1"/>
         <TextBox Margin="0,3,0,3" Text="{Binding Path=SelectedPlace}" Grid.Row="3" Grid.Column="1"/>
 
-        <Button Name="Button_reg" Command="{Binding EditTicket}" CommandParameter="{Binding ElementName=EditTicketWnd}" Content="Изменить" Grid.Row="8" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click" />
+        <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditTicket}" CommandParameter="{Binding ElementName=EditTicketWnd}" Content="Изменить" Grid.Row="8" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click" />
 
     </Grid>
 </Window>

@@ -57,12 +57,12 @@
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewTime}" Grid.Row="3" Grid.Column="1"  />
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewIsFirst}" Grid.Row="4" Grid.Column="1" />
 
-                <Button Content="Добавить" Command="{Binding AddNewSessions}" Grid.Column="1" Grid.Row="6" Height="27" CommandParameter="{Binding ElementName=addNewsessionWnd}" Margin="0,16,0,27" Click="Button_Click"/>
+                <Button Content="Добавить" Cursor="Hand" Command="{Binding AddNewSessions}" Grid.Column="1" Grid.Row="6" Height="27" CommandParameter="{Binding ElementName=addNewsessionWnd}" Margin="0,16,0,27" Click="Button_Click"/>
 
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
                     <StackPanel Background="#FF3DA7A2">
-                        <Button Command="{Binding DeleteSession}" Click="Button_Click_1">Удалить</Button>
-                        <Button Command="{Binding OpenEditSession}" Click="Button_Click_2">Изменить</Button>
+                        <Button Command="{Binding DeleteSession}" Cursor="Hand" Click="Button_Click_1">Удалить</Button>
+                        <Button Command="{Binding OpenEditSession}" Cursor="Hand" Click="Button_Click_2">Изменить</Button>
                     </StackPanel>
                 </GroupBox>
             </Grid>

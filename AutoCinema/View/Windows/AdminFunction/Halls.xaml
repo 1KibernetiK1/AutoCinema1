@@ -43,13 +43,13 @@
                 <TextBox Margin="0,3,0,3" Text="{Binding Path=NewNumber}" Grid.Row="0" Grid.Column="1"  />
                 <ComboBox Name="ComboSize" Margin="0,3,0,3" Text="{Binding Path=NewSize}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="1" />
 
-                <Button Content="Добавить" Grid.Column="1" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewHall}"   CommandParameter="{Binding ElementName=AddNewHallswnd}" Margin="0,5,0,0"/>
+                <Button Content="Добавить" Grid.Column="1" Cursor="Hand" Grid.Row="2"  Height="27" VerticalAlignment="Top" Command="{Binding AddNewHall}"   CommandParameter="{Binding ElementName=AddNewHallswnd}" Margin="0,5,0,0"/>
 
                 <GroupBox Header="Действия" Grid.Column="1" Grid.Row="2" Margin="44,59,44,29" Grid.RowSpan="2">
                     <StackPanel Margin="0,0,-2,0" Height="80">
-                        <Button Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHall}" >Удалить</Button>
-                        <Button Command="{Binding OpenEditHalls}" Width="100">Изменить</Button>
-                        <Button  Width="100" VerticalAlignment="Top" x:Name="HallsExcel" Command="{Binding HallsExcel}" Content="Записать в excel"/>
+                        <Button Width="100" VerticalAlignment="Top" Cursor="Hand" Command="{Binding DeleteHall}" >Удалить</Button>
+                        <Button Command="{Binding OpenEditHalls}" Cursor="Hand" Width="100">Изменить</Button>
+                        <Button  Width="100" VerticalAlignment="Top" Cursor="Hand" x:Name="HallsExcel" Command="{Binding HallsExcel}" Content="Записать в excel"/>
                     </StackPanel>
                 </GroupBox>
 
@@ -91,15 +91,15 @@
                     <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeName, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"  />
                     <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeCount, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" />
 
-                    <Button Content="Добавить" Grid.Column="1" Grid.Row="2" Command="{Binding AddNewHallSize}" Margin="0,7,0,16" Click="Button_Click"/>
+                    <Button Content="Добавить" Cursor="Hand" Grid.Column="1" Grid.Row="2" Command="{Binding AddNewHallSize}" Margin="0,7,0,16" Click="Button_Click"/>
 
 
 
                     <GroupBox Name="ActionsForHallSize" Header="Действия" Margin="10,20,-82,20" Grid.RowSpan="3" Grid.Column="2" Grid.Row="1">
                         <StackPanel >
-                            <Button Name="delHallsize"  Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHallSize}" Click="delHallsize_Click" >Удалить</Button>
-                            <Button Command="{Binding OpenEditHallSize}" Width="100">Изменить</Button>
-                            <Button x:Name="ExcelHallSize" Command="{Binding HallsSizeExcel}" Content="Записать в excel"/>
+                            <Button Name="delHallsize" Cursor="Hand" Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHallSize}" Click="delHallsize_Click" >Удалить</Button>
+                            <Button Command="{Binding OpenEditHallSize}" Cursor="Hand" Width="100">Изменить</Button>
+                            <Button x:Name="ExcelHallSize" Cursor="Hand" Command="{Binding HallsSizeExcel}" Content="Записать в excel"/>
                         </StackPanel>
                     </GroupBox>
 

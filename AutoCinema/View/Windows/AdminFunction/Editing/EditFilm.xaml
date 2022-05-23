@@ -41,7 +41,7 @@
         <TextBox Margin="0,3,0,3" Text="{Binding FilmAuthors}"  Grid.Column="1" Grid.Row="6"/>
         <TextBox Margin="0,3,0,3" Width = "200" HorizontalAlignment="Stretch" TextWrapping="WrapWithOverflow" Text="{Binding FilmDescriptions}"  Grid.Column="1" Grid.Row="7"/>
 
-        <Button Name="Button_reg" Command="{Binding EditFilm}" CommandParameter="{Binding ElementName=EditFilmWnd}" Content="Изменить" Grid.Row="8" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click" />
+        <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditFilm}" CommandParameter="{Binding ElementName=EditFilmWnd}" Content="Изменить" Grid.Row="8" Grid.Column="1" Margin="112,0,0,0" Click="Button_reg_Click" />
 
     </Grid>
 </Window>
