@@ -41,6 +41,35 @@ namespace AutoCinema.Domains
 
         }
 
+        public static string AddReg(string name, string password, string access)
+        {
+            string result = "Уже существует";
+
+
+
+            //проверяем есть ли фильм
+            bool checkIsExist = CinemaDataContainer.GetContext().Пользователи.Any(
+            el => el.Логин == name
+            && el.Пароль == password
+            && el.УровеньДоступа == access);
+            if (!checkIsExist)
+            {
+                Пользователи newUsers = new Пользователи
+                {
+                    Логин = name,
+                    Пароль = password,
+                    УровеньДоступа = "Пользователь"
+                };
+
+                CinemaDataContainer.GetContext().Пользователи.Add(newUsers);
+                CinemaDataContainer.GetContext().SaveChanges();
+                result = "Сделано!";
+            }
+            return result;
+
+
+        }
+
         public static string DeleteUser(Пользователи user)
         {
             string result = "Такого фильма не существует";

@@ -22,9 +22,9 @@
         </Grid.ColumnDefinitions>
         <Label Content=":Логин" Grid.Column="0" Grid.Row="1" FlowDirection="RightToLeft"/>
         <Label Content=":Пароль" Grid.Column="0" Grid.Row="2" FlowDirection="RightToLeft"/>
-        <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="1" />
-        <TextBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="2" />
-        <Button Name="Button_reg" Content="Регистрация" Grid.Row="3" Grid.Column="1" Margin="112,2,0,3" Click="Button_reg_Click" Cursor="Hand"/>
+        <TextBox Height="20" Margin="0,3,0,3" Text="{Binding Login}" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="1" />
+        <TextBox Margin="0,3,0,3" x:Name="PasswordTextBox" Text="{Binding Password}" Grid.Column="1" Grid.Row="2" />
+        <Button Name="Button_reg" Command="{Binding AddNewReg}" Content="Регистрация" Grid.Row="3" Grid.Column="1" Margin="112,2,0,3" Click="Button_reg_Click" Cursor="Hand"/>
 
     </Grid>
 </Window>

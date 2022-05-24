@@ -130,6 +130,46 @@ namespace AutoCinema.ViewModel
             }
         }
 
+        private RelayCommand addNewReg;
+        public RelayCommand AddNewReg
+        {
+            get
+            {
+                return addNewReg ?? new RelayCommand(obj =>
+                {
+                    string resultStr = "";
+
+                    StringBuilder errors = new StringBuilder();
+
+                    if (string.IsNullOrWhiteSpace(Login))
+                        errors.AppendLine("Укажите Логин");
+                    if (string.IsNullOrWhiteSpace(Password))
+                        errors.AppendLine("Укажите пароль");
+                 
+
+
+                    if (errors.Length > 0)
+                    {
+                        MessageBox.Show(errors.ToString());
+                        return;
+                    }
+
+                    try
+                    {
+                        resultStr = Users.AddReg(Login, EncryptionPassword.GetHash(Password), AccessLevel);
+                        MessageBox.Show("Информация сохранена!");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+
+
+                }
+          );
+            }
+        }
+
 
 
 
