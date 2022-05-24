@@ -12,11 +12,10 @@ using System.Windows;
 
 namespace AutoCinema.ViewModel
 {
-    public class SessionsViewModel : INotifyPropertyChanged
+    public class SessionsViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        CinemaDataContainer cinemaData;
 
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -38,11 +37,6 @@ namespace AutoCinema.ViewModel
         public static int NewFilm { get; set; }
         public static string NewIsFirst { get; set; }
         public static string NewDate { get; set; }
-
-        public static int A { get; set; }
-        public static int B { get; set; }
-
-        public static decimal price { get; set; }
         #endregion
 
 
@@ -126,10 +120,9 @@ namespace AutoCinema.ViewModel
 
         public SessionsViewModel()
         {
-            cinemaData = CinemaDataContainer.GetContext();
-            sessions = new List<Сеансы>(cinemaData.Сеансы);
-            Films = new List<Фильмы>(cinemaData.Фильмы);
-            Halls = new List<Залы>(cinemaData.Залы);
+            sessions = new List<Сеансы>(CinemaDataContainer.GetContext().Сеансы);
+            Films = new List<Фильмы>(CinemaDataContainer.GetContext().Фильмы);
+            Halls = new List<Залы>(CinemaDataContainer.GetContext().Залы);
         }
 
 
@@ -251,6 +244,8 @@ namespace AutoCinema.ViewModel
             editSessions.Show();
         }
 
+    
+
         private RelayCommand openeditSession;
         public RelayCommand OpenEditSession
         {
@@ -271,6 +266,11 @@ namespace AutoCinema.ViewModel
             set { openeditSession = value; }
         }
 
+
+        public void Dispose()
+        {
+            CinemaDataContainer.GetContext().Dispose();
+        }
 
     }
 }

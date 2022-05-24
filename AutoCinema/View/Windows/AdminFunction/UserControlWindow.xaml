@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="Userswnd"
-        Title="UserControlWindow" Height="450" Width="800" ResizeMode="NoResize" >
+        Title="Пользователи" Height="450" Width="800" ResizeMode="NoResize" >
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="129*"/>

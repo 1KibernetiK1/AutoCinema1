@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View"
         mc:Ignorable="d"
-        Title="Регистрация" Height="172" Width="272" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Регистрация" Height="141" Width="257" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid Background="#FFEEF9FF">
         <Grid.RowDefinitions>
             <RowDefinition Height="25"></RowDefinition>
@@ -19,13 +19,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
             <ColumnDefinition Width="auto" MinWidth="169"></ColumnDefinition>
-            <ColumnDefinition Width="auto" MinWidth="19"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Content=":Логин" Grid.Column="0" Grid.Row="2" FlowDirection="RightToLeft"/>
-        <Label Content=":Пароль" Grid.Column="0" Grid.Row="3" FlowDirection="RightToLeft"/>
-        <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="2" />
-        <TextBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="3" />
-        <Button Name="Button_reg" Content="Регистрация" Grid.Row="4" Grid.Column="1" Margin="112,10,0,-10" Click="Button_reg_Click" Cursor="Hand"/>
-        
+        <Label Content=":Логин" Grid.Column="0" Grid.Row="1" FlowDirection="RightToLeft"/>
+        <Label Content=":Пароль" Grid.Column="0" Grid.Row="2" FlowDirection="RightToLeft"/>
+        <TextBox Height="20" Margin="0,3,0,3" x:Name="LoginTextBox" Grid.Column="1" Grid.Row="1" />
+        <TextBox Margin="0,3,0,3" x:Name="PasswordTextBox" Grid.Column="1" Grid.Row="2" />
+        <Button Name="Button_reg" Content="Регистрация" Grid.Row="3" Grid.Column="1" Margin="112,2,0,3" Click="Button_reg_Click" Cursor="Hand"/>
+
     </Grid>
 </Window>

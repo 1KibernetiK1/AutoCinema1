@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="AddTicketWnd"
-        Title="Выбрать место" Height="450" Width="640" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Билеты" Height="450" Width="640" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="129*"/>
@@ -25,7 +25,7 @@
 
 
         </DataGrid>
-        <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0">
+        <GroupBox Header="Добавить новый билет" Grid.Column="1" Grid.Row="0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="87*"/>

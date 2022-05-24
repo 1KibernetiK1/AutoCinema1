@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows.CashierFunction"
         mc:Ignorable="d"
-        Title="CashierWindow" Height="167" Width="352" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
+        Title="Окно кассира" Height="167" Width="352" ResizeMode="NoResize" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
     <Grid>
         <TabControl x:Name="tabControl" >
             <TabControl.Background>

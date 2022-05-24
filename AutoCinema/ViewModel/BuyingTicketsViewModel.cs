@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace AutoCinema.ViewModel
 {
-    public class BuyingTicketsViewModel : INotifyPropertyChanged
+    public class BuyingTicketsViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -23,7 +23,7 @@ namespace AutoCinema.ViewModel
             }
         }
 
-        CinemaDataContainer cinemaData;
+       
 
         private List<Билеты> allTickets = Tickets.GetAllTickets();
 
@@ -50,11 +50,10 @@ namespace AutoCinema.ViewModel
 
         public BuyingTicketsViewModel()
         {
-            cinemaData = new CinemaDataContainer();
-            Ticket = new List<Билеты>(cinemaData.Билеты);
-            Reservations = new List<Бронь>(cinemaData.Бронь);
-            NewSess1 = new List<Сеансы>(cinemaData.Сеансы);
-            Newhall1 = new List<Залы>(cinemaData.Залы);
+            Ticket = new List<Билеты>(CinemaDataContainer.GetContext().Билеты);
+            Reservations = new List<Бронь>(CinemaDataContainer.GetContext().Бронь);
+            NewSess1 = new List<Сеансы>(CinemaDataContainer.GetContext().Сеансы);
+            Newhall1 = new List<Залы>(CinemaDataContainer.GetContext().Залы);
         }
 
 
@@ -189,7 +188,7 @@ namespace AutoCinema.ViewModel
             BuyingTicketWindow.AllTickView.Items.Refresh();
         }
 
-
+     
 
         private RelayCommand openTicket;
         public RelayCommand OpenTicket
@@ -230,5 +229,10 @@ namespace AutoCinema.ViewModel
             set { openeditTicket = value; }
         }
 
+
+        public void Dispose()
+        {
+            CinemaDataContainer.GetContext().Dispose();
+        }
     }
 }

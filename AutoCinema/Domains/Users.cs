@@ -29,7 +29,7 @@ namespace AutoCinema.Domains
                 Пользователи newUsers = new Пользователи
                 {
                     Логин = name,
-                    Пароль = EncryptionPassword.GetHash(password),
+                    Пароль = password,
                     УровеньДоступа = access
                 };
 
@@ -59,7 +59,7 @@ namespace AutoCinema.Domains
             string result = "Такого фильма не существует";
             Пользователи Users = CinemaDataContainer.GetContext().Пользователи.FirstOrDefault(f => f.ID == oldUsers.ID);
             Users.Логин = name;
-            Users.Пароль = EncryptionPassword.GetHash(password);
+            Users.Пароль = password;
             Users.УровеньДоступа = access;
             CinemaDataContainer.GetContext().SaveChanges();
             result = "Сделано! Пользователь " + Users.Логин + " изменен";

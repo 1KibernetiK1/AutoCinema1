@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AutoCinema.View.Windows.CashierFunction"
         mc:Ignorable="d"
-        Title="InfoAboutSessionWindow" Height="450" Width="800">
+        Title="Информация о сеансах" Height="450" Width="800">
     <Grid>
         <DataGrid  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" IsReadOnly="True" VerticalGridLinesBrush="#FFCB6969" SelectedItem="{Binding SelectedTicket}" Grid.Row="0" Grid.Column="0" x:Name="dataGrid" ItemsSource="{Binding AllSessions}" AutoGenerateColumns="False" >
             <DataGrid.Columns>

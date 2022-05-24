@@ -15,7 +15,6 @@ namespace AutoCinema.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        CinemaDataContainer cinemaData;
 
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -31,9 +30,8 @@ namespace AutoCinema.ViewModel
 
         public PricesViewModel()
         {
-            cinemaData = CinemaDataContainer.GetContext();
-            price = new List<СтоимостьБилетов>(cinemaData.СтоимостьБилетов);
-            Seansi = new List<Сеансы>(cinemaData.Сеансы);
+            price = new List<СтоимостьБилетов>(CinemaDataContainer.GetContext().СтоимостьБилетов);
+            Seansi = new List<Сеансы>(CinemaDataContainer.GetContext().Сеансы);
 
         }
 
@@ -234,7 +232,7 @@ namespace AutoCinema.ViewModel
 
         public void Dispose()
         {
-            cinemaData.Dispose();
+            CinemaDataContainer.GetContext().Dispose();
         }
     }
 }

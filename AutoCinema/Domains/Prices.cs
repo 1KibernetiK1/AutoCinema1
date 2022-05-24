@@ -43,7 +43,6 @@ namespace AutoCinema.Domains
         {
             string result = "Такого сеанса не существует";
 
-            MessageBox.Show(result);
 
             CinemaDataContainer.GetContext().СтоимостьБилетов.Remove(prices);
             CinemaDataContainer.GetContext().SaveChanges();

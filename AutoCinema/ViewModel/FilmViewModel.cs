@@ -10,11 +10,10 @@ using System.Windows;
 
 namespace AutoCinema.ViewModel
 {
-    public class FilmViewModel : INotifyPropertyChanged
+    public class FilmViewModel : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        CinemaDataContainer cinemaData = CinemaDataContainer.GetContext();
 
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -191,6 +190,8 @@ namespace AutoCinema.ViewModel
             WinFilms.AllFilmsView.Items.Refresh();
         }
 
+     
+
         private RelayCommand openeditFilm;
         public RelayCommand OpenEditFilm
         {
@@ -226,6 +227,11 @@ namespace AutoCinema.ViewModel
 
             }
             set { openFilms = value; }
+        }
+
+        public void Dispose()
+        {
+            CinemaDataContainer.GetContext().Dispose();
         }
 
 

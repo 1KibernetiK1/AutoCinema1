@@ -42,7 +42,6 @@ namespace AutoCinema.Domains
         {
             string result = "Такого размера не существует";
 
-            MessageBox.Show(result);
 
             CinemaDataContainer.GetContext().Залы.Remove(hall);
             CinemaDataContainer.GetContext().SaveChanges();

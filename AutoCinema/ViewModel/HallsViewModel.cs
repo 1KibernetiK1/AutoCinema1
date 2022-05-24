@@ -16,7 +16,7 @@ namespace AutoCinema.ViewModel
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        CinemaDataContainer cinemaData;
+
 
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -31,10 +31,10 @@ namespace AutoCinema.ViewModel
 
         public HallsViewModel()
         {
-            cinemaData = CinemaDataContainer.GetContext();
+          
 
-            halls = new List<Залы>(cinemaData.Залы);
-            Размеры = new List<РазмерыЗалов>(cinemaData.РазмерыЗалов);
+            halls = new List<Залы>(CinemaDataContainer.GetContext().Залы);
+            Размеры = new List<РазмерыЗалов>(CinemaDataContainer.GetContext().РазмерыЗалов);
         }
 
 
@@ -261,7 +261,7 @@ namespace AutoCinema.ViewModel
 
         public void Dispose()
         {
-            cinemaData.Dispose();
+            CinemaDataContainer.GetContext().Dispose();
         }
     }
 }

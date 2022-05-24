@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="addNewsessionWnd"
-        Title="SessionsWindows" Height="497" Width="700" ResizeMode="NoResize">
+        Title="Сеансы" Height="497" Width="700" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="129*"/>
@@ -26,7 +26,7 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0">
+        <GroupBox Header="Добавить новый сеанс" Grid.Column="1" Grid.Row="0">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="87*"/>

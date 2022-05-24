@@ -16,7 +16,6 @@ namespace AutoCinema.ViewModel
 {
     public class LoginViewModel : INotifyPropertyChanged, IDisposable
     {
-        CinemaDataContainer cinemaData = CinemaDataContainer.GetContext();
         public event PropertyChangedEventHandler PropertyChanged;
         public ICommand ClickCommand { get; set; }
         public static string Login { get; set; }
@@ -25,7 +24,6 @@ namespace AutoCinema.ViewModel
 
         public LoginViewModel()
         {
-            cinemaData = new CinemaDataContainer();
             ClickCommand = new RelayCommand(arg => ClickMethod());
 
         }
@@ -46,7 +44,7 @@ namespace AutoCinema.ViewModel
 
         private void ClickMethod()
         {
-            Пользователи p = cinemaData.Пользователи.FirstOrDefault(u => u.Логин == Login);
+            Пользователи p = CinemaDataContainer.GetContext().Пользователи.FirstOrDefault(u => u.Логин == Login);
             if (p != null)
             {
                 if (p.Пароль == EncryptionPassword.GetHash(Password))
@@ -116,7 +114,7 @@ namespace AutoCinema.ViewModel
 
                     try
                     {
-                        resultStr = Users.AddUser(Login, Password, AccessLevel);
+                        resultStr = Users.AddUser(Login, EncryptionPassword.GetHash(Password), AccessLevel);
                         MessageBox.Show("Информация сохранена!");
                         SetNullValuesProperties();
                         UpdateAllUserView();
@@ -244,7 +242,7 @@ namespace AutoCinema.ViewModel
                     string resultStr = "Не выбран сотрудник";
                     if (SelectedUsers != null)
                     {
-                        resultStr = Users.editUser(SelectedUsers, Login, Password, AccessLevel);
+                        resultStr = Users.editUser(SelectedUsers, Login, EncryptionPassword.GetHash(Password), AccessLevel);
 
                         UpdateAllUserView();
                         SetNullValuesProperties();
@@ -271,7 +269,7 @@ namespace AutoCinema.ViewModel
         public void Dispose()
         {
             // мы должны освободить ресурсы контекста при удалении ViewModel
-            cinemaData.Dispose();
+            CinemaDataContainer.GetContext().Dispose();
         }
     }
 }

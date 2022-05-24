@@ -22,7 +22,7 @@ namespace AutoCinema.View
 
         private void Button_reg_Click(object sender, RoutedEventArgs e)
         {
-            var tt = PasswordTextBox.Text;
+            var PT = PasswordTextBox.Text;
 
             if (CinemaDataContainer.GetContext().Пользователи.Count(x => x.Логин == LoginTextBox.Text) > 0)
             {
@@ -34,7 +34,7 @@ namespace AutoCinema.View
                 Пользователи userObj = new Пользователи()
                 {
                     Логин = LoginTextBox.Text,
-                    Пароль = EncryptionPassword.GetHash(tt),
+                    Пароль = EncryptionPassword.GetHash(PT),
                     УровеньДоступа = "Пользователь"
                 };
                 CinemaDataContainer.GetContext().Пользователи.Add(userObj);

@@ -15,7 +15,6 @@ namespace AutoCinema.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        CinemaDataContainer cinemaData;
 
         private void NotifyPropertyChanged(string propertyName)
         {
@@ -169,7 +168,7 @@ namespace AutoCinema.ViewModel
 
         public void Dispose()
         {
-            cinemaData.Dispose();
+            CinemaDataContainer.GetContext().Dispose();
         }
     }
 }

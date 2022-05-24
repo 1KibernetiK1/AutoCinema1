@@ -43,7 +43,6 @@ namespace AutoCinema.Domains
         {
             string result = "не существует";
 
-            MessageBox.Show(result);
 
             CinemaDataContainer.GetContext().Бронь.Remove(reserv);
             CinemaDataContainer.GetContext().SaveChanges();

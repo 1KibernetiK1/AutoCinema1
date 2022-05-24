@@ -44,7 +44,7 @@ namespace AutoCinema.Domains
 
                 CinemaDataContainer.GetContext().Фильмы.Add(newFilms);
                 CinemaDataContainer.GetContext().SaveChanges();
-                result = "Сделано!";
+
             }
             return result;
 

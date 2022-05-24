@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:AutoCinema.View.Windows"
         mc:Ignorable="d"
         Name="AddNewHallswnd"
-        Title="Halls" Height="500" Width="900">
+        Title="Залы" Height="500" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
@@ -18,15 +18,15 @@
             <RowDefinition Height="152*"/>
 
         </Grid.RowDefinitions>
-        <DataGrid x:Name="ViewAllHalls" IsReadOnly="True"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="0,0,21,17" Grid.RowSpan="2" >
+        <DataGrid x:Name="ViewAllHalls" IsReadOnly="True"  AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="0,0,40,17" Grid.RowSpan="2" >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Номер" Binding="{Binding НомерЗала, Mode=TwoWay}"    />
                 <DataGridComboBoxColumn x:Name="cbc1" Header="Размер" ItemsSource="{Binding Размеры}"  SelectedValueBinding="{Binding IDРазмера, Mode=TwoWay}" SelectedValuePath="ID"  DisplayMemberPath="Наименование" />
             </DataGrid.Columns>
 
         </DataGrid>
-        <GroupBox Header="Добавить новый" Grid.Row="0" Grid.ColumnSpan="2" Margin="538,0,0,17" Grid.RowSpan="2">
-            <Grid>
+        <GroupBox Header="Добавить новый зал" Grid.Row="0" Grid.ColumnSpan="2" Margin="528,0,0,17" Grid.RowSpan="2">
+            <Grid Margin="10,0,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="75*" />
                     <ColumnDefinition Width="141*"  />
@@ -64,7 +64,7 @@
             <Grid.RowDefinitions>
 
             </Grid.RowDefinitions>
-            <DataGrid x:Name="ViewAllHallssizes" IsReadOnly="True" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,359,0" >
+            <DataGrid x:Name="ViewAllHallssizes" IsReadOnly="True" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,378,0" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование, Mode=TwoWay}"    />
                     <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding КоличествоРядов, Mode=TwoWay}" />
@@ -73,8 +73,8 @@
 
 
             </DataGrid>
-            <GroupBox Header="Добавить новый" Grid.Column="1" Grid.Row="0" Margin="61,0,0,0">
-                <Grid Margin="0,0,-2,0">
+            <GroupBox Header="Добавить новый размер зала" Grid.Column="1" Grid.Row="0" Margin="43,0,0,0">
+                <Grid Margin="10,0,-2,0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" MinWidth="111"/>
                         <ColumnDefinition Width="Auto" MinWidth="111" />
@@ -95,8 +95,8 @@
 
 
 
-                    <GroupBox Name="ActionsForHallSize" Header="Действия" Margin="10,20,-82,20" Grid.RowSpan="3" Grid.Column="2" Grid.Row="1">
-                        <StackPanel >
+                    <GroupBox Name="ActionsForHallSize" Header="Действия" Margin="20,22,-92,4" Grid.RowSpan="3" Grid.Column="2" Grid.Row="1">
+                        <StackPanel Height="89" >
                             <Button Name="delHallsize" Cursor="Hand" Width="100" VerticalAlignment="Top"  Command="{Binding DeleteHallSize}" Click="delHallsize_Click" >Удалить</Button>
                             <Button Command="{Binding OpenEditHallSize}" Cursor="Hand" Width="100">Изменить</Button>
                             <Button x:Name="ExcelHallSize" Cursor="Hand" Command="{Binding HallsSizeExcel}" Content="Записать в excel"/>
