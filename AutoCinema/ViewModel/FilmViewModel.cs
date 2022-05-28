@@ -190,7 +190,30 @@ namespace AutoCinema.ViewModel
             WinFilms.AllFilmsView.Items.Refresh();
         }
 
-     
+        //private void UpdateSearchFilmView()
+        //{
+          
+
+        //    if (WinFilms.Searchtb.Text != "")
+        //    {
+        //        AllFilms = Films.GetAllFilms();
+        //        var SearchFilms = AllFilms..Where(x => x.Название.ToLowerInvariant().Contains(SearchFilmTb.Text.ToLowerInvariant()));
+
+        //        ViewAllFilms.ItemsSource = null;
+        //        ViewAllFilms.ItemsSource = SearchFilms;
+        //    }
+        //    else
+        //    {
+        //        ViewAllFilms.ItemsSource = CinemaDataContainer.GetContext().Фильмы.ToList();
+        //    }
+
+        //    WinFilms.Searchtb.ItemsSource = null;
+        //    WinFilms.Searchtb.Items.Clear();
+        //    WinFilms.Searchtb.ItemsSource = AllFilms;
+        //    WinFilms.Searchtb.Items.Refresh();
+        //}
+
+
 
         private RelayCommand openeditFilm;
         public RelayCommand OpenEditFilm

@@ -50,6 +50,10 @@ namespace AutoCinema.Domains
 
         }
 
+      
+
+
+
         public static string DeleteFilm(Фильмы film)
         {
             string result = "Такого фильма не существует";

@@ -15,9 +15,9 @@
         <Grid.RowDefinitions>
 
         </Grid.RowDefinitions>
-        <DataGrid x:Name="ViewAllFilms" ItemsSource="{Binding AllFilms}" SelectedItem="{Binding SelectedFilm}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AreRowDetailsFrozen="True" IsReadOnly="True" Grid.IsSharedSizeScope="True" FontSize="14" >
+        <DataGrid Name="ViewAllFilms" ItemsSource="{Binding AllFilms}" SelectedItem="{Binding SelectedFilm}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" AreRowDetailsFrozen="True" IsReadOnly="True" Grid.IsSharedSizeScope="True" FontSize="14" >
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Название" Binding="{Binding Название}"></DataGridTextColumn>
+                <DataGridTextColumn x:Name="name" Header="Название" Binding="{Binding Название}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Жанр" Binding="{Binding Жанр}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Длительность" Binding="{Binding Длительность}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Год" Binding="{Binding Год}"></DataGridTextColumn>
@@ -66,7 +66,7 @@
 
                 <Button Content="Добавить" Command="{Binding AddNewFilm}" Cursor="Hand" Grid.Column="1" Grid.Row="7" Height="27" CommandParameter="{Binding ElementName=AddNewFilmwnd}"/>
 
-                <GroupBox Header="Действия" Grid.Column="1" Grid.Row="8" Margin="0,50,0,0">
+                <GroupBox Header="Действия" Grid.Row="8" Margin="88,39,0,11" Grid.ColumnSpan="2">
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteItem}" Cursor="Hand">Удалить</Button>
                         <Button Command="{Binding OpenEditFilm}" Cursor="Hand">Изменить</Button>
