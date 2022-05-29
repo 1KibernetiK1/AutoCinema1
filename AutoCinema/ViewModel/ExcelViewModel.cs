@@ -165,41 +165,48 @@ namespace AutoCinema.ViewModel
 
         }
 
-        //private RelayCommand hallsExcel;
-        //public RelayCommand HallsExcel
-        //{
-        //    get
-        //    {
-        //        return hallsExcel ?? new RelayCommand(obj =>
-        //        {
-        //            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-        //            excel.Visible = true;
-        //            Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
-        //            Worksheet sheet1 = (Worksheet)workbook.Sheets[1];
-
-        //            for (int j = 0; j < Halls.AllHallsView.Columns.Count; j++) //Для названия
-        //            {
-        //                Range myRange = (Range)sheet1.Cells[1, j + 1];
-        //                sheet1.Cells[1, j + 1].Font.Bold = true; //Чтобы заголовок был жирным шрифтом
-        //                sheet1.Columns[j + 1].ColumnWidth = 15; //Регулировка ширины столбца
-        //                myRange.Value2 = Halls.AllHallsView.Columns[j].Header;
-        //            }
-        //            for (int i = 0; i < Halls.AllHallsView.Columns.Count; i++) //Для содержимого
-        //            {
-        //                for (int j = 0; j < Halls.AllHallsView.Items.Count; j++)
-        //                {
-        //                    TextBlock b = Halls.AllHallsView.Columns[i].GetCellContent(Halls.AllHallsView.Items[j]) as TextBlock;
-        //                    Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[j + 2, i + 1];
-        //                    myRange.Value2 = b.Text;
-        //                }
-        //            }
-
-        //        }
-        //  );
-        //    }
+        private HallsViewModel hallsView = new HallsViewModel();
 
 
-        //}
+        private RelayCommand hallsExcel;
+        public RelayCommand HallsExcel
+        {
+          
+
+            get
+            {
+                return hallsExcel ?? new RelayCommand(obj =>
+                {
+                   
+
+                    Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+                    excel.Visible = true;
+                    Workbook workbook = excel.Workbooks.Add(System.Reflection.Missing.Value);
+                    Worksheet sheet1 = (Worksheet)workbook.Sheets[1];
+
+                    for (int j = 0; j < Halls.AllHallsView.Columns.Count; j++) //Для названия
+                    {
+                        Range myRange = (Range)sheet1.Cells[1, j + 1];
+                        sheet1.Cells[1, j + 1].Font.Bold = true; //Чтобы заголовок был жирным шрифтом
+                        sheet1.Columns[j + 1].ColumnWidth = 15; //Регулировка ширины столбца
+                        myRange.Value2 = Halls.AllHallsView.Columns[j].Header;
+                    }
+                    for (int i = 0; i < Halls.AllHallsView.Columns.Count; i++) //Для содержимого
+                    {
+                        for (int j = 0; j < Halls.AllHallsView.Items.Count; j++)
+                        {
+                            TextBlock b = Halls.AllHallsView.Columns[i].GetCellContent(Halls.AllHallsView.Items[j]) as TextBlock;
+                            Microsoft.Office.Interop.Excel.Range myRange = (Microsoft.Office.Interop.Excel.Range)sheet1.Cells[j + 2, i + 1];
+                            myRange.Value2 = b.Text;
+                        }
+                    }
+
+                }
+          );
+            }
+
+
+        }
 
         private RelayCommand hallsSizeExcel;
         public RelayCommand HallsSizeExcel
