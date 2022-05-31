@@ -110,7 +110,7 @@ namespace AutoCinema.ViewModel
                     // если фильмы
                     if (SelectedReserv != null)
                     {
-                        resultStr = Reserv.DeleteHallSize(SelectedReserv);
+                        resultStr = Reserv.DeleteReserv(SelectedReserv);
                     }
 
 
