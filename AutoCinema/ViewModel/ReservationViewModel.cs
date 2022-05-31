@@ -99,12 +99,12 @@ namespace AutoCinema.ViewModel
 
 
 
-        private RelayCommand deleteHall;
-        public RelayCommand DeleteHall
+        private RelayCommand deleteReserv;
+        public RelayCommand DeleteReserv
         {
             get
             {
-                return deleteHall ?? new RelayCommand(obj =>
+                return deleteReserv ?? new RelayCommand(obj =>
                 {
                     string resultStr = "Ничего не выбрано";
                     // если фильмы
@@ -118,7 +118,7 @@ namespace AutoCinema.ViewModel
                 }
           );
             }
-            set { deleteHall = value; }
+            set { deleteReserv = value; }
         }
 
         private void OpenReservMethod()

@@ -39,7 +39,7 @@ namespace AutoCinema.Domains
 
         }
 
-        public static string DeleteHallSize(Бронь reserv)
+        public static string DeleteReserv(Бронь reserv)
         {
             string result = "не существует";
 
@@ -53,7 +53,7 @@ namespace AutoCinema.Domains
             return result;
         }
 
-        public static string editHallSize(Бронь reservasion, string newName, string newcount)
+        public static string editReserv(Бронь reservasion, string newName, string newcount)
         {
             string result = "Такого размера не существует";
             MessageBox.Show(result, newName);

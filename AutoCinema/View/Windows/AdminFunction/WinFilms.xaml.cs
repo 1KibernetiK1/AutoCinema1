@@ -16,12 +16,6 @@ namespace AutoCinema.View.Windows
     {
         public static DataGrid AllFilmsView;
 
-        public static TextBox Searchtb;
-
-        public static List<Фильмы> Films;
-
-
-
        
 
         public WinFilms()
