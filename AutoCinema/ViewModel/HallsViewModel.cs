@@ -90,7 +90,7 @@ namespace AutoCinema.ViewModel
 
                     try
                     {
-                        resultStr = HallsD.AddHallSize(NewNumber, NewSize);
+                        resultStr = HallsD.AddHall(NewNumber, NewSize);
                         MessageBox.Show("Информация сохранена!");
                         SetNullValuesProperties();
                         UpdateAllDataView();

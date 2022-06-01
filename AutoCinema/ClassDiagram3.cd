@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="AutoCinema.Info_cinema" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15" Y="5" Width="1.5" />
+    <Position X="9.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\AdministrationWindow.xaml.cs</FileName>
@@ -9,7 +9,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6.25" Y="6" Width="1.5" />
+    <Position X="0.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAACABAQAAAAAAAA=</HashCode>
       <FileName>View\Windows\LoginWindow.xaml.cs</FileName>
@@ -17,7 +17,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.Core.RelayCommand" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="6" Width="1.5" />
+    <Position X="12.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Core\RelayCommand.cs</FileName>
@@ -25,133 +25,133 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.DataBase.CinemaDataContainer" Collapsed="true">
-    <Position X="11.5" Y="3" Width="1.5" />
+    <Position X="5.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAABEQAAAAARAAQEAAAQAAAACBAAAAAAAA=</HashCode>
       <FileName>DataBase\CinemaData.Context.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.Билеты" Collapsed="true">
-    <Position X="13.5" Y="14.25" Width="1.5" />
+    <Position X="5.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAEACgEAAAAAAYAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataBase\Билеты.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.Бронь" Collapsed="true">
-    <Position X="11.5" Y="14.25" Width="1.5" />
+    <Position X="7.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEEAAAAAAAgAgAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>DataBase\Бронь.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.Залы" Collapsed="true">
-    <Position X="9.75" Y="14.25" Width="1.5" />
+    <Position X="9.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAEAAAAAAAgAAAAAAAAAAAAAAAQIAgAABAAAAAAAA=</HashCode>
       <FileName>DataBase\Залы.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.Пользователи" Collapsed="true">
-    <Position X="7.75" Y="14.25" Width="1.5" />
+    <Position X="11" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAhAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataBase\Пользователи.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.РазмерыЗалов" Collapsed="true">
-    <Position X="5.75" Y="14.25" Width="1.5" />
+    <Position X="12.75" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAgAAAAAAAQIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataBase\РазмерыЗалов.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.Сеансы" Collapsed="true">
-    <Position X="0.5" Y="14.25" Width="1.5" />
+    <Position X="0.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAFAAAAEAAgEQACAAARAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataBase\Сеансы.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.СтоимостьБилетов" Collapsed="true">
-    <Position X="2.25" Y="14.25" Width="1.5" />
+    <Position X="2.25" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAgAAAAAAAIAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>DataBase\СтоимостьБилетов.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.DataBase.Фильмы" Collapsed="true">
-    <Position X="4" Y="14.25" Width="1.5" />
+    <Position X="4" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAwAAEAAgAAAAAAAAAAAAAAAQAAAAABAIBAAAAA=</HashCode>
       <FileName>DataBase\Фильмы.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.Films" Collapsed="true">
-    <Position X="15" Y="4" Width="1.5" />
+    <Position X="9.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAkAAAABAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Domains\Films.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.HallsD" Collapsed="true">
-    <Position X="8" Y="5" Width="1.5" />
+    <Position X="2.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAgAAAAAAAAAAAAACAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAgAAAAAAAAAAAAACAAAAAAAAAAQAAAAAAAAA=</HashCode>
       <FileName>Domains\HallsD.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.Hallsize" Collapsed="true">
-    <Position X="9.75" Y="5" Width="1.5" />
+    <Position X="4" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAQAAEAAAAAAAEAA=</HashCode>
       <FileName>Domains\Hallsize.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.Prices" Collapsed="true">
-    <Position X="8" Y="6" Width="1.5" />
+    <Position X="2.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAAAAAAAAAIAAAAAAAQAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Domains\Prices.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="AutoCinema.Domains.Reserv">
-    <Position X="19.75" Y="16" Width="1.5" />
+  <Class Name="AutoCinema.Domains.Reserv" Collapsed="true">
+    <Position X="0.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAACAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Domains\Reserv.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.Sessions" Collapsed="true">
-    <Position X="8.5" Y="15.5" Width="1.5" />
+    <Position X="7.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACAAAAAAAAACAAAAAAAAAAAYAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Domains\Sessions.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.Tickets" Collapsed="true">
-    <Position X="10.5" Y="15.5" Width="1.5" />
+    <Position X="12.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAABAAAAABAAAAAAAAAAAAAgAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Domains\Tickets.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Domains.Users" Collapsed="true">
-    <Position X="18" Y="14.25" Width="1.5" />
+    <Position X="2.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAABAAEAAAAAAAAAAAAAAAgAAAAAAEAAAA=</HashCode>
       <FileName>Domains\Users.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.Security.EncryptionPassword" Collapsed="true">
-    <Position X="11.5" Y="4" Width="1.5" />
+    <Position X="5.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>Security\EncryptionPassword.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.View.Windows.EditFilm" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.25" Y="3" Width="1.5" />
+    <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditFilm.xaml.cs</FileName>
@@ -159,7 +159,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.EditHalls" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15" Y="3" Width="1.5" />
+    <Position X="9.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditHalls.xaml.cs</FileName>
@@ -167,7 +167,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.EditHallSize" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.75" Y="3" Width="1.5" />
+    <Position X="11" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditHallSize.xaml.cs</FileName>
@@ -175,7 +175,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.Halls" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6.25" Y="5" Width="1.5" />
+    <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAgAAAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Halls.xaml.cs</FileName>
@@ -183,15 +183,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.PriceTicketsWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11.5" Y="6" Width="1.5" />
+    <Position X="5.75" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\PriceTicketsWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AutoCinema.View.Windows.SessionsWindows" BaseTypeListCollapsed="true">
-    <Position X="13.5" Y="15.5" Width="1.75" />
+  <Class Name="AutoCinema.View.Windows.SessionsWindows" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABIAAAAAAAAAEAAAAAABAAAAAACAQAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\SessionsWindows.xaml.cs</FileName>
@@ -199,7 +199,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.UserControlWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="20" Y="14.25" Width="1.5" />
+    <Position X="0.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\UserControlWindow.xaml.cs</FileName>
@@ -207,7 +207,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.WinFilms" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15.75" Y="14.25" Width="1.5" />
+    <Position X="4" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\WinFilms.xaml.cs</FileName>
@@ -215,7 +215,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.BuyingTicketWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="8" Y="3" Width="1.5" />
+    <Position X="2.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\CashierFunction\BuyingTicketWindow.xaml.cs</FileName>
@@ -223,15 +223,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.PrintTicketWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="15" Y="6" Width="1.5" />
+    <Position X="9.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\CashierFunction\PrintTicketWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AutoCinema.View.Windows.Reservation" BaseTypeListCollapsed="true">
-    <Position X="1.75" Y="15.5" Width="1.5" />
+  <Class Name="AutoCinema.View.Windows.Reservation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\UserFunction\Reservation.xaml.cs</FileName>
@@ -239,7 +239,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.AdminFunction.EditPrice" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="3" Width="1.5" />
+    <Position X="12.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditPrice.xaml.cs</FileName>
@@ -247,7 +247,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.AdminFunction.EditSessions" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6.25" Y="4" Width="1.5" />
+    <Position X="0.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditSessions.xaml.cs</FileName>
@@ -255,7 +255,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.AdminFunction.EditUsers" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="4" Width="1.5" />
+    <Position X="4" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditUsers.xaml.cs</FileName>
@@ -263,7 +263,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.AdminFunction.GeneralDataWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="4" Width="1.5" />
+    <Position X="12.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgIAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\GeneralDataWindow.xaml.cs</FileName>
@@ -271,7 +271,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.AdminFunction.Editing.EditTicket" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="8" Y="4" Width="1.5" />
+    <Position X="2.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\AdminFunction\Editing\EditTicket.xaml.cs</FileName>
@@ -279,7 +279,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.CashierFunction.CashierWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="3" Width="1.5" />
+    <Position X="4" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\CashierFunction\CashierWindow.xaml.cs</FileName>
@@ -287,15 +287,15 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Windows.CashierFunction.InfoAboutSessionWindow" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.75" Y="5" Width="1.5" />
+    <Position X="11" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\CashierFunction\InfoAboutSessionWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="AutoCinema.View.Windows.CashierFunction.ReservationWindow" BaseTypeListCollapsed="true">
-    <Position X="6.25" Y="15.5" Width="1.5" />
+  <Class Name="AutoCinema.View.Windows.CashierFunction.ReservationWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\CashierFunction\ReservationWindow.xaml.cs</FileName>
@@ -303,7 +303,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.View.Registration" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.75" Y="6" Width="1.5" />
+    <Position X="11" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>View\Windows\Registration.xaml.cs</FileName>
@@ -311,7 +311,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.BuyingTicketsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="6.25" Y="3" Width="1.5" />
+    <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAMgACgIBIALGhAACkAAgAIBAAACACAGIACAAAA=</HashCode>
       <FileName>ViewModel\BuyingTicketsViewModel.cs</FileName>
@@ -319,7 +319,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.ExcelViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.25" Y="4" Width="1.5" />
+    <Position X="7.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAIACAAIAAIIIAACCCgAAAAABAAAAgAAAAAAA=</HashCode>
       <FileName>ViewModel\ExcelViewModel.cs</FileName>
@@ -327,7 +327,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.FilmViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.75" Y="4" Width="1.5" />
+    <Position X="11" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEAEAAAAUKAAAMABAREAAAAEgAAIAABABSAgQESQBAA=</HashCode>
       <FileName>ViewModel\FilmViewModel.cs</FileName>
@@ -335,7 +335,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.HallsSizeViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="11.5" Y="5" Width="1.5" />
+    <Position X="5.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAC4AAIAACAAAIQBAAAAAACAgAAAgAAAggAgAICAkAI=</HashCode>
       <FileName>ViewModel\HallsSizeViewModel.cs</FileName>
@@ -343,7 +343,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.HallsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="13.25" Y="5" Width="1.5" />
+    <Position X="7.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gAAAggAAgSAQEoABEIAEAAiAhQIIAAAAgADAAoCQAAI=</HashCode>
       <FileName>ViewModel\HallsViewModel.cs</FileName>
@@ -351,7 +351,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.LoginViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="18.5" Y="5" Width="1.5" />
+    <Position X="12.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>MBAHACACASAAAAQFAACAAAggggAKAAACAgAQAAEAAgQ=</HashCode>
       <FileName>ViewModel\LoginViewModel.cs</FileName>
@@ -359,7 +359,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.PricesViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.75" Y="6" Width="1.5" />
+    <Position X="4" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>IAABACAAACQgAoABAAOAAAAAgESACAgAAAAoEQAAJAE=</HashCode>
       <FileName>ViewModel\PricesViewModel.cs</FileName>
@@ -367,14 +367,14 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.PrintTicketViewModel" Collapsed="true">
-    <Position X="13.25" Y="6" Width="1.5" />
+    <Position X="7.5" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAAAA=</HashCode>
       <FileName>ViewModel\PrintTicketViewModel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AutoCinema.ViewModel.ReservationViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3.75" Y="16" Width="1.5" />
+    <Position X="4" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABACBAAAACAAALBAIAAgACAAgAAQAIBAEAAgAAAAQAA=</HashCode>
       <FileName>ViewModel\ReservationViewModel.cs</FileName>
@@ -382,7 +382,7 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="AutoCinema.ViewModel.SessionsViewModel" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="16.25" Y="15.75" Width="1.75" />
+    <Position X="9.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACEBAAQgACAQIIAAgBIAAIQAiAAAAAgSAAAogIQBgsA=</HashCode>
       <FileName>ViewModel\SessionsViewModel.cs</FileName>

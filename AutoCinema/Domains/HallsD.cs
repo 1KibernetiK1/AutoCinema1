@@ -15,7 +15,7 @@ namespace AutoCinema.Domains
 
         }
 
-        public static string AddHallSize(int name, string count)
+        public static string AddHall(int name, string count)
         {
             string result = "Не найдено";
             //проверяем есть ли фильм

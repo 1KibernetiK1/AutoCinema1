@@ -18,18 +18,17 @@ namespace AutoCinema.View.Windows
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            CinemaDataContainer ctx = new CinemaDataContainer();
 
             string f, r, pl, pr, d, t, h;
-            Билеты last = ctx.Билеты.ToList().Last();
-            f = ctx.Фильмы.FirstOrDefault(c => c.ID == ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDФильма).Название;
+            Билеты last = CinemaDataContainer.GetContext().Билеты.ToList().Last();
+            f = CinemaDataContainer.GetContext().Фильмы.FirstOrDefault(c => c.ID == CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDФильма).Название;
             r = last.Ряд.Value.ToString();
             pl = last.Место.Value.ToString();
-            d = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Дата;
-            t = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Время;
-            h = ctx.Залы.FirstOrDefault(c => c.ID == ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDЗала).НомерЗала.Value.ToString();
-            Сеансы lastSeans = ctx.Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса);
-            pr = ctx.СтоимостьБилетов.FirstOrDefault(c => c.IDСеанса == lastSeans.ID).Стоимость.Value.ToString() + " руб.";
+            d = CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Дата;
+            t = CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).Время;
+            h = CinemaDataContainer.GetContext().Залы.FirstOrDefault(c => c.ID == CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса).IDЗала).НомерЗала.Value.ToString();
+            Сеансы lastSeans = CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(s => s.ID == last.IDСеанса);
+            pr = CinemaDataContainer.GetContext().СтоимостьБилетов.FirstOrDefault(c => c.IDСеанса == lastSeans.ID).Стоимость.Value.ToString() + " руб.";
 
             Film.Content = f.ToString();
             Row.Content = r.ToString();
