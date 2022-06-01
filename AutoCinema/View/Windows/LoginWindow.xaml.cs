@@ -47,6 +47,8 @@ namespace AutoCinema
                     break;
                 case "NotExistUser":
                     MessageBox.Show("Пользователь не найден!");
+                    UserControlWindow userControlWindow = new UserControlWindow();
+                    userControlWindow.Show();
                     break;
             }
         }
