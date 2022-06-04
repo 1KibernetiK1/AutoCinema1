@@ -87,17 +87,14 @@ namespace AutoCinema.ViewModel
                         return;
                     }
 
-                    try
-                    {
+                  
                         resultStr = Prices.AddPrice(session, NewPrice);
                         MessageBox.Show("Информация сохранена!");
                         SetNullValuesProperties();
                         UpdateAllPriceView();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                    }
+                   
+                        
+                    
 
 
                 }

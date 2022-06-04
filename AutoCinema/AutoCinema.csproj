@@ -320,9 +320,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CinemaData.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
     <None Include="DataBase\CinemaData.edmx.diagram">
       <DependentUpon>CinemaData.edmx</DependentUpon>
     </None>

@@ -26,6 +26,7 @@ namespace AutoCinema.Domains
 
             СтоимостьБилетов newPrices = new СтоимостьБилетов
             {
+                ID = session,
                 IDСеанса = session,
                 Стоимость = price
             };

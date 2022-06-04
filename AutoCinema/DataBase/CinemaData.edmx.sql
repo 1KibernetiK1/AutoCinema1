@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/24/2022 18:09:06
+-- Date Created: 06/05/2022 00:43:38
 -- Generated from EDMX file: C:\Users\12345\Desktop\AutoCinema\Autos\AutoCinema\AutoCinema\DataBase\CinemaData.edmx
 -- --------------------------------------------------
 
@@ -131,7 +131,7 @@ GO
 
 -- Creating table 'СтоимостьБилетов'
 CREATE TABLE [dbo].[СтоимостьБилетов] (
-    [ID] int  NOT NULL,
+    [ID] int IDENTITY(1,1) NOT NULL,
     [IDСеанса] int  NULL,
     [Стоимость] int  NULL
 );
