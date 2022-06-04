@@ -60,7 +60,6 @@ namespace AutoCinema.Domains
         public static string editTicket(Билеты Newtickets, int NewIDSession, int NewIdHall, int NewRow, int Newplace)
         {
             string result = "Такого размера не существует";
-            MessageBox.Show(result);
             Билеты tickets = CinemaDataContainer.GetContext().Билеты.FirstOrDefault(f => f.ID == Newtickets.ID);
             tickets.IDСеанса = NewIDSession;
             tickets.IDЗала = NewIdHall;

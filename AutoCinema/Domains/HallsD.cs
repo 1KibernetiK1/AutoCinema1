@@ -55,7 +55,6 @@ namespace AutoCinema.Domains
         public static string editHall(Залы hall, int newName, string count)
         {
             string result = "Такого размера не существует";
-            MessageBox.Show(result);
             Залы halls = CinemaDataContainer.GetContext().Залы.FirstOrDefault(f => f.ID == hall.ID);
             halls.НомерЗала = newName;
             halls.РазмерыЗалов = CinemaDataContainer.GetContext().РазмерыЗалов.FirstOrDefault(a => a.Наименование == count);

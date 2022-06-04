@@ -56,7 +56,6 @@ namespace AutoCinema.Domains
         public static string editPrice(СтоимостьБилетов pricetick, int session, int price)
         {
             string result = "Такого размера не существует";
-            MessageBox.Show(result);
             СтоимостьБилетов prices = CinemaDataContainer.GetContext().СтоимостьБилетов.FirstOrDefault(f => f.ID == pricetick.ID);
             prices.IDСеанса = session;
             prices.Стоимость = price;

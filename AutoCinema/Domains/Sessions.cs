@@ -60,7 +60,6 @@ namespace AutoCinema.Domains
         public static string editSession(Сеансы sessions, int NewIDFilm, int NewIdHall, string Newdate, string Newtime, string NewNewISFirst)
         {
             string result = "Такого размера не существует";
-            MessageBox.Show(result);
             Сеансы Session = CinemaDataContainer.GetContext().Сеансы.FirstOrDefault(f => f.ID == sessions.ID);
             Session.IDФильма = NewIDFilm;
             Session.IDЗала = NewIdHall;
