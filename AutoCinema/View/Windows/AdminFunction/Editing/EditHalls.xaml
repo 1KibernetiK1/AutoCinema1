@@ -24,8 +24,8 @@
             </Grid.ColumnDefinitions>
             <Label Content="Номер:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
             <Label Content="Размер:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-            <TextBox Margin="5,6,-155,0" Text="{Binding Path=NewNumber, Mode=TwoWay}" Grid.Row="0" Grid.Column="2"  />
-            <ComboBox Name="ComboSize" Margin="5,3,-155,3" Text="{Binding Path=NewSize, Mode=TwoWay}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="2" />
+            <TextBox Margin="5,6,-155,0" Text="{Binding Path=NewNumber}" Grid.Row="0" Grid.Column="2"  />
+            <ComboBox Name="ComboSize" Margin="5,3,-155,3" Text="{Binding Path=NewSize}" ItemsSource="{Binding Размеры}" DisplayMemberPath="Наименование" Grid.Row="1" Grid.Column="2" />
 
             <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditHall}" CommandParameter="{Binding ElementName=EditHallWnd}" Content="Изменить" Grid.Row="2" Grid.Column="2" Margin="116,10,-155,-10" Click="Button_reg_Click" />
 

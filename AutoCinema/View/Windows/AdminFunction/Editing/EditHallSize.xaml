@@ -24,8 +24,8 @@
             </Grid.ColumnDefinitions>
             <Label Content="Наименование:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
             <Label Content="Количество рядов:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-            <TextBox Margin="3,3,-152,3" Text="{Binding Path=SizeName, Mode=TwoWay}" Grid.Row="0" Grid.Column="2"  />
-            <TextBox Margin="3,3,-152,3" Text="{Binding Path=SizeCount, Mode=TwoWay}" Grid.Row="1" Grid.Column="2" />
+            <TextBox Margin="3,3,-152,3" Text="{Binding Path=SizeName}" Grid.Row="0" Grid.Column="2"  />
+            <TextBox Margin="3,3,-152,3" Text="{Binding Path=SizeCount}" Grid.Row="1" Grid.Column="2" />
 
             <Button Name="Button_reg" Cursor="Hand" Command="{Binding EditHallSize}" CommandParameter="{Binding ElementName=EditHallsSizeWnd}" Content="Изменить" Grid.Row="2" Grid.Column="2" Margin="116,10,-155,-10" Click="Button_reg_Click" />
 

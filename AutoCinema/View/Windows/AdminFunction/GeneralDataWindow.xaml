@@ -61,7 +61,7 @@
 
             <DataGrid x:Name="ViewAllHalls" FontSize="14"  AlternatingRowBackground="#FFFDF7DC" IsReadOnly="True" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllHalls}" SelectedItem="{Binding SelectedHall}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="449,289,187,-137" >
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Номер" Binding="{Binding НомерЗала, Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Номер" Binding="{Binding НомерЗала}"/>
                     <DataGridComboBoxColumn x:Name="cbc4" Header="Размер" ItemsSource="{Binding Размеры}"  SelectedValueBinding="{Binding IDРазмера, Mode=TwoWay}" SelectedValuePath="ID"  DisplayMemberPath="Наименование" />
                 </DataGrid.Columns>
 
@@ -69,9 +69,9 @@
 
             <DataGrid x:Name="ViewAllHallssizes" FontSize="14" AlternatingRowBackground="#FFFDF7DC" IsReadOnly="True" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Margin="888,289,-353,-137" >
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" IsReadOnly="True" Binding="{Binding ID, Mode=OneWay}"    />
-                    <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование, Mode=TwoWay}"    />
-                    <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding КоличествоРядов, Mode=TwoWay}" />
+                    <DataGridTextColumn Header="ID" IsReadOnly="True" Binding="{Binding ID}"    />
+                    <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование}"    />
+                    <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding КоличествоРядов}" />
 
                 </DataGrid.Columns>
 

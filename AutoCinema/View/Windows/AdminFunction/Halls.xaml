@@ -66,8 +66,8 @@
             </Grid.RowDefinitions>
             <DataGrid x:Name="ViewAllHallssizes" IsReadOnly="True" AlternatingRowBackground="#FFFDF7DC" HorizontalGridLinesBrush="#FFCB6969" VerticalGridLinesBrush="#FFCB6969" ItemsSource="{Binding AllSizes}" SelectedItem="{Binding SelectedHallsize}" AutoGenerateColumns="False" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,377,0" >
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование, Mode=TwoWay}"    />
-                    <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding КоличествоРядов, Mode=TwoWay}" />
+                    <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование}"    />
+                    <DataGridTextColumn Header="Количество Рядов"  Binding="{Binding КоличествоРядов}" />
 
                 </DataGrid.Columns>
 
@@ -88,8 +88,8 @@
                     </Grid.RowDefinitions>
                     <Label Content="Наименование:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
                     <Label Content="Количество рядов:" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
-                    <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeName, Mode=TwoWay}" Grid.Row="0" Grid.Column="1"  />
-                    <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeCount, Mode=TwoWay}" Grid.Row="1" Grid.Column="1" />
+                    <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeName}" Grid.Row="0" Grid.Column="1"  />
+                    <TextBox Margin="0,3,0,3" Text="{Binding Path=SizeCount}" Grid.Row="1" Grid.Column="1" />
 
                     <Button Content="Добавить" Cursor="Hand" Grid.Column="1" Grid.Row="2" Command="{Binding AddNewHallSize}" Margin="0,7,0,16" Click="Button_Click"/>
 
