@@ -66,6 +66,8 @@
 
                 <Button Content="Добавить" Command="{Binding AddNewFilm}" Cursor="Hand" Grid.Column="1" Grid.Row="7" Height="27" CommandParameter="{Binding ElementName=AddNewFilmwnd}"/>
 
+                <TextBox Name="TBSearch" Text="{Binding SearchFilm}" Grid.Row="8" Margin="5,10,5,99" TextChanged="TBSearch_TextChanged" Grid.Column="1"/>
+
                 <GroupBox Header="Действия" Grid.Row="8" Margin="88,39,0,11" Grid.ColumnSpan="2">
                     <StackPanel Background="#FF3DA7A2">
                         <Button Command="{Binding DeleteItem}" Cursor="Hand">Удалить</Button>
@@ -73,6 +75,7 @@
                         <Button Name="Export" Command="{Binding FilmExcel}" Cursor="Hand">Записать в excel</Button>
                     </StackPanel>
                 </GroupBox>
+                <Label Content="Поиск:" Grid.Row="8" Grid.Column="0" Margin="0,8,0,99"/>
             </Grid>
         </GroupBox>
     </Grid>

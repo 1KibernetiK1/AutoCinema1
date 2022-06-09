@@ -1,4 +1,6 @@
-﻿using AutoCinema.ViewModel;
+﻿using AutoCinema.DataBase;
+using AutoCinema.ViewModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -41,5 +43,9 @@ namespace AutoCinema.View.Windows
         {
             Hide();
         }
+
+     
+
+      
     }
 }

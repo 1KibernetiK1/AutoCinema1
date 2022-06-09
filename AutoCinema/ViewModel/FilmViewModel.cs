@@ -5,6 +5,7 @@ using AutoCinema.View.Windows;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Text;
 using System.Windows;
 
@@ -102,6 +103,9 @@ namespace AutoCinema.ViewModel
             }
         }
 
+       
+
+
         private void OpenFilmMethod()
         {
             WinFilms winFilm = new WinFilms();
@@ -140,6 +144,29 @@ namespace AutoCinema.ViewModel
             }
             set { deleteItem = value; }
         }
+
+        //private RelayCommand searchFilm;
+        //public RelayCommand SearchFilm
+        //{
+        //    get
+        //    {
+        //        return searchFilm ?? new RelayCommand(obj =>
+        //        {
+        //            string resultStr = "Ничего не выбрано";
+        //            // если фильмы
+        //            var currentFilms = CinemaDataContainer.GetContext().Фильмы.ToList();
+
+        //            currentFilms = currentFilms.Where(p => p.Название.ToLower().Contains(WinFilms.TextBoxSearch.Text.ToLower())).ToList();
+
+        //            WinFilms.AllFilmsView.ItemsSource = currentFilms.OrderBy(p => p.ID).ToList();
+
+        //            //обновление
+        //            SetNullValuesProperties();
+        //        }
+        //  );
+        //    }
+        //    set { searchFilm = value; }
+        //}
 
         private RelayCommand editFilm;
         public RelayCommand EditFilm

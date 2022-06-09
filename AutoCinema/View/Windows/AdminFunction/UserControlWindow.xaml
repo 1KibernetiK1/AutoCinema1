@@ -48,10 +48,10 @@
                 </Grid.RowDefinitions>
                 <Label Content="Логин:" Grid.Row="0" Grid.Column="0"/>
                 <Label Content="Пароль:" Grid.Row="1" Grid.Column="0"/>
-                <Label Content="Уровень доступа:" Grid.Row="2" Grid.Column="0"/>
-                <TextBox x:Name="NameBox" Text="{Binding Login}" Margin="0,3,0,3" Grid.Row="0" Grid.Column="1"  />
-                <TextBox x:Name="GenreBox" Text="{Binding Password}" Margin="0,3,0,3" Grid.Row="1" Grid.Column="1"  />
-                <ComboBox x:Name="DurationBox" Text="{Binding AccessLevel}" Margin="0,3,0,3" Grid.Row="2" Grid.Column="1"  >
+                <Label Content="Уровень доступа:" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,149,70" Grid.RowSpan="5"/>
+                <TextBox x:Name="NameBox" Text="{Binding Login}" Margin="27,3,0,3" Grid.Row="0" Grid.Column="1"  />
+                <TextBox x:Name="GenreBox" Text="{Binding Password}" Margin="27,3,0,3" Grid.Row="1" Grid.Column="1"  />
+                <ComboBox x:Name="DurationBox" Text="{Binding AccessLevel}" Margin="27,3,0,3" Grid.Row="2" Grid.Column="1"  >
                     <TextBlock>Администратор</TextBlock>
                     <TextBlock>Кассир</TextBlock>
                     <TextBlock>Пользователь</TextBlock>
@@ -68,6 +68,10 @@
                         <Button Name="Export" Command="{Binding UserExcel}" Cursor="Hand">Записать в excel</Button>
                     </StackPanel>
                 </GroupBox>
+                <TextBox x:Name="NameBox_Copy" Text="{Binding Login}" Margin="73,6,5,7" Grid.Row="7" Grid.Column="1" TextChanged="NameBox_Copy_TextChanged"  />
+                <Label Content="Поиск по логину:" Grid.Row="7" Grid.Column="0" Margin="0,0,149,7" Grid.ColumnSpan="2"/>
+                <Label Content="Поиск по уровню доступа:" Grid.Row="8" Grid.Column="0" Margin="0,10,98,97" Grid.ColumnSpan="2"/>
+                <TextBox x:Name="NameBox_Copy1" Text="{Binding Login}" Margin="73,16,5,97" Grid.Row="8" Grid.Column="1" TextChanged="NameBox_Copy1_TextChanged"  />
             </Grid>
         </GroupBox>
     </Grid>
