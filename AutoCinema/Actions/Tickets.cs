@@ -50,7 +50,7 @@ namespace AutoCinema.Domains
 
             CinemaDataContainer.GetContext().Билеты.Remove(Tickets);
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! билет " + Tickets.ID + "удален";
+            result = "Сделано! Билет " + Tickets.ID + " удален";
 
             MessageBox.Show(result);
 
@@ -69,7 +69,7 @@ namespace AutoCinema.Domains
 
 
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! размер зала " + tickets.ID + " изменен";
+            result = "Сделано! Билет " + tickets.ID + " изменен";
 
             MessageBox.Show(result);
 

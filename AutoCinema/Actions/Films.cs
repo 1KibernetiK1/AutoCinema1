@@ -60,7 +60,7 @@ namespace AutoCinema.Domains
 
             CinemaDataContainer.GetContext().Фильмы.Remove(film);
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Фильм " + film.Название + "удален";
+            result = "Сделано! Фильм " + film.Название + " удален";
 
             return result;
         }
@@ -77,7 +77,7 @@ namespace AutoCinema.Domains
             Film.Авторы = newAuthors;
             Film.Описание = newDescriptions;
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Фильм " + Film.Название + "изменен";
+            result = "Сделано! Фильм " + Film.Название + " изменен";
 
             return result;
         }

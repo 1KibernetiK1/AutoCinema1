@@ -79,14 +79,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Core\RelayCommand.cs" />
-    <Compile Include="Domains\Films.cs" />
-    <Compile Include="Domains\HallsD.cs" />
-    <Compile Include="Domains\Hallsize.cs" />
-    <Compile Include="Domains\Prices.cs" />
-    <Compile Include="Domains\Reserv.cs" />
-    <Compile Include="Domains\Sessions.cs" />
-    <Compile Include="Domains\Tickets.cs" />
-    <Compile Include="Domains\Users.cs" />
+    <Compile Include="Actions\Films.cs" />
+    <Compile Include="Actions\HallsD.cs" />
+    <Compile Include="Actions\Hallsize.cs" />
+    <Compile Include="Actions\Prices.cs" />
+    <Compile Include="Actions\Reserv.cs" />
+    <Compile Include="Actions\Sessions.cs" />
+    <Compile Include="Actions\Tickets.cs" />
+    <Compile Include="Actions\Users.cs" />
     <Compile Include="Security\EncryptionPassword.cs" />
     <Compile Include="ViewModel\BuyingTicketsViewModel.cs" />
     <Compile Include="ViewModel\ExcelViewModel.cs" />
@@ -320,6 +320,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CinemaData.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DataBase\CinemaData.edmx.diagram">
       <DependentUpon>CinemaData.edmx</DependentUpon>
     </None>

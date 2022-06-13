@@ -152,7 +152,7 @@ namespace AutoCinema.ViewModel
             {
                 return editTicket ?? new RelayCommand(obj =>
                 {
-                    string resultStr = "Не выбран сотрудник";
+                    string resultStr = "билет не выбран";
                     if (SelectedTicket != null)
                     {
                         resultStr = Tickets.editTicket(SelectedTicket, NewSession, NewHall, SelectedRow, SelectedPlace);

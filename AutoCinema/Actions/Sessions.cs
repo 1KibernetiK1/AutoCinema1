@@ -69,7 +69,7 @@ namespace AutoCinema.Domains
 
 
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Сеанс " + Session.ID + "изменен";
+            result = "Сделано! Сеанс " + Session.ID + " изменен";
 
             MessageBox.Show(result);
 

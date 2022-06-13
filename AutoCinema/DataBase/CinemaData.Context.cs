@@ -20,6 +20,8 @@ using System.Data.Entity.Infrastructure;
 
 public partial class CinemaDataContainer : DbContext
 {
+
+
         private static CinemaDataContainer _context;
 
         public CinemaDataContainer()
@@ -36,9 +38,9 @@ public partial class CinemaDataContainer : DbContext
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
-    {
-        throw new UnintentionalCodeFirstException();
-    }
+        {
+            throw new UnintentionalCodeFirstException();
+        }
 
 
     public virtual DbSet<Билеты> Билеты { get; set; }

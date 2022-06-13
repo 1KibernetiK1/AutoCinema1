@@ -46,7 +46,7 @@ namespace AutoCinema.Domains
 
             CinemaDataContainer.GetContext().Бронь.Remove(reserv);
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Размер зала " + reserv.ФИО + "удален";
+            result = "Сделано! Бронирование " + reserv.ФИО + " удалено";
 
             MessageBox.Show(result);
 
@@ -62,7 +62,7 @@ namespace AutoCinema.Domains
             reserv.Телефон = newcount;
 
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Билет " + reserv.IDБилета + "изменен";
+            result = "Сделано! Бронирование " + reserv.IDБилета + " изменено";
 
             MessageBox.Show(result);
 

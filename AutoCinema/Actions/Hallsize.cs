@@ -46,7 +46,7 @@ namespace AutoCinema.Domains
 
             CinemaDataContainer.GetContext().РазмерыЗалов.Remove(hallsize);
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Размер зала " + hallsize.Наименование + "удален";
+            result = "Сделано! Размер зала " + hallsize.Наименование + " удален";
 
             MessageBox.Show(result);
 
@@ -62,7 +62,7 @@ namespace AutoCinema.Domains
             Sizes.КоличествоРядов = newcount;
 
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! размер зала " + Sizes.Наименование + "изменен";
+            result = "Сделано! Размер зала " + Sizes.Наименование + " изменен";
 
             MessageBox.Show(result);
 

@@ -47,7 +47,7 @@ namespace AutoCinema.Domains
 
             CinemaDataContainer.GetContext().СтоимостьБилетов.Remove(prices);
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! сеанс " + prices.Стоимость + "удален";
+            result = "Сделано! Стоимость " + prices.Стоимость + " удалена";
 
             MessageBox.Show(result);
 
@@ -63,7 +63,7 @@ namespace AutoCinema.Domains
 
 
             CinemaDataContainer.GetContext().SaveChanges();
-            result = "Сделано! Стоимость изменена " + pricetick.Стоимость + "изменен";
+            result = "Сделано! Стоимость " + pricetick.Стоимость + " изменена";
 
             MessageBox.Show(result);
 
